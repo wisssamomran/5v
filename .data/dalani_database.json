@@ -151,7 +151,9 @@
       "favoritesCount": 48,
       "createdAt": "2026-02-09",
       "updatedAt": "2026-02-12",
-      "isReserved": false
+      "isReserved": true,
+      "reservedUntil": "2026-10-22T16:17:54.216Z",
+      "activeBookingId": "bkg-test-1792513074216"
     },
     {
       "id": "list-102",
@@ -1037,6 +1039,357 @@
   ],
   "auditLogs": [
     {
+      "id": "log-1792513086262-67",
+      "timestamp": "2026-10-20T16:18:06.262Z",
+      "userId": "usr-202",
+      "userName": "طارق محمد الحيمي",
+      "userRole": "seeker",
+      "action": "approve",
+      "targetType": "contract",
+      "targetId": "cnt-1792513086182",
+      "result": "success",
+      "details": "توقيع إلكتروني على العقد [CNT-2026-7033] بواسطة [طارق محمد الحيمي] كـ [secondParty]",
+      "ipAddress": "127.0.0.1"
+    },
+    {
+      "id": "log-1792513086254-875",
+      "timestamp": "2026-10-20T16:18:06.254Z",
+      "userId": "usr-101",
+      "userName": "أحمد علي الريمي",
+      "userRole": "advertiser",
+      "action": "approve",
+      "targetType": "contract",
+      "targetId": "cnt-1792513086182",
+      "result": "success",
+      "details": "توقيع إلكتروني على العقد [CNT-2026-7033] بواسطة [أحمد علي الريمي] كـ [firstParty]",
+      "ipAddress": "127.0.0.1"
+    },
+    {
+      "id": "log-1792513086244-267",
+      "timestamp": "2026-10-20T16:18:06.244Z",
+      "userId": "usr-202",
+      "userName": "طارق محمد الحيمي",
+      "userRole": "seeker",
+      "action": "approve",
+      "targetType": "contract",
+      "targetId": "cnt-1792513086182",
+      "result": "success",
+      "details": "اعتماد العقد [CNT-2026-7033] من قبل [طارق محمد الحيمي] بصفة [secondParty]. حالة العقد الحالية: [approved]",
+      "ipAddress": "127.0.0.1"
+    },
+    {
+      "id": "log-1792513086236-229",
+      "timestamp": "2026-10-20T16:18:06.236Z",
+      "userId": "usr-101",
+      "userName": "أحمد علي الريمي",
+      "userRole": "advertiser",
+      "action": "approve",
+      "targetType": "contract",
+      "targetId": "cnt-1792513086182",
+      "result": "success",
+      "details": "اعتماد العقد [CNT-2026-7033] من قبل [أحمد علي الريمي] بصفة [firstParty]. حالة العقد الحالية: [pending_approval]",
+      "ipAddress": "127.0.0.1"
+    },
+    {
+      "id": "log-1792513086228-420",
+      "timestamp": "2026-10-20T16:18:06.228Z",
+      "userId": "usr-202",
+      "userName": "طارق محمد الحيمي",
+      "userRole": "seeker",
+      "action": "update",
+      "targetType": "contract",
+      "targetId": "cnt-1792513086182",
+      "result": "warning",
+      "details": "تحديث بنود العقد [CNT-2026-7033] للإصدار (3) بواسطة [طارق محمد الحيمي]: تعديل السعر بعد الاعتماد (تم تعليق الاعتماد لطلب موافقة الطرفين منعاً للتعديل الصامت)",
+      "ipAddress": "127.0.0.1"
+    },
+    {
+      "id": "log-1792513086218-229",
+      "timestamp": "2026-10-20T16:18:06.218Z",
+      "userId": "usr-202",
+      "userName": "طارق محمد الحيمي",
+      "userRole": "seeker",
+      "action": "approve",
+      "targetType": "contract",
+      "targetId": "cnt-1792513086182",
+      "result": "success",
+      "details": "اعتماد العقد [CNT-2026-7033] من قبل [طارق محمد الحيمي] بصفة [secondParty]. حالة العقد الحالية: [approved]",
+      "ipAddress": "127.0.0.1"
+    },
+    {
+      "id": "log-1792513086210-262",
+      "timestamp": "2026-10-20T16:18:06.210Z",
+      "userId": "usr-101",
+      "userName": "أحمد علي الريمي",
+      "userRole": "advertiser",
+      "action": "approve",
+      "targetType": "contract",
+      "targetId": "cnt-1792513086182",
+      "result": "success",
+      "details": "اعتماد العقد [CNT-2026-7033] من قبل [أحمد علي الريمي] بصفة [firstParty]. حالة العقد الحالية: [pending_approval]",
+      "ipAddress": "127.0.0.1"
+    },
+    {
+      "id": "log-1792513086197-454",
+      "timestamp": "2026-10-20T16:18:06.197Z",
+      "userId": "usr-202",
+      "userName": "طارق محمد الحيمي",
+      "userRole": "seeker",
+      "action": "update",
+      "targetType": "contract",
+      "targetId": "cnt-1792513086182",
+      "result": "success",
+      "details": "تحديث بنود العقد [CNT-2026-7033] للإصدار (2) بواسطة [طارق محمد الحيمي]: إضافة بند الفحص الهندسي والكروكي الميداني",
+      "ipAddress": "127.0.0.1"
+    },
+    {
+      "id": "log-1792513086182-162",
+      "timestamp": "2026-10-20T16:18:06.182Z",
+      "userId": "usr-101",
+      "userName": "أحمد علي الريمي",
+      "userRole": "advertiser",
+      "action": "create",
+      "targetType": "contract",
+      "targetId": "cnt-1792513086182",
+      "result": "success",
+      "details": "إنشاء مسودة عقد [بيع عقاري] برقم [CNT-2026-7033] مرتبط بالحجز [BKG-TEST-6407] والعقار [YEM-2026-101]",
+      "ipAddress": "127.0.0.1"
+    },
+    {
+      "id": "log-1792513074302-625",
+      "timestamp": "2026-10-20T16:17:54.302Z",
+      "userId": "usr-202",
+      "userName": "طارق محمد الحيمي",
+      "userRole": "seeker",
+      "action": "approve",
+      "targetType": "contract",
+      "targetId": "cnt-1792513074237",
+      "result": "success",
+      "details": "توقيع إلكتروني على العقد [CNT-2026-3483] بواسطة [طارق محمد الحيمي] كـ [secondParty]",
+      "ipAddress": "127.0.0.1"
+    },
+    {
+      "id": "log-1792513074294-230",
+      "timestamp": "2026-10-20T16:17:54.294Z",
+      "userId": "usr-101",
+      "userName": "أحمد علي الريمي",
+      "userRole": "advertiser",
+      "action": "approve",
+      "targetType": "contract",
+      "targetId": "cnt-1792513074237",
+      "result": "success",
+      "details": "توقيع إلكتروني على العقد [CNT-2026-3483] بواسطة [أحمد علي الريمي] كـ [firstParty]",
+      "ipAddress": "127.0.0.1"
+    },
+    {
+      "id": "log-1792513074287-130",
+      "timestamp": "2026-10-20T16:17:54.287Z",
+      "userId": "usr-202",
+      "userName": "طارق محمد الحيمي",
+      "userRole": "seeker",
+      "action": "approve",
+      "targetType": "contract",
+      "targetId": "cnt-1792513074237",
+      "result": "success",
+      "details": "اعتماد العقد [CNT-2026-3483] من قبل [طارق محمد الحيمي] بصفة [secondParty]. حالة العقد الحالية: [approved]",
+      "ipAddress": "127.0.0.1"
+    },
+    {
+      "id": "log-1792513074281-327",
+      "timestamp": "2026-10-20T16:17:54.281Z",
+      "userId": "usr-101",
+      "userName": "أحمد علي الريمي",
+      "userRole": "advertiser",
+      "action": "approve",
+      "targetType": "contract",
+      "targetId": "cnt-1792513074237",
+      "result": "success",
+      "details": "اعتماد العقد [CNT-2026-3483] من قبل [أحمد علي الريمي] بصفة [firstParty]. حالة العقد الحالية: [pending_approval]",
+      "ipAddress": "127.0.0.1"
+    },
+    {
+      "id": "log-1792513074273-373",
+      "timestamp": "2026-10-20T16:17:54.273Z",
+      "userId": "usr-202",
+      "userName": "طارق محمد الحيمي",
+      "userRole": "seeker",
+      "action": "update",
+      "targetType": "contract",
+      "targetId": "cnt-1792513074237",
+      "result": "warning",
+      "details": "تحديث بنود العقد [CNT-2026-3483] للإصدار (3) بواسطة [طارق محمد الحيمي]: تعديل السعر بعد الاعتماد (تم تعليق الاعتماد لطلب موافقة الطرفين منعاً للتعديل الصامت)",
+      "ipAddress": "127.0.0.1"
+    },
+    {
+      "id": "log-1792513074266-231",
+      "timestamp": "2026-10-20T16:17:54.266Z",
+      "userId": "usr-202",
+      "userName": "طارق محمد الحيمي",
+      "userRole": "seeker",
+      "action": "approve",
+      "targetType": "contract",
+      "targetId": "cnt-1792513074237",
+      "result": "success",
+      "details": "اعتماد العقد [CNT-2026-3483] من قبل [طارق محمد الحيمي] بصفة [secondParty]. حالة العقد الحالية: [approved]",
+      "ipAddress": "127.0.0.1"
+    },
+    {
+      "id": "log-1792513074260-760",
+      "timestamp": "2026-10-20T16:17:54.260Z",
+      "userId": "usr-101",
+      "userName": "أحمد علي الريمي",
+      "userRole": "advertiser",
+      "action": "approve",
+      "targetType": "contract",
+      "targetId": "cnt-1792513074237",
+      "result": "success",
+      "details": "اعتماد العقد [CNT-2026-3483] من قبل [أحمد علي الريمي] بصفة [firstParty]. حالة العقد الحالية: [pending_approval]",
+      "ipAddress": "127.0.0.1"
+    },
+    {
+      "id": "log-1792513074250-422",
+      "timestamp": "2026-10-20T16:17:54.250Z",
+      "userId": "usr-202",
+      "userName": "طارق محمد الحيمي",
+      "userRole": "seeker",
+      "action": "update",
+      "targetType": "contract",
+      "targetId": "cnt-1792513074237",
+      "result": "success",
+      "details": "تحديث بنود العقد [CNT-2026-3483] للإصدار (2) بواسطة [طارق محمد الحيمي]: إضافة بند الفحص الهندسي والكروكي الميداني",
+      "ipAddress": "127.0.0.1"
+    },
+    {
+      "id": "log-1792513074238-207",
+      "timestamp": "2026-10-20T16:17:54.238Z",
+      "userId": "usr-101",
+      "userName": "أحمد علي الريمي",
+      "userRole": "advertiser",
+      "action": "create",
+      "targetType": "contract",
+      "targetId": "cnt-1792513074237",
+      "result": "success",
+      "details": "إنشاء مسودة عقد [بيع عقاري] برقم [CNT-2026-3483] مرتبط بالحجز [BKG-TEST-4188] والعقار [YEM-2026-101]",
+      "ipAddress": "127.0.0.1"
+    },
+    {
+      "id": "log-1792513007472-84",
+      "timestamp": "2026-10-20T16:16:47.472Z",
+      "userId": "usr-202",
+      "userName": "طارق محمد الحيمي",
+      "userRole": "seeker",
+      "action": "approve",
+      "targetType": "contract",
+      "targetId": "cnt-1792513007445",
+      "result": "success",
+      "details": "اعتماد العقد [CNT-2026-9347] من قبل [طارق محمد الحيمي] بصفة [secondParty]. حالة العقد الحالية: [signed]",
+      "ipAddress": "127.0.0.1"
+    },
+    {
+      "id": "log-1792513007464-222",
+      "timestamp": "2026-10-20T16:16:47.464Z",
+      "userId": "usr-101",
+      "userName": "أحمد علي الريمي",
+      "userRole": "advertiser",
+      "action": "approve",
+      "targetType": "contract",
+      "targetId": "cnt-1792513007445",
+      "result": "success",
+      "details": "اعتماد العقد [CNT-2026-9347] من قبل [أحمد علي الريمي] بصفة [firstParty]. حالة العقد الحالية: [pending_approval]",
+      "ipAddress": "127.0.0.1"
+    },
+    {
+      "id": "log-1792513007457-350",
+      "timestamp": "2026-10-20T16:16:47.457Z",
+      "userId": "usr-202",
+      "userName": "طارق محمد الحيمي",
+      "userRole": "seeker",
+      "action": "update",
+      "targetType": "contract",
+      "targetId": "cnt-1792513007445",
+      "result": "success",
+      "details": "تحديث بنود العقد [CNT-2026-9347] للإصدار (2) بواسطة [طارق محمد الحيمي]: إضافة بند الفحص الهندسي والكروكي الميداني",
+      "ipAddress": "127.0.0.1"
+    },
+    {
+      "id": "log-1792513007445-735",
+      "timestamp": "2026-10-20T16:16:47.445Z",
+      "userId": "usr-101",
+      "userName": "أحمد علي الريمي",
+      "userRole": "advertiser",
+      "action": "create",
+      "targetType": "contract",
+      "targetId": "cnt-1792513007445",
+      "result": "success",
+      "details": "إنشاء مسودة عقد [بيع عقاري] برقم [CNT-2026-9347] مرتبط بالحجز [BKG-2026-2002] والعقار [YEM-2026-103]",
+      "ipAddress": "127.0.0.1"
+    },
+    {
+      "id": "log-1792512925175-880",
+      "timestamp": "2026-10-20T16:15:25.175Z",
+      "userId": "usr-101",
+      "userName": "أحمد علي الريمي",
+      "userRole": "advertiser",
+      "action": "approve",
+      "targetType": "contract",
+      "targetId": "cnt-1792512925155",
+      "result": "success",
+      "details": "اعتماد العقد [CNT-2026-9632] من قبل [أحمد علي الريمي] بصفة [firstParty]. حالة العقد الحالية: [pending_approval]",
+      "ipAddress": "127.0.0.1"
+    },
+    {
+      "id": "log-1792512925168-667",
+      "timestamp": "2026-10-20T16:15:25.168Z",
+      "userId": "usr-202",
+      "userName": "طارق محمد الحيمي",
+      "userRole": "seeker",
+      "action": "update",
+      "targetType": "contract",
+      "targetId": "cnt-1792512925155",
+      "result": "success",
+      "details": "تحديث بنود العقد [CNT-2026-9632] للإصدار (2) بواسطة [طارق محمد الحيمي]: إضافة بند الفحص الهندسي والكروكي الميداني",
+      "ipAddress": "127.0.0.1"
+    },
+    {
+      "id": "log-1792512925155-723",
+      "timestamp": "2026-10-20T16:15:25.155Z",
+      "userId": "usr-101",
+      "userName": "أحمد علي الريمي",
+      "userRole": "advertiser",
+      "action": "create",
+      "targetType": "contract",
+      "targetId": "cnt-1792512925155",
+      "result": "success",
+      "details": "إنشاء مسودة عقد [بيع عقاري] برقم [CNT-2026-9632] مرتبط بالحجز [BKG-2026-2003] والعقار [YEM-2026-103]",
+      "ipAddress": "127.0.0.1"
+    },
+    {
+      "id": "log-1792512814830-686",
+      "timestamp": "2026-10-20T16:13:34.830Z",
+      "userId": "usr-202",
+      "userName": "طارق محمد الحيمي",
+      "userRole": "seeker",
+      "action": "update",
+      "targetType": "contract",
+      "targetId": "cnt-1792512814818",
+      "result": "success",
+      "details": "تحديث بنود العقد [CNT-2026-3437] للإصدار (2) بواسطة [طارق محمد الحيمي]: إضافة بند الفحص الهندسي والكروكي الميداني",
+      "ipAddress": "127.0.0.1"
+    },
+    {
+      "id": "log-1792512814818-273",
+      "timestamp": "2026-10-20T16:13:34.818Z",
+      "userId": "usr-101",
+      "userName": "أحمد علي الريمي",
+      "userRole": "advertiser",
+      "action": "create",
+      "targetType": "contract",
+      "targetId": "cnt-1792512814818",
+      "result": "success",
+      "details": "إنشاء مسودة عقد [بيع عقاري] برقم [CNT-2026-3437] مرتبط بالحجز [BKG-2026-2004] والعقار [YEM-2026-103]",
+      "ipAddress": "127.0.0.1"
+    },
+    {
       "id": "log-1792433833308-351",
       "timestamp": "١٩‏/١٠‏/٢٠٢٦، ٦:١٧ م",
       "userId": "usr-visitor",
@@ -1555,7 +1908,7 @@
     }
   ],
   "meta": {
-    "lastUpdated": "2026-10-19T18:17:13.309Z",
+    "lastUpdated": "2026-10-20T16:18:06.268Z",
     "version": "1.0.0"
   },
   "staff": [
@@ -2168,6 +2521,293 @@
   ],
   "bookings": [
     {
+      "id": "bkg-test-1792513086160",
+      "bookingNumber": "BKG-TEST-6407",
+      "listingId": "list-101",
+      "listingTitle": "فيلا مستقلة راقية للبيع في حدة",
+      "listingNumber": "YEM-2026-101",
+      "listingGovernorate": "صنعاء (أمانة العاصمة)",
+      "listingPrice": 350000,
+      "listingCurrency": "USD",
+      "advertiserId": "usr-101",
+      "advertiserName": "هشام عبد الرحمن القدسي",
+      "advertiserPhone": "777012345",
+      "seekerId": "usr-202",
+      "seekerName": "أصيل محمد الحكيمي",
+      "seekerPhone": "778990011",
+      "status": "active",
+      "durationHours": 48,
+      "startDate": "2026-10-20T16:18:06.160Z",
+      "expiresAt": "2026-10-22T16:18:06.160Z",
+      "notes": "حجز تجريبي لاختبار دورة حياة العقد بالكامل",
+      "createdAt": "2026-10-20",
+      "updatedAt": "2026-10-20",
+      "contractId": "cnt-1792513086182",
+      "contractNumber": "CNT-2026-7033",
+      "dealStage": "contract_completed",
+      "messages": [
+        {
+          "id": "msg-1792513086186-727",
+          "bookingId": "bkg-test-1792513086160",
+          "senderId": "system",
+          "senderName": "نظام دلنّي العقاري",
+          "senderRole": "system_admin",
+          "text": "📜 تم إعداد مسودة عقد [بيع عقاري] رسمي برقم [CNT-2026-7033] بواسطة [أحمد علي الريمي]. يمكن للأطراف مراجعة البنود واعتمادها قانونياً.",
+          "type": "system",
+          "timestamp": "٠٤:١٨ م"
+        },
+        {
+          "id": "msg-1792513086200-540",
+          "bookingId": "bkg-test-1792513086160",
+          "senderId": "system",
+          "senderName": "نظام دلنّي العقاري",
+          "senderRole": "system_admin",
+          "text": "📝 تم إصدار النسخة (2) من العقد [CNT-2026-7033] بواسطة [طارق محمد الحيمي]. ملخص التعديل: إضافة بند الفحص الهندسي والكروكي الميداني",
+          "type": "system",
+          "timestamp": "٠٤:١٨ م"
+        },
+        {
+          "id": "msg-1792513086212-535",
+          "bookingId": "bkg-test-1792513086160",
+          "senderId": "system",
+          "senderName": "نظام دلنّي العقاري",
+          "senderRole": "system_admin",
+          "text": "✅ تم اعتماد العقد [CNT-2026-7033] من قبل [الطرف الأول (البائع/المؤجر) - أحمد علي الريمي]. بانتظار اعتماد الطرف المقابل.",
+          "type": "system",
+          "timestamp": "٠٤:١٨ م"
+        },
+        {
+          "id": "msg-1792513086221-850",
+          "bookingId": "bkg-test-1792513086160",
+          "senderId": "system",
+          "senderName": "نظام دلنّي العقاري",
+          "senderRole": "system_admin",
+          "text": "✅ تم اعتماد العقد [CNT-2026-7033] من قبل [الطرف الثاني (المشتري/المستأجر) - طارق محمد الحيمي]. 🎉 تم اعتماد العقد رسمياً من جميع الأطراف وبات جاهزاً للطباعة والتوثيق!",
+          "type": "system",
+          "timestamp": "٠٤:١٨ م"
+        },
+        {
+          "id": "msg-1792513086231-703",
+          "bookingId": "bkg-test-1792513086160",
+          "senderId": "system",
+          "senderName": "نظام دلنّي العقاري",
+          "senderRole": "system_admin",
+          "text": "📝 تم إصدار النسخة (3) من العقد [CNT-2026-7033] بواسطة [طارق محمد الحيمي]. ملخص التعديل: تعديل السعر بعد الاعتماد ⚠️ يتطلب إعادة اعتماد الطرفين.",
+          "type": "system",
+          "timestamp": "٠٤:١٨ م"
+        },
+        {
+          "id": "msg-1792513086238-335",
+          "bookingId": "bkg-test-1792513086160",
+          "senderId": "system",
+          "senderName": "نظام دلنّي العقاري",
+          "senderRole": "system_admin",
+          "text": "✅ تم اعتماد العقد [CNT-2026-7033] من قبل [الطرف الأول (البائع/المؤجر) - أحمد علي الريمي]. بانتظار اعتماد الطرف المقابل.",
+          "type": "system",
+          "timestamp": "٠٤:١٨ م"
+        },
+        {
+          "id": "msg-1792513086248-616",
+          "bookingId": "bkg-test-1792513086160",
+          "senderId": "system",
+          "senderName": "نظام دلنّي العقاري",
+          "senderRole": "system_admin",
+          "text": "✅ تم اعتماد العقد [CNT-2026-7033] من قبل [الطرف الثاني (المشتري/المستأجر) - طارق محمد الحيمي]. 🎉 تم اعتماد العقد رسمياً من جميع الأطراف وبات جاهزاً للطباعة والتوثيق!",
+          "type": "system",
+          "timestamp": "٠٤:١٨ م"
+        },
+        {
+          "id": "msg-1792513086257-194",
+          "bookingId": "bkg-test-1792513086160",
+          "senderId": "system",
+          "senderName": "نظام دلنّي العقاري",
+          "senderRole": "system_admin",
+          "text": "✍️ قام [أحمد علي الريمي] بالتوقيع الإلكتروني على العقد [CNT-2026-7033]. ",
+          "type": "system",
+          "timestamp": "٠٤:١٨ م"
+        },
+        {
+          "id": "msg-1792513086265-196",
+          "bookingId": "bkg-test-1792513086160",
+          "senderId": "system",
+          "senderName": "نظام دلنّي العقاري",
+          "senderRole": "system_admin",
+          "text": "✍️ قام [طارق محمد الحيمي] بالتوقيع الإلكتروني على العقد [CNT-2026-7033]. 🏆 اكتمل توقيع الطرفين على العقد رسمياً!",
+          "type": "system",
+          "timestamp": "٠٤:١٨ م"
+        }
+      ]
+    },
+    {
+      "id": "bkg-test-1792513074216",
+      "bookingNumber": "BKG-TEST-4188",
+      "listingId": "list-101",
+      "listingTitle": "فيلا مستقلة راقية للبيع في حدة",
+      "listingNumber": "YEM-2026-101",
+      "listingGovernorate": "صنعاء (أمانة العاصمة)",
+      "listingPrice": 350000,
+      "listingCurrency": "USD",
+      "advertiserId": "usr-101",
+      "advertiserName": "هشام عبد الرحمن القدسي",
+      "advertiserPhone": "777012345",
+      "seekerId": "usr-202",
+      "seekerName": "أصيل محمد الحكيمي",
+      "seekerPhone": "778990011",
+      "status": "active",
+      "durationHours": 48,
+      "startDate": "2026-10-20T16:17:54.216Z",
+      "expiresAt": "2026-10-22T16:17:54.216Z",
+      "notes": "حجز تجريبي لاختبار دورة حياة العقد بالكامل",
+      "createdAt": "2026-10-20",
+      "updatedAt": "2026-10-20",
+      "contractId": "cnt-1792513074237",
+      "contractNumber": "CNT-2026-3483",
+      "dealStage": "contract_completed",
+      "messages": [
+        {
+          "id": "msg-1792513074240-920",
+          "bookingId": "bkg-test-1792513074216",
+          "senderId": "system",
+          "senderName": "نظام دلنّي العقاري",
+          "senderRole": "system_admin",
+          "text": "📜 تم إعداد مسودة عقد [بيع عقاري] رسمي برقم [CNT-2026-3483] بواسطة [أحمد علي الريمي]. يمكن للأطراف مراجعة البنود واعتمادها قانونياً.",
+          "type": "system",
+          "timestamp": "٠٤:١٧ م"
+        },
+        {
+          "id": "msg-1792513074253-267",
+          "bookingId": "bkg-test-1792513074216",
+          "senderId": "system",
+          "senderName": "نظام دلنّي العقاري",
+          "senderRole": "system_admin",
+          "text": "📝 تم إصدار النسخة (2) من العقد [CNT-2026-3483] بواسطة [طارق محمد الحيمي]. ملخص التعديل: إضافة بند الفحص الهندسي والكروكي الميداني",
+          "type": "system",
+          "timestamp": "٠٤:١٧ م"
+        },
+        {
+          "id": "msg-1792513074262-104",
+          "bookingId": "bkg-test-1792513074216",
+          "senderId": "system",
+          "senderName": "نظام دلنّي العقاري",
+          "senderRole": "system_admin",
+          "text": "✅ تم اعتماد العقد [CNT-2026-3483] من قبل [الطرف الأول (البائع/المؤجر) - أحمد علي الريمي]. بانتظار اعتماد الطرف المقابل.",
+          "type": "system",
+          "timestamp": "٠٤:١٧ م"
+        },
+        {
+          "id": "msg-1792513074268-537",
+          "bookingId": "bkg-test-1792513074216",
+          "senderId": "system",
+          "senderName": "نظام دلنّي العقاري",
+          "senderRole": "system_admin",
+          "text": "✅ تم اعتماد العقد [CNT-2026-3483] من قبل [الطرف الثاني (المشتري/المستأجر) - طارق محمد الحيمي]. 🎉 تم اعتماد العقد رسمياً من جميع الأطراف وبات جاهزاً للطباعة والتوثيق!",
+          "type": "system",
+          "timestamp": "٠٤:١٧ م"
+        },
+        {
+          "id": "msg-1792513074275-583",
+          "bookingId": "bkg-test-1792513074216",
+          "senderId": "system",
+          "senderName": "نظام دلنّي العقاري",
+          "senderRole": "system_admin",
+          "text": "📝 تم إصدار النسخة (3) من العقد [CNT-2026-3483] بواسطة [طارق محمد الحيمي]. ملخص التعديل: تعديل السعر بعد الاعتماد ⚠️ يتطلب إعادة اعتماد الطرفين.",
+          "type": "system",
+          "timestamp": "٠٤:١٧ م"
+        },
+        {
+          "id": "msg-1792513074283-376",
+          "bookingId": "bkg-test-1792513074216",
+          "senderId": "system",
+          "senderName": "نظام دلنّي العقاري",
+          "senderRole": "system_admin",
+          "text": "✅ تم اعتماد العقد [CNT-2026-3483] من قبل [الطرف الأول (البائع/المؤجر) - أحمد علي الريمي]. بانتظار اعتماد الطرف المقابل.",
+          "type": "system",
+          "timestamp": "٠٤:١٧ م"
+        },
+        {
+          "id": "msg-1792513074290-193",
+          "bookingId": "bkg-test-1792513074216",
+          "senderId": "system",
+          "senderName": "نظام دلنّي العقاري",
+          "senderRole": "system_admin",
+          "text": "✅ تم اعتماد العقد [CNT-2026-3483] من قبل [الطرف الثاني (المشتري/المستأجر) - طارق محمد الحيمي]. 🎉 تم اعتماد العقد رسمياً من جميع الأطراف وبات جاهزاً للطباعة والتوثيق!",
+          "type": "system",
+          "timestamp": "٠٤:١٧ م"
+        },
+        {
+          "id": "msg-1792513074296-900",
+          "bookingId": "bkg-test-1792513074216",
+          "senderId": "system",
+          "senderName": "نظام دلنّي العقاري",
+          "senderRole": "system_admin",
+          "text": "✍️ قام [أحمد علي الريمي] بالتوقيع الإلكتروني على العقد [CNT-2026-3483]. ",
+          "type": "system",
+          "timestamp": "٠٤:١٧ م"
+        },
+        {
+          "id": "msg-1792513074304-303",
+          "bookingId": "bkg-test-1792513074216",
+          "senderId": "system",
+          "senderName": "نظام دلنّي العقاري",
+          "senderRole": "system_admin",
+          "text": "✍️ قام [طارق محمد الحيمي] بالتوقيع الإلكتروني على العقد [CNT-2026-3483]. 🏆 اكتمل توقيع الطرفين على العقد رسمياً!",
+          "type": "system",
+          "timestamp": "٠٤:١٧ م"
+        }
+      ],
+      "inspectionVisit": {
+        "status": "confirmed",
+        "requestedDate": "2026-10-21",
+        "requestedTime": "16:00",
+        "locationNotes": "المعاينة أمام مدخل العقار - التنسيق المسبق مع المالك",
+        "scheduledBy": "أصيل محمد الحكيمي",
+        "confirmedAt": "2026-10-17 11:00",
+        "result": "pending"
+      },
+      "currentTerms": {
+        "price": 350000,
+        "currency": "USD",
+        "paymentMethod": "certified_check",
+        "depositAmount": 17500,
+        "depositCurrency": "USD",
+        "handoverDate": "2026-11-01",
+        "feeResponsibility": "shared_equally",
+        "specialConditions": [
+          "فحص وثائق الملكية والبصيرة الشرعية قبل سداد الدفعة النهائية",
+          "سداد كافة فواتير الخدمات السابقة حتى تاريخ استلام العقار"
+        ],
+        "notes": "حجز تجريبي لاختبار دورة حياة العقد بالكامل"
+      },
+      "termsStatus": "pending_approval",
+      "termsHistory": [
+        {
+          "id": "rev-bkg-test-1792513074216-1",
+          "version": 1,
+          "proposedBy": {
+            "id": "usr-202",
+            "name": "أصيل محمد الحكيمي",
+            "role": "seeker"
+          },
+          "proposedAt": "2026-10-20",
+          "terms": {
+            "price": 350000,
+            "currency": "USD",
+            "paymentMethod": "certified_check",
+            "depositAmount": 17500,
+            "depositCurrency": "USD",
+            "handoverDate": "2026-11-01",
+            "feeResponsibility": "shared_equally",
+            "specialConditions": [
+              "فحص وثائق الملكية والبصيرة الشرعية قبل سداد الدفعة النهائية",
+              "سداد كافة فواتير الخدمات السابقة حتى تاريخ استلام العقار"
+            ],
+            "notes": "حجز تجريبي لاختبار دورة حياة العقد بالكامل"
+          },
+          "status": "pending_approval"
+        }
+      ]
+    },
+    {
       "id": "bkg-1792375972482-734",
       "bookingNumber": "BKG-2026-2004",
       "requestId": "req-1792375968434-298",
@@ -2191,7 +2831,7 @@
       "confirmedBy": "هشام عبد الرحمن القدسي",
       "notes": "تم بحمد الله إتمام البيع وتوثيق البصيرة الشرعية في المحكمة",
       "createdAt": "2026-10-19",
-      "updatedAt": "2026-10-19",
+      "updatedAt": "2026-10-20",
       "dealStage": "contract_completed",
       "messages": [
         {
@@ -2223,6 +2863,26 @@
           "type": "chat",
           "text": "أهلاً بك، تم تحديد موعد المعاينة وأوراق الملكية جاهزة للاطلاع.",
           "timestamp": "2026-10-19"
+        },
+        {
+          "id": "msg-1792512814820-345",
+          "bookingId": "bkg-1792375972482-734",
+          "senderId": "system",
+          "senderName": "نظام دلنّي العقاري",
+          "senderRole": "system_admin",
+          "text": "📜 تم إعداد مسودة عقد [بيع عقاري] رسمي برقم [CNT-2026-3437] بواسطة [أحمد علي الريمي]. يمكن للأطراف مراجعة البنود واعتمادها قانونياً.",
+          "type": "system",
+          "timestamp": "٠٤:١٣ م"
+        },
+        {
+          "id": "msg-1792512814832-238",
+          "bookingId": "bkg-1792375972482-734",
+          "senderId": "system",
+          "senderName": "نظام دلنّي العقاري",
+          "senderRole": "system_admin",
+          "text": "📝 تم إصدار النسخة (2) من العقد [CNT-2026-3437] بواسطة [طارق محمد الحيمي]. ملخص التعديل: إضافة بند الفحص الهندسي والكروكي الميداني",
+          "type": "system",
+          "timestamp": "٠٤:١٣ م"
         }
       ],
       "inspectionVisit": {
@@ -2299,7 +2959,9 @@
           "responseAt": "2026-10-19",
           "responseNotes": "موافقة على مسودة الشروط"
         }
-      ]
+      ],
+      "contractId": "cnt-1792512814818",
+      "contractNumber": "CNT-2026-3437"
     },
     {
       "id": "bkg-1792372494039-300",
@@ -2325,11 +2987,11 @@
       "confirmedBy": "هشام عبد الرحمن القدسي",
       "notes": "تم قبول الطلب وتأكيد الحجز المؤقت لحين مراجعة وثائق وصكوك العقار",
       "createdAt": "2026-10-19",
-      "updatedAt": "2026-10-19",
+      "updatedAt": "2026-10-20",
       "cancelledBy": "هشام عبد الرحمن القدسي",
       "cancelledAt": "2026-10-19T02:12:39.894Z",
       "cancellationReason": "اختبار إعادة الإتاحة عند إلغاء الحجز",
-      "dealStage": "booking_exclusive",
+      "dealStage": "contract_completed",
       "messages": [
         {
           "id": "msg-bkg-1792372494039-300-1",
@@ -2360,6 +3022,36 @@
           "type": "chat",
           "text": "أهلاً بك، تم تحديد موعد المعاينة وأوراق الملكية جاهزة للاطلاع.",
           "timestamp": "2026-10-19"
+        },
+        {
+          "id": "msg-1792512925158-26",
+          "bookingId": "bkg-1792372494039-300",
+          "senderId": "system",
+          "senderName": "نظام دلنّي العقاري",
+          "senderRole": "system_admin",
+          "text": "📜 تم إعداد مسودة عقد [بيع عقاري] رسمي برقم [CNT-2026-9632] بواسطة [أحمد علي الريمي]. يمكن للأطراف مراجعة البنود واعتمادها قانونياً.",
+          "type": "system",
+          "timestamp": "٠٤:١٥ م"
+        },
+        {
+          "id": "msg-1792512925170-346",
+          "bookingId": "bkg-1792372494039-300",
+          "senderId": "system",
+          "senderName": "نظام دلنّي العقاري",
+          "senderRole": "system_admin",
+          "text": "📝 تم إصدار النسخة (2) من العقد [CNT-2026-9632] بواسطة [طارق محمد الحيمي]. ملخص التعديل: إضافة بند الفحص الهندسي والكروكي الميداني",
+          "type": "system",
+          "timestamp": "٠٤:١٥ م"
+        },
+        {
+          "id": "msg-1792512925177-853",
+          "bookingId": "bkg-1792372494039-300",
+          "senderId": "system",
+          "senderName": "نظام دلنّي العقاري",
+          "senderRole": "system_admin",
+          "text": "✅ تم اعتماد العقد [CNT-2026-9632] من قبل [الطرف الأول (البائع/المؤجر) - أحمد علي الريمي]. بانتظار اعتماد الطرف المقابل.",
+          "type": "system",
+          "timestamp": "٠٤:١٥ م"
         }
       ],
       "inspectionVisit": {
@@ -2412,7 +3104,9 @@
           },
           "status": "pending_approval"
         }
-      ]
+      ],
+      "contractId": "cnt-1792512925155",
+      "contractNumber": "CNT-2026-9632"
     },
     {
       "id": "bkg-1792372476615-376",
@@ -2438,11 +3132,11 @@
       "confirmedBy": "هشام عبد الرحمن القدسي",
       "notes": "مرحباً بك، تم تأكيد حجز الأرض مؤقتاً لمدة 48 ساعة",
       "createdAt": "2026-10-19",
-      "updatedAt": "2026-10-19",
+      "updatedAt": "2026-10-20",
       "cancelledBy": "هشام عبد الرحمن القدسي",
       "cancelledAt": "2026-10-19T01:14:49.888Z",
       "cancellationReason": "تم إلغاء الحجز باتفاق المشتري والبائع",
-      "dealStage": "booking_exclusive",
+      "dealStage": "contract_completed",
       "messages": [
         {
           "id": "msg-bkg-1792372476615-376-1",
@@ -2473,6 +3167,46 @@
           "type": "chat",
           "text": "أهلاً بك، تم تحديد موعد المعاينة وأوراق الملكية جاهزة للاطلاع.",
           "timestamp": "2026-10-19"
+        },
+        {
+          "id": "msg-1792513007448-12",
+          "bookingId": "bkg-1792372476615-376",
+          "senderId": "system",
+          "senderName": "نظام دلنّي العقاري",
+          "senderRole": "system_admin",
+          "text": "📜 تم إعداد مسودة عقد [بيع عقاري] رسمي برقم [CNT-2026-9347] بواسطة [أحمد علي الريمي]. يمكن للأطراف مراجعة البنود واعتمادها قانونياً.",
+          "type": "system",
+          "timestamp": "٠٤:١٦ م"
+        },
+        {
+          "id": "msg-1792513007459-305",
+          "bookingId": "bkg-1792372476615-376",
+          "senderId": "system",
+          "senderName": "نظام دلنّي العقاري",
+          "senderRole": "system_admin",
+          "text": "📝 تم إصدار النسخة (2) من العقد [CNT-2026-9347] بواسطة [طارق محمد الحيمي]. ملخص التعديل: إضافة بند الفحص الهندسي والكروكي الميداني",
+          "type": "system",
+          "timestamp": "٠٤:١٦ م"
+        },
+        {
+          "id": "msg-1792513007466-322",
+          "bookingId": "bkg-1792372476615-376",
+          "senderId": "system",
+          "senderName": "نظام دلنّي العقاري",
+          "senderRole": "system_admin",
+          "text": "✅ تم اعتماد العقد [CNT-2026-9347] من قبل [الطرف الأول (البائع/المؤجر) - أحمد علي الريمي]. بانتظار اعتماد الطرف المقابل.",
+          "type": "system",
+          "timestamp": "٠٤:١٦ م"
+        },
+        {
+          "id": "msg-1792513007474-168",
+          "bookingId": "bkg-1792372476615-376",
+          "senderId": "system",
+          "senderName": "نظام دلنّي العقاري",
+          "senderRole": "system_admin",
+          "text": "✅ تم اعتماد العقد [CNT-2026-9347] من قبل [الطرف الثاني (المشتري/المستأجر) - طارق محمد الحيمي]. 🎉 تم اعتماد العقد رسمياً من جميع الأطراف وبات جاهزاً للطباعة والتوثيق!",
+          "type": "system",
+          "timestamp": "٠٤:١٦ م"
         }
       ],
       "inspectionVisit": {
@@ -2525,7 +3259,9 @@
           },
           "status": "pending_approval"
         }
-      ]
+      ],
+      "contractId": "cnt-1792513007445",
+      "contractNumber": "CNT-2026-9347"
     },
     {
       "id": "bkg-201",
@@ -2728,7 +3464,3316 @@
           "responseAt": "2026-10-17",
           "responseNotes": "موافقة على مسودة الشروط"
         }
-      ]
+      ],
+      "contractId": "cnt-301",
+      "contractNumber": "CNT-2026-3001"
+    }
+  ],
+  "contracts": [
+    {
+      "id": "cnt-1792513086182",
+      "contractNumber": "CNT-2026-7033",
+      "bookingId": "bkg-test-1792513086160",
+      "bookingNumber": "BKG-TEST-6407",
+      "listingId": "list-101",
+      "listingNumber": "YEM-2026-101",
+      "listingTitle": "فيلا مستقلة راقية للبيع في حدة",
+      "contractType": "sale",
+      "status": "signed",
+      "propertySnapshot": {
+        "title": "فيلا سوبر ديلوكس حديثة البناء في حدة",
+        "propertyType": "villa",
+        "purpose": "sale",
+        "governorate": "صنعاء (أمانة العاصمة)",
+        "city": "صنعاء",
+        "district": "حدة",
+        "street": "شارع 14 المتفرع من شارع الخمسين",
+        "area": 9,
+        "areaUnit": "لبنة عشاري",
+        "deedNumber": "صك مقيد بالسجل العقاري المعتمد",
+        "boundaries": {
+          "north": "شارع معبد نافذ",
+          "south": "عقار مجاور",
+          "east": "شارع فرعي",
+          "west": "عقار مجاور"
+        }
+      },
+      "firstParty": {
+        "id": "usr-101",
+        "name": "هشام عبد الرحمن القدسي",
+        "phone": "777012345",
+        "role": "seller",
+        "nationalIdOrPassport": "1002345678",
+        "address": "صنعاء (أمانة العاصمة) - صنعاء",
+        "signatureStatus": "signed",
+        "signedAt": "2026-10-20T16:18:06.254Z"
+      },
+      "secondParty": {
+        "id": "usr-202",
+        "name": "أصيل محمد الحكيمي",
+        "phone": "778990011",
+        "role": "buyer",
+        "nationalIdOrPassport": "1008765432",
+        "address": "صنعاء",
+        "signatureStatus": "signed",
+        "signedAt": "2026-10-20T16:18:06.262Z"
+      },
+      "witnesses": [
+        {
+          "id": "wit-1",
+          "name": "فضيلة الشيخ / القاضي الأمين الشرعي المعتمد",
+          "phone": "+967 771 000 111",
+          "role": "witness",
+          "nationalIdOrPassport": "ترخيص توثيق شرعي صادر عن وزارة العدل",
+          "signatureStatus": "unsigned"
+        },
+        {
+          "id": "wit-2",
+          "name": "شاهد إثبات ثانٍ",
+          "phone": "+967 772 000 222",
+          "role": "witness",
+          "nationalIdOrPassport": "بطاقة شخصية سارية",
+          "signatureStatus": "unsigned"
+        }
+      ],
+      "brokerOrAgent": {
+        "id": "dalani-broker",
+        "name": "منصة دلنّي العقارية",
+        "phone": "+967 1 445 566",
+        "commissionAmount": 3500,
+        "commissionPayer": "shared_equally"
+      },
+      "financialTerms": {
+        "totalAmount": 345000,
+        "currency": "USD",
+        "depositAmount": 17500,
+        "depositCurrency": "USD",
+        "paymentSchedule": "سداد العربون، وتسليم المتبقي نقداً أو بحوالة بنكية معتمدة",
+        "notes": "تمت مراجعة المسودة وإضافة بند المعاينة الهندسية"
+      },
+      "durationTerms": {
+        "startDate": "2026-10-20",
+        "handoverDate": "خلال أسبوعين من التوقيع"
+      },
+      "clauses": [
+        {
+          "id": "cls-1",
+          "number": 1,
+          "title": "التمهيد وأهلية التعاقد الشرعية والقانونية",
+          "isMandatory": true,
+          "content": "يقر الطرفان (البائع والمشتري) بأهليتهما الشرعية والقانونية المعتبرة شرعاً للتعاقد والتصرف النافي للجهالة، وخلوهما من أي مانع نظامي أو قضائي، وتوافق إرادتهما الحرة على إبرام هذا العقد لبيع وشراء العقار الموصوف ببنوده."
+        },
+        {
+          "id": "cls-2",
+          "number": 2,
+          "title": "محل العقد ومواصفات المبيع وصك البصيرة",
+          "isMandatory": true,
+          "content": "محل هذا البيع هو العقار المسمى [فيلا سوبر ديلوكس حديثة البناء في حدة]، الكائن في [صنعاء (أمانة العاصمة) - صنعاء - حدة]، والبالغ مساحته الإجمالية [9] لبنة عشاري، والمقيد بصك الملكية الشرعية/البصيرة برقم [مقيد بالسجل العقاري المعتمد]."
+        },
+        {
+          "id": "cls-3",
+          "number": 3,
+          "title": "الثمن الإجمالي وجدول الوفاء والعربون",
+          "isMandatory": true,
+          "content": "اتفق الطرفان على أن الثمن الإجمالي المقطوع للعقار هو [350,000 دولار أمريكي]، سدد المشتري منه عربون حجز والتزام قدره [17,500 دولار أمريكي]، ويلتزم المشتري بسداد باقي الثمن وقدره [332,500 دولار أمريكي] بموجب [نقداً بالعملة المحددة] عند تحرير وثيقة الإفراغ والتسليم."
+        },
+        {
+          "id": "cls-4",
+          "number": 4,
+          "title": "المعاينة النافية للجهالة وضمان خلو العقار من النزاع",
+          "isMandatory": true,
+          "content": "يقر المشتري بأنه عاين العقار المبيع المعاينة الشرعية التامة النافية للجهالة وقبله بحالته الراهنة وموقعه وحدوده. كما يقر البائع ويضمن شرعاً وقانوناً خلو المبيع من أي رهن أو حكر أو اختصاص أو حيازة للغير أو أي نزاع قضائي قائم."
+        },
+        {
+          "id": "cls-5",
+          "number": 5,
+          "title": "التسليم والإفراغ ونقل الملكية والتعميد الشرعي",
+          "isMandatory": true,
+          "content": "يلتزم البائع بتسليم العقار المبيع للمشتري خالياً من أي شواغل وتسليم كافة أصول الوثائق والبصائر المعمدة وتعميد وثيقة التنازل لدى الأمين الشرعي المعتمد والسجل العقاري فور استلام كامل الثمن في موعد أقصاه [خلال أسبوعين من إتمام السداد وتعميد الوثائق]."
+        },
+        {
+          "id": "cls-6",
+          "number": 6,
+          "title": "الرسوم والضرائب وأتعاب الوساطة العقارية",
+          "isMandatory": false,
+          "content": "اتفق الطرفان على أن رسوم التوثيق وتعميد الأمين الشرعي وضريبة التصرفات العقارية وأتعاب منصة دلنّي العقارية [تتحملها الأطراف مناصفة وفق العرف التجاري والقانون]."
+        },
+        {
+          "id": "cls-7",
+          "number": 7,
+          "title": "الشرط الجزائي ونكول الأطراف عن الإتمام",
+          "isMandatory": true,
+          "content": "في حال نكول أحد الطرفين أو رجوعه عن إتمام البيع دون مسوغ شرعي أو قانوني قاهر، يلتزم الطرف الناكل بتعويض الطرف الآخر بما يعادل قيمة العربون المتفق عليه كشرط جزائي ملزم قضائياً."
+        },
+        {
+          "id": "cls-8",
+          "number": 8,
+          "title": "القانون الواجب التطبيق والمحاكم المختصة",
+          "isMandatory": true,
+          "content": "يخضع هذا العقد لأحكام الشريعة الإسلامية والقانون المدني وقوانين التوثيق والتسجيل العقاري السارية في الجمهورية اليمنية، وتختص المحكمة الابتدائية الواقع في دائرتها العقار بنظر أي نزاع قد ينشأ لا قدر الله."
+        },
+        {
+          "id": "cls-test-1",
+          "number": 9,
+          "title": "شرط المعاينة الهندسية ومطابقة كروكي الأمانة",
+          "content": "اتفق الطرفان على مطابقة المخطط الهندسي الصادر من مكتب الأشغال العامة بأمانة العاصمة قبل موعد الإفراغ.",
+          "isMandatory": false
+        }
+      ],
+      "currentVersion": 3,
+      "versionHistory": [
+        {
+          "version": 1,
+          "createdAt": "2026-10-20T16:18:06.182Z",
+          "createdBy": {
+            "id": "usr-101",
+            "name": "أحمد علي الريمي",
+            "role": "advertiser"
+          },
+          "summaryOfChanges": "إنشاء مسودة العقد الرسمية واستيراد بيانات الحجز والشروط المتفق عليها وصك العقار",
+          "clauses": [
+            {
+              "id": "cls-1",
+              "number": 1,
+              "title": "التمهيد وأهلية التعاقد الشرعية والقانونية",
+              "isMandatory": true,
+              "content": "يقر الطرفان (البائع والمشتري) بأهليتهما الشرعية والقانونية المعتبرة شرعاً للتعاقد والتصرف النافي للجهالة، وخلوهما من أي مانع نظامي أو قضائي، وتوافق إرادتهما الحرة على إبرام هذا العقد لبيع وشراء العقار الموصوف ببنوده."
+            },
+            {
+              "id": "cls-2",
+              "number": 2,
+              "title": "محل العقد ومواصفات المبيع وصك البصيرة",
+              "isMandatory": true,
+              "content": "محل هذا البيع هو العقار المسمى [فيلا سوبر ديلوكس حديثة البناء في حدة]، الكائن في [صنعاء (أمانة العاصمة) - صنعاء - حدة]، والبالغ مساحته الإجمالية [9] لبنة عشاري، والمقيد بصك الملكية الشرعية/البصيرة برقم [مقيد بالسجل العقاري المعتمد]."
+            },
+            {
+              "id": "cls-3",
+              "number": 3,
+              "title": "الثمن الإجمالي وجدول الوفاء والعربون",
+              "isMandatory": true,
+              "content": "اتفق الطرفان على أن الثمن الإجمالي المقطوع للعقار هو [350,000 دولار أمريكي]، سدد المشتري منه عربون حجز والتزام قدره [17,500 دولار أمريكي]، ويلتزم المشتري بسداد باقي الثمن وقدره [332,500 دولار أمريكي] بموجب [نقداً بالعملة المحددة] عند تحرير وثيقة الإفراغ والتسليم."
+            },
+            {
+              "id": "cls-4",
+              "number": 4,
+              "title": "المعاينة النافية للجهالة وضمان خلو العقار من النزاع",
+              "isMandatory": true,
+              "content": "يقر المشتري بأنه عاين العقار المبيع المعاينة الشرعية التامة النافية للجهالة وقبله بحالته الراهنة وموقعه وحدوده. كما يقر البائع ويضمن شرعاً وقانوناً خلو المبيع من أي رهن أو حكر أو اختصاص أو حيازة للغير أو أي نزاع قضائي قائم."
+            },
+            {
+              "id": "cls-5",
+              "number": 5,
+              "title": "التسليم والإفراغ ونقل الملكية والتعميد الشرعي",
+              "isMandatory": true,
+              "content": "يلتزم البائع بتسليم العقار المبيع للمشتري خالياً من أي شواغل وتسليم كافة أصول الوثائق والبصائر المعمدة وتعميد وثيقة التنازل لدى الأمين الشرعي المعتمد والسجل العقاري فور استلام كامل الثمن في موعد أقصاه [خلال أسبوعين من إتمام السداد وتعميد الوثائق]."
+            },
+            {
+              "id": "cls-6",
+              "number": 6,
+              "title": "الرسوم والضرائب وأتعاب الوساطة العقارية",
+              "isMandatory": false,
+              "content": "اتفق الطرفان على أن رسوم التوثيق وتعميد الأمين الشرعي وضريبة التصرفات العقارية وأتعاب منصة دلنّي العقارية [تتحملها الأطراف مناصفة وفق العرف التجاري والقانون]."
+            },
+            {
+              "id": "cls-7",
+              "number": 7,
+              "title": "الشرط الجزائي ونكول الأطراف عن الإتمام",
+              "isMandatory": true,
+              "content": "في حال نكول أحد الطرفين أو رجوعه عن إتمام البيع دون مسوغ شرعي أو قانوني قاهر، يلتزم الطرف الناكل بتعويض الطرف الآخر بما يعادل قيمة العربون المتفق عليه كشرط جزائي ملزم قضائياً."
+            },
+            {
+              "id": "cls-8",
+              "number": 8,
+              "title": "القانون الواجب التطبيق والمحاكم المختصة",
+              "isMandatory": true,
+              "content": "يخضع هذا العقد لأحكام الشريعة الإسلامية والقانون المدني وقوانين التوثيق والتسجيل العقاري السارية في الجمهورية اليمنية، وتختص المحكمة الابتدائية الواقع في دائرتها العقار بنظر أي نزاع قد ينشأ لا قدر الله."
+            }
+          ],
+          "financialTerms": {
+            "totalAmount": 350000,
+            "currency": "USD",
+            "depositAmount": 17500,
+            "paymentSchedule": "certified_check"
+          },
+          "status": "draft"
+        },
+        {
+          "version": 2,
+          "createdAt": "2026-10-20T16:18:06.197Z",
+          "createdBy": {
+            "id": "usr-202",
+            "name": "طارق محمد الحيمي",
+            "role": "seeker"
+          },
+          "summaryOfChanges": "إضافة بند الفحص الهندسي والكروكي الميداني",
+          "clauses": [
+            {
+              "id": "cls-1",
+              "number": 1,
+              "title": "التمهيد وأهلية التعاقد الشرعية والقانونية",
+              "isMandatory": true,
+              "content": "يقر الطرفان (البائع والمشتري) بأهليتهما الشرعية والقانونية المعتبرة شرعاً للتعاقد والتصرف النافي للجهالة، وخلوهما من أي مانع نظامي أو قضائي، وتوافق إرادتهما الحرة على إبرام هذا العقد لبيع وشراء العقار الموصوف ببنوده."
+            },
+            {
+              "id": "cls-2",
+              "number": 2,
+              "title": "محل العقد ومواصفات المبيع وصك البصيرة",
+              "isMandatory": true,
+              "content": "محل هذا البيع هو العقار المسمى [فيلا سوبر ديلوكس حديثة البناء في حدة]، الكائن في [صنعاء (أمانة العاصمة) - صنعاء - حدة]، والبالغ مساحته الإجمالية [9] لبنة عشاري، والمقيد بصك الملكية الشرعية/البصيرة برقم [مقيد بالسجل العقاري المعتمد]."
+            },
+            {
+              "id": "cls-3",
+              "number": 3,
+              "title": "الثمن الإجمالي وجدول الوفاء والعربون",
+              "isMandatory": true,
+              "content": "اتفق الطرفان على أن الثمن الإجمالي المقطوع للعقار هو [350,000 دولار أمريكي]، سدد المشتري منه عربون حجز والتزام قدره [17,500 دولار أمريكي]، ويلتزم المشتري بسداد باقي الثمن وقدره [332,500 دولار أمريكي] بموجب [نقداً بالعملة المحددة] عند تحرير وثيقة الإفراغ والتسليم."
+            },
+            {
+              "id": "cls-4",
+              "number": 4,
+              "title": "المعاينة النافية للجهالة وضمان خلو العقار من النزاع",
+              "isMandatory": true,
+              "content": "يقر المشتري بأنه عاين العقار المبيع المعاينة الشرعية التامة النافية للجهالة وقبله بحالته الراهنة وموقعه وحدوده. كما يقر البائع ويضمن شرعاً وقانوناً خلو المبيع من أي رهن أو حكر أو اختصاص أو حيازة للغير أو أي نزاع قضائي قائم."
+            },
+            {
+              "id": "cls-5",
+              "number": 5,
+              "title": "التسليم والإفراغ ونقل الملكية والتعميد الشرعي",
+              "isMandatory": true,
+              "content": "يلتزم البائع بتسليم العقار المبيع للمشتري خالياً من أي شواغل وتسليم كافة أصول الوثائق والبصائر المعمدة وتعميد وثيقة التنازل لدى الأمين الشرعي المعتمد والسجل العقاري فور استلام كامل الثمن في موعد أقصاه [خلال أسبوعين من إتمام السداد وتعميد الوثائق]."
+            },
+            {
+              "id": "cls-6",
+              "number": 6,
+              "title": "الرسوم والضرائب وأتعاب الوساطة العقارية",
+              "isMandatory": false,
+              "content": "اتفق الطرفان على أن رسوم التوثيق وتعميد الأمين الشرعي وضريبة التصرفات العقارية وأتعاب منصة دلنّي العقارية [تتحملها الأطراف مناصفة وفق العرف التجاري والقانون]."
+            },
+            {
+              "id": "cls-7",
+              "number": 7,
+              "title": "الشرط الجزائي ونكول الأطراف عن الإتمام",
+              "isMandatory": true,
+              "content": "في حال نكول أحد الطرفين أو رجوعه عن إتمام البيع دون مسوغ شرعي أو قانوني قاهر، يلتزم الطرف الناكل بتعويض الطرف الآخر بما يعادل قيمة العربون المتفق عليه كشرط جزائي ملزم قضائياً."
+            },
+            {
+              "id": "cls-8",
+              "number": 8,
+              "title": "القانون الواجب التطبيق والمحاكم المختصة",
+              "isMandatory": true,
+              "content": "يخضع هذا العقد لأحكام الشريعة الإسلامية والقانون المدني وقوانين التوثيق والتسجيل العقاري السارية في الجمهورية اليمنية، وتختص المحكمة الابتدائية الواقع في دائرتها العقار بنظر أي نزاع قد ينشأ لا قدر الله."
+            },
+            {
+              "id": "cls-test-1",
+              "number": 9,
+              "title": "شرط المعاينة الهندسية ومطابقة كروكي الأمانة",
+              "content": "اتفق الطرفان على مطابقة المخطط الهندسي الصادر من مكتب الأشغال العامة بأمانة العاصمة قبل موعد الإفراغ.",
+              "isMandatory": false
+            }
+          ],
+          "financialTerms": {
+            "totalAmount": 350000,
+            "currency": "USD",
+            "depositAmount": 17500,
+            "depositCurrency": "USD",
+            "paymentSchedule": "سداد العربون، وتسليم المتبقي نقداً أو بحوالة بنكية معتمدة",
+            "notes": "تمت مراجعة المسودة وإضافة بند المعاينة الهندسية"
+          },
+          "status": "draft"
+        },
+        {
+          "version": 3,
+          "createdAt": "2026-10-20T16:18:06.228Z",
+          "createdBy": {
+            "id": "usr-202",
+            "name": "طارق محمد الحيمي",
+            "role": "seeker"
+          },
+          "summaryOfChanges": "تعديل السعر بعد الاعتماد",
+          "clauses": [
+            {
+              "id": "cls-1",
+              "number": 1,
+              "title": "التمهيد وأهلية التعاقد الشرعية والقانونية",
+              "isMandatory": true,
+              "content": "يقر الطرفان (البائع والمشتري) بأهليتهما الشرعية والقانونية المعتبرة شرعاً للتعاقد والتصرف النافي للجهالة، وخلوهما من أي مانع نظامي أو قضائي، وتوافق إرادتهما الحرة على إبرام هذا العقد لبيع وشراء العقار الموصوف ببنوده."
+            },
+            {
+              "id": "cls-2",
+              "number": 2,
+              "title": "محل العقد ومواصفات المبيع وصك البصيرة",
+              "isMandatory": true,
+              "content": "محل هذا البيع هو العقار المسمى [فيلا سوبر ديلوكس حديثة البناء في حدة]، الكائن في [صنعاء (أمانة العاصمة) - صنعاء - حدة]، والبالغ مساحته الإجمالية [9] لبنة عشاري، والمقيد بصك الملكية الشرعية/البصيرة برقم [مقيد بالسجل العقاري المعتمد]."
+            },
+            {
+              "id": "cls-3",
+              "number": 3,
+              "title": "الثمن الإجمالي وجدول الوفاء والعربون",
+              "isMandatory": true,
+              "content": "اتفق الطرفان على أن الثمن الإجمالي المقطوع للعقار هو [350,000 دولار أمريكي]، سدد المشتري منه عربون حجز والتزام قدره [17,500 دولار أمريكي]، ويلتزم المشتري بسداد باقي الثمن وقدره [332,500 دولار أمريكي] بموجب [نقداً بالعملة المحددة] عند تحرير وثيقة الإفراغ والتسليم."
+            },
+            {
+              "id": "cls-4",
+              "number": 4,
+              "title": "المعاينة النافية للجهالة وضمان خلو العقار من النزاع",
+              "isMandatory": true,
+              "content": "يقر المشتري بأنه عاين العقار المبيع المعاينة الشرعية التامة النافية للجهالة وقبله بحالته الراهنة وموقعه وحدوده. كما يقر البائع ويضمن شرعاً وقانوناً خلو المبيع من أي رهن أو حكر أو اختصاص أو حيازة للغير أو أي نزاع قضائي قائم."
+            },
+            {
+              "id": "cls-5",
+              "number": 5,
+              "title": "التسليم والإفراغ ونقل الملكية والتعميد الشرعي",
+              "isMandatory": true,
+              "content": "يلتزم البائع بتسليم العقار المبيع للمشتري خالياً من أي شواغل وتسليم كافة أصول الوثائق والبصائر المعمدة وتعميد وثيقة التنازل لدى الأمين الشرعي المعتمد والسجل العقاري فور استلام كامل الثمن في موعد أقصاه [خلال أسبوعين من إتمام السداد وتعميد الوثائق]."
+            },
+            {
+              "id": "cls-6",
+              "number": 6,
+              "title": "الرسوم والضرائب وأتعاب الوساطة العقارية",
+              "isMandatory": false,
+              "content": "اتفق الطرفان على أن رسوم التوثيق وتعميد الأمين الشرعي وضريبة التصرفات العقارية وأتعاب منصة دلنّي العقارية [تتحملها الأطراف مناصفة وفق العرف التجاري والقانون]."
+            },
+            {
+              "id": "cls-7",
+              "number": 7,
+              "title": "الشرط الجزائي ونكول الأطراف عن الإتمام",
+              "isMandatory": true,
+              "content": "في حال نكول أحد الطرفين أو رجوعه عن إتمام البيع دون مسوغ شرعي أو قانوني قاهر، يلتزم الطرف الناكل بتعويض الطرف الآخر بما يعادل قيمة العربون المتفق عليه كشرط جزائي ملزم قضائياً."
+            },
+            {
+              "id": "cls-8",
+              "number": 8,
+              "title": "القانون الواجب التطبيق والمحاكم المختصة",
+              "isMandatory": true,
+              "content": "يخضع هذا العقد لأحكام الشريعة الإسلامية والقانون المدني وقوانين التوثيق والتسجيل العقاري السارية في الجمهورية اليمنية، وتختص المحكمة الابتدائية الواقع في دائرتها العقار بنظر أي نزاع قد ينشأ لا قدر الله."
+            },
+            {
+              "id": "cls-test-1",
+              "number": 9,
+              "title": "شرط المعاينة الهندسية ومطابقة كروكي الأمانة",
+              "content": "اتفق الطرفان على مطابقة المخطط الهندسي الصادر من مكتب الأشغال العامة بأمانة العاصمة قبل موعد الإفراغ.",
+              "isMandatory": false
+            }
+          ],
+          "financialTerms": {
+            "totalAmount": 345000,
+            "currency": "USD",
+            "depositAmount": 17500,
+            "depositCurrency": "USD",
+            "paymentSchedule": "سداد العربون، وتسليم المتبقي نقداً أو بحوالة بنكية معتمدة",
+            "notes": "تمت مراجعة المسودة وإضافة بند المعاينة الهندسية"
+          },
+          "status": "pending_approval"
+        }
+      ],
+      "versions": [
+        {
+          "version": 1,
+          "createdAt": "2026-10-20T16:18:06.182Z",
+          "createdBy": {
+            "id": "usr-101",
+            "name": "أحمد علي الريمي",
+            "role": "advertiser"
+          },
+          "summaryOfChanges": "إنشاء مسودة العقد الرسمية واستيراد بيانات الحجز والشروط المتفق عليها وصك العقار",
+          "clauses": [
+            {
+              "id": "cls-1",
+              "number": 1,
+              "title": "التمهيد وأهلية التعاقد الشرعية والقانونية",
+              "isMandatory": true,
+              "content": "يقر الطرفان (البائع والمشتري) بأهليتهما الشرعية والقانونية المعتبرة شرعاً للتعاقد والتصرف النافي للجهالة، وخلوهما من أي مانع نظامي أو قضائي، وتوافق إرادتهما الحرة على إبرام هذا العقد لبيع وشراء العقار الموصوف ببنوده."
+            },
+            {
+              "id": "cls-2",
+              "number": 2,
+              "title": "محل العقد ومواصفات المبيع وصك البصيرة",
+              "isMandatory": true,
+              "content": "محل هذا البيع هو العقار المسمى [فيلا سوبر ديلوكس حديثة البناء في حدة]، الكائن في [صنعاء (أمانة العاصمة) - صنعاء - حدة]، والبالغ مساحته الإجمالية [9] لبنة عشاري، والمقيد بصك الملكية الشرعية/البصيرة برقم [مقيد بالسجل العقاري المعتمد]."
+            },
+            {
+              "id": "cls-3",
+              "number": 3,
+              "title": "الثمن الإجمالي وجدول الوفاء والعربون",
+              "isMandatory": true,
+              "content": "اتفق الطرفان على أن الثمن الإجمالي المقطوع للعقار هو [350,000 دولار أمريكي]، سدد المشتري منه عربون حجز والتزام قدره [17,500 دولار أمريكي]، ويلتزم المشتري بسداد باقي الثمن وقدره [332,500 دولار أمريكي] بموجب [نقداً بالعملة المحددة] عند تحرير وثيقة الإفراغ والتسليم."
+            },
+            {
+              "id": "cls-4",
+              "number": 4,
+              "title": "المعاينة النافية للجهالة وضمان خلو العقار من النزاع",
+              "isMandatory": true,
+              "content": "يقر المشتري بأنه عاين العقار المبيع المعاينة الشرعية التامة النافية للجهالة وقبله بحالته الراهنة وموقعه وحدوده. كما يقر البائع ويضمن شرعاً وقانوناً خلو المبيع من أي رهن أو حكر أو اختصاص أو حيازة للغير أو أي نزاع قضائي قائم."
+            },
+            {
+              "id": "cls-5",
+              "number": 5,
+              "title": "التسليم والإفراغ ونقل الملكية والتعميد الشرعي",
+              "isMandatory": true,
+              "content": "يلتزم البائع بتسليم العقار المبيع للمشتري خالياً من أي شواغل وتسليم كافة أصول الوثائق والبصائر المعمدة وتعميد وثيقة التنازل لدى الأمين الشرعي المعتمد والسجل العقاري فور استلام كامل الثمن في موعد أقصاه [خلال أسبوعين من إتمام السداد وتعميد الوثائق]."
+            },
+            {
+              "id": "cls-6",
+              "number": 6,
+              "title": "الرسوم والضرائب وأتعاب الوساطة العقارية",
+              "isMandatory": false,
+              "content": "اتفق الطرفان على أن رسوم التوثيق وتعميد الأمين الشرعي وضريبة التصرفات العقارية وأتعاب منصة دلنّي العقارية [تتحملها الأطراف مناصفة وفق العرف التجاري والقانون]."
+            },
+            {
+              "id": "cls-7",
+              "number": 7,
+              "title": "الشرط الجزائي ونكول الأطراف عن الإتمام",
+              "isMandatory": true,
+              "content": "في حال نكول أحد الطرفين أو رجوعه عن إتمام البيع دون مسوغ شرعي أو قانوني قاهر، يلتزم الطرف الناكل بتعويض الطرف الآخر بما يعادل قيمة العربون المتفق عليه كشرط جزائي ملزم قضائياً."
+            },
+            {
+              "id": "cls-8",
+              "number": 8,
+              "title": "القانون الواجب التطبيق والمحاكم المختصة",
+              "isMandatory": true,
+              "content": "يخضع هذا العقد لأحكام الشريعة الإسلامية والقانون المدني وقوانين التوثيق والتسجيل العقاري السارية في الجمهورية اليمنية، وتختص المحكمة الابتدائية الواقع في دائرتها العقار بنظر أي نزاع قد ينشأ لا قدر الله."
+            }
+          ],
+          "financialTerms": {
+            "totalAmount": 350000,
+            "currency": "USD",
+            "depositAmount": 17500,
+            "paymentSchedule": "certified_check"
+          },
+          "status": "draft"
+        },
+        {
+          "version": 2,
+          "createdAt": "2026-10-20T16:18:06.197Z",
+          "createdBy": {
+            "id": "usr-202",
+            "name": "طارق محمد الحيمي",
+            "role": "seeker"
+          },
+          "summaryOfChanges": "إضافة بند الفحص الهندسي والكروكي الميداني",
+          "clauses": [
+            {
+              "id": "cls-1",
+              "number": 1,
+              "title": "التمهيد وأهلية التعاقد الشرعية والقانونية",
+              "isMandatory": true,
+              "content": "يقر الطرفان (البائع والمشتري) بأهليتهما الشرعية والقانونية المعتبرة شرعاً للتعاقد والتصرف النافي للجهالة، وخلوهما من أي مانع نظامي أو قضائي، وتوافق إرادتهما الحرة على إبرام هذا العقد لبيع وشراء العقار الموصوف ببنوده."
+            },
+            {
+              "id": "cls-2",
+              "number": 2,
+              "title": "محل العقد ومواصفات المبيع وصك البصيرة",
+              "isMandatory": true,
+              "content": "محل هذا البيع هو العقار المسمى [فيلا سوبر ديلوكس حديثة البناء في حدة]، الكائن في [صنعاء (أمانة العاصمة) - صنعاء - حدة]، والبالغ مساحته الإجمالية [9] لبنة عشاري، والمقيد بصك الملكية الشرعية/البصيرة برقم [مقيد بالسجل العقاري المعتمد]."
+            },
+            {
+              "id": "cls-3",
+              "number": 3,
+              "title": "الثمن الإجمالي وجدول الوفاء والعربون",
+              "isMandatory": true,
+              "content": "اتفق الطرفان على أن الثمن الإجمالي المقطوع للعقار هو [350,000 دولار أمريكي]، سدد المشتري منه عربون حجز والتزام قدره [17,500 دولار أمريكي]، ويلتزم المشتري بسداد باقي الثمن وقدره [332,500 دولار أمريكي] بموجب [نقداً بالعملة المحددة] عند تحرير وثيقة الإفراغ والتسليم."
+            },
+            {
+              "id": "cls-4",
+              "number": 4,
+              "title": "المعاينة النافية للجهالة وضمان خلو العقار من النزاع",
+              "isMandatory": true,
+              "content": "يقر المشتري بأنه عاين العقار المبيع المعاينة الشرعية التامة النافية للجهالة وقبله بحالته الراهنة وموقعه وحدوده. كما يقر البائع ويضمن شرعاً وقانوناً خلو المبيع من أي رهن أو حكر أو اختصاص أو حيازة للغير أو أي نزاع قضائي قائم."
+            },
+            {
+              "id": "cls-5",
+              "number": 5,
+              "title": "التسليم والإفراغ ونقل الملكية والتعميد الشرعي",
+              "isMandatory": true,
+              "content": "يلتزم البائع بتسليم العقار المبيع للمشتري خالياً من أي شواغل وتسليم كافة أصول الوثائق والبصائر المعمدة وتعميد وثيقة التنازل لدى الأمين الشرعي المعتمد والسجل العقاري فور استلام كامل الثمن في موعد أقصاه [خلال أسبوعين من إتمام السداد وتعميد الوثائق]."
+            },
+            {
+              "id": "cls-6",
+              "number": 6,
+              "title": "الرسوم والضرائب وأتعاب الوساطة العقارية",
+              "isMandatory": false,
+              "content": "اتفق الطرفان على أن رسوم التوثيق وتعميد الأمين الشرعي وضريبة التصرفات العقارية وأتعاب منصة دلنّي العقارية [تتحملها الأطراف مناصفة وفق العرف التجاري والقانون]."
+            },
+            {
+              "id": "cls-7",
+              "number": 7,
+              "title": "الشرط الجزائي ونكول الأطراف عن الإتمام",
+              "isMandatory": true,
+              "content": "في حال نكول أحد الطرفين أو رجوعه عن إتمام البيع دون مسوغ شرعي أو قانوني قاهر، يلتزم الطرف الناكل بتعويض الطرف الآخر بما يعادل قيمة العربون المتفق عليه كشرط جزائي ملزم قضائياً."
+            },
+            {
+              "id": "cls-8",
+              "number": 8,
+              "title": "القانون الواجب التطبيق والمحاكم المختصة",
+              "isMandatory": true,
+              "content": "يخضع هذا العقد لأحكام الشريعة الإسلامية والقانون المدني وقوانين التوثيق والتسجيل العقاري السارية في الجمهورية اليمنية، وتختص المحكمة الابتدائية الواقع في دائرتها العقار بنظر أي نزاع قد ينشأ لا قدر الله."
+            },
+            {
+              "id": "cls-test-1",
+              "number": 9,
+              "title": "شرط المعاينة الهندسية ومطابقة كروكي الأمانة",
+              "content": "اتفق الطرفان على مطابقة المخطط الهندسي الصادر من مكتب الأشغال العامة بأمانة العاصمة قبل موعد الإفراغ.",
+              "isMandatory": false
+            }
+          ],
+          "financialTerms": {
+            "totalAmount": 350000,
+            "currency": "USD",
+            "depositAmount": 17500,
+            "depositCurrency": "USD",
+            "paymentSchedule": "سداد العربون، وتسليم المتبقي نقداً أو بحوالة بنكية معتمدة",
+            "notes": "تمت مراجعة المسودة وإضافة بند المعاينة الهندسية"
+          },
+          "status": "draft"
+        },
+        {
+          "version": 3,
+          "createdAt": "2026-10-20T16:18:06.228Z",
+          "createdBy": {
+            "id": "usr-202",
+            "name": "طارق محمد الحيمي",
+            "role": "seeker"
+          },
+          "summaryOfChanges": "تعديل السعر بعد الاعتماد",
+          "clauses": [
+            {
+              "id": "cls-1",
+              "number": 1,
+              "title": "التمهيد وأهلية التعاقد الشرعية والقانونية",
+              "isMandatory": true,
+              "content": "يقر الطرفان (البائع والمشتري) بأهليتهما الشرعية والقانونية المعتبرة شرعاً للتعاقد والتصرف النافي للجهالة، وخلوهما من أي مانع نظامي أو قضائي، وتوافق إرادتهما الحرة على إبرام هذا العقد لبيع وشراء العقار الموصوف ببنوده."
+            },
+            {
+              "id": "cls-2",
+              "number": 2,
+              "title": "محل العقد ومواصفات المبيع وصك البصيرة",
+              "isMandatory": true,
+              "content": "محل هذا البيع هو العقار المسمى [فيلا سوبر ديلوكس حديثة البناء في حدة]، الكائن في [صنعاء (أمانة العاصمة) - صنعاء - حدة]، والبالغ مساحته الإجمالية [9] لبنة عشاري، والمقيد بصك الملكية الشرعية/البصيرة برقم [مقيد بالسجل العقاري المعتمد]."
+            },
+            {
+              "id": "cls-3",
+              "number": 3,
+              "title": "الثمن الإجمالي وجدول الوفاء والعربون",
+              "isMandatory": true,
+              "content": "اتفق الطرفان على أن الثمن الإجمالي المقطوع للعقار هو [350,000 دولار أمريكي]، سدد المشتري منه عربون حجز والتزام قدره [17,500 دولار أمريكي]، ويلتزم المشتري بسداد باقي الثمن وقدره [332,500 دولار أمريكي] بموجب [نقداً بالعملة المحددة] عند تحرير وثيقة الإفراغ والتسليم."
+            },
+            {
+              "id": "cls-4",
+              "number": 4,
+              "title": "المعاينة النافية للجهالة وضمان خلو العقار من النزاع",
+              "isMandatory": true,
+              "content": "يقر المشتري بأنه عاين العقار المبيع المعاينة الشرعية التامة النافية للجهالة وقبله بحالته الراهنة وموقعه وحدوده. كما يقر البائع ويضمن شرعاً وقانوناً خلو المبيع من أي رهن أو حكر أو اختصاص أو حيازة للغير أو أي نزاع قضائي قائم."
+            },
+            {
+              "id": "cls-5",
+              "number": 5,
+              "title": "التسليم والإفراغ ونقل الملكية والتعميد الشرعي",
+              "isMandatory": true,
+              "content": "يلتزم البائع بتسليم العقار المبيع للمشتري خالياً من أي شواغل وتسليم كافة أصول الوثائق والبصائر المعمدة وتعميد وثيقة التنازل لدى الأمين الشرعي المعتمد والسجل العقاري فور استلام كامل الثمن في موعد أقصاه [خلال أسبوعين من إتمام السداد وتعميد الوثائق]."
+            },
+            {
+              "id": "cls-6",
+              "number": 6,
+              "title": "الرسوم والضرائب وأتعاب الوساطة العقارية",
+              "isMandatory": false,
+              "content": "اتفق الطرفان على أن رسوم التوثيق وتعميد الأمين الشرعي وضريبة التصرفات العقارية وأتعاب منصة دلنّي العقارية [تتحملها الأطراف مناصفة وفق العرف التجاري والقانون]."
+            },
+            {
+              "id": "cls-7",
+              "number": 7,
+              "title": "الشرط الجزائي ونكول الأطراف عن الإتمام",
+              "isMandatory": true,
+              "content": "في حال نكول أحد الطرفين أو رجوعه عن إتمام البيع دون مسوغ شرعي أو قانوني قاهر، يلتزم الطرف الناكل بتعويض الطرف الآخر بما يعادل قيمة العربون المتفق عليه كشرط جزائي ملزم قضائياً."
+            },
+            {
+              "id": "cls-8",
+              "number": 8,
+              "title": "القانون الواجب التطبيق والمحاكم المختصة",
+              "isMandatory": true,
+              "content": "يخضع هذا العقد لأحكام الشريعة الإسلامية والقانون المدني وقوانين التوثيق والتسجيل العقاري السارية في الجمهورية اليمنية، وتختص المحكمة الابتدائية الواقع في دائرتها العقار بنظر أي نزاع قد ينشأ لا قدر الله."
+            },
+            {
+              "id": "cls-test-1",
+              "number": 9,
+              "title": "شرط المعاينة الهندسية ومطابقة كروكي الأمانة",
+              "content": "اتفق الطرفان على مطابقة المخطط الهندسي الصادر من مكتب الأشغال العامة بأمانة العاصمة قبل موعد الإفراغ.",
+              "isMandatory": false
+            }
+          ],
+          "financialTerms": {
+            "totalAmount": 345000,
+            "currency": "USD",
+            "depositAmount": 17500,
+            "depositCurrency": "USD",
+            "paymentSchedule": "سداد العربون، وتسليم المتبقي نقداً أو بحوالة بنكية معتمدة",
+            "notes": "تمت مراجعة المسودة وإضافة بند المعاينة الهندسية"
+          },
+          "status": "pending_approval"
+        }
+      ],
+      "firstPartyApprovedAt": "2026-10-20T16:18:06.236Z",
+      "secondPartyApprovedAt": "2026-10-20T16:18:06.244Z",
+      "notes": "تم إنشاء المسودة تلقائياً بواسطة [أحمد علي الريمي] استناداً إلى الحجز [BKG-TEST-6407].",
+      "createdAt": "2026-10-20",
+      "updatedAt": "2026-10-20",
+      "firstPartyApproval": true,
+      "secondPartyApproval": true,
+      "approvedAt": "2026-10-20T16:18:06.244Z",
+      "approvedBy": "طارق محمد الحيمي",
+      "isModificationPendingApproval": false,
+      "signedAt": "2026-10-20T16:18:06.262Z"
+    },
+    {
+      "id": "cnt-1792513074237",
+      "contractNumber": "CNT-2026-3483",
+      "bookingId": "bkg-test-1792513074216",
+      "bookingNumber": "BKG-TEST-4188",
+      "listingId": "list-101",
+      "listingNumber": "YEM-2026-101",
+      "listingTitle": "فيلا مستقلة راقية للبيع في حدة",
+      "contractType": "sale",
+      "status": "signed",
+      "propertySnapshot": {
+        "title": "فيلا سوبر ديلوكس حديثة البناء في حدة",
+        "propertyType": "villa",
+        "purpose": "sale",
+        "governorate": "صنعاء (أمانة العاصمة)",
+        "city": "صنعاء",
+        "district": "حدة",
+        "street": "شارع 14 المتفرع من شارع الخمسين",
+        "area": 9,
+        "areaUnit": "لبنة عشاري",
+        "deedNumber": "صك مقيد بالسجل العقاري المعتمد",
+        "boundaries": {
+          "north": "شارع معبد نافذ",
+          "south": "عقار مجاور",
+          "east": "شارع فرعي",
+          "west": "عقار مجاور"
+        }
+      },
+      "firstParty": {
+        "id": "usr-101",
+        "name": "هشام عبد الرحمن القدسي",
+        "phone": "777012345",
+        "role": "seller",
+        "nationalIdOrPassport": "1002345678",
+        "address": "صنعاء (أمانة العاصمة) - صنعاء",
+        "signatureStatus": "signed",
+        "signedAt": "2026-10-20T16:17:54.294Z"
+      },
+      "secondParty": {
+        "id": "usr-202",
+        "name": "أصيل محمد الحكيمي",
+        "phone": "778990011",
+        "role": "buyer",
+        "nationalIdOrPassport": "1008765432",
+        "address": "صنعاء",
+        "signatureStatus": "signed",
+        "signedAt": "2026-10-20T16:17:54.302Z"
+      },
+      "witnesses": [
+        {
+          "id": "wit-1",
+          "name": "فضيلة الشيخ / القاضي الأمين الشرعي المعتمد",
+          "phone": "+967 771 000 111",
+          "role": "witness",
+          "nationalIdOrPassport": "ترخيص توثيق شرعي صادر عن وزارة العدل",
+          "signatureStatus": "unsigned"
+        },
+        {
+          "id": "wit-2",
+          "name": "شاهد إثبات ثانٍ",
+          "phone": "+967 772 000 222",
+          "role": "witness",
+          "nationalIdOrPassport": "بطاقة شخصية سارية",
+          "signatureStatus": "unsigned"
+        }
+      ],
+      "brokerOrAgent": {
+        "id": "dalani-broker",
+        "name": "منصة دلنّي العقارية",
+        "phone": "+967 1 445 566",
+        "commissionAmount": 3500,
+        "commissionPayer": "shared_equally"
+      },
+      "financialTerms": {
+        "totalAmount": 345000,
+        "currency": "USD",
+        "depositAmount": 17500,
+        "depositCurrency": "USD",
+        "paymentSchedule": "سداد العربون، وتسليم المتبقي نقداً أو بحوالة بنكية معتمدة",
+        "notes": "تمت مراجعة المسودة وإضافة بند المعاينة الهندسية"
+      },
+      "durationTerms": {
+        "startDate": "2026-10-20",
+        "handoverDate": "خلال أسبوعين من التوقيع"
+      },
+      "clauses": [
+        {
+          "id": "cls-1",
+          "number": 1,
+          "title": "التمهيد وأهلية التعاقد الشرعية والقانونية",
+          "isMandatory": true,
+          "content": "يقر الطرفان (البائع والمشتري) بأهليتهما الشرعية والقانونية المعتبرة شرعاً للتعاقد والتصرف النافي للجهالة، وخلوهما من أي مانع نظامي أو قضائي، وتوافق إرادتهما الحرة على إبرام هذا العقد لبيع وشراء العقار الموصوف ببنوده."
+        },
+        {
+          "id": "cls-2",
+          "number": 2,
+          "title": "محل العقد ومواصفات المبيع وصك البصيرة",
+          "isMandatory": true,
+          "content": "محل هذا البيع هو العقار المسمى [فيلا سوبر ديلوكس حديثة البناء في حدة]، الكائن في [صنعاء (أمانة العاصمة) - صنعاء - حدة]، والبالغ مساحته الإجمالية [9] لبنة عشاري، والمقيد بصك الملكية الشرعية/البصيرة برقم [مقيد بالسجل العقاري المعتمد]."
+        },
+        {
+          "id": "cls-3",
+          "number": 3,
+          "title": "الثمن الإجمالي وجدول الوفاء والعربون",
+          "isMandatory": true,
+          "content": "اتفق الطرفان على أن الثمن الإجمالي المقطوع للعقار هو [350,000 دولار أمريكي]، سدد المشتري منه عربون حجز والتزام قدره [17,500 دولار أمريكي]، ويلتزم المشتري بسداد باقي الثمن وقدره [332,500 دولار أمريكي] بموجب [نقداً بالعملة المحددة] عند تحرير وثيقة الإفراغ والتسليم."
+        },
+        {
+          "id": "cls-4",
+          "number": 4,
+          "title": "المعاينة النافية للجهالة وضمان خلو العقار من النزاع",
+          "isMandatory": true,
+          "content": "يقر المشتري بأنه عاين العقار المبيع المعاينة الشرعية التامة النافية للجهالة وقبله بحالته الراهنة وموقعه وحدوده. كما يقر البائع ويضمن شرعاً وقانوناً خلو المبيع من أي رهن أو حكر أو اختصاص أو حيازة للغير أو أي نزاع قضائي قائم."
+        },
+        {
+          "id": "cls-5",
+          "number": 5,
+          "title": "التسليم والإفراغ ونقل الملكية والتعميد الشرعي",
+          "isMandatory": true,
+          "content": "يلتزم البائع بتسليم العقار المبيع للمشتري خالياً من أي شواغل وتسليم كافة أصول الوثائق والبصائر المعمدة وتعميد وثيقة التنازل لدى الأمين الشرعي المعتمد والسجل العقاري فور استلام كامل الثمن في موعد أقصاه [خلال أسبوعين من إتمام السداد وتعميد الوثائق]."
+        },
+        {
+          "id": "cls-6",
+          "number": 6,
+          "title": "الرسوم والضرائب وأتعاب الوساطة العقارية",
+          "isMandatory": false,
+          "content": "اتفق الطرفان على أن رسوم التوثيق وتعميد الأمين الشرعي وضريبة التصرفات العقارية وأتعاب منصة دلنّي العقارية [تتحملها الأطراف مناصفة وفق العرف التجاري والقانون]."
+        },
+        {
+          "id": "cls-7",
+          "number": 7,
+          "title": "الشرط الجزائي ونكول الأطراف عن الإتمام",
+          "isMandatory": true,
+          "content": "في حال نكول أحد الطرفين أو رجوعه عن إتمام البيع دون مسوغ شرعي أو قانوني قاهر، يلتزم الطرف الناكل بتعويض الطرف الآخر بما يعادل قيمة العربون المتفق عليه كشرط جزائي ملزم قضائياً."
+        },
+        {
+          "id": "cls-8",
+          "number": 8,
+          "title": "القانون الواجب التطبيق والمحاكم المختصة",
+          "isMandatory": true,
+          "content": "يخضع هذا العقد لأحكام الشريعة الإسلامية والقانون المدني وقوانين التوثيق والتسجيل العقاري السارية في الجمهورية اليمنية، وتختص المحكمة الابتدائية الواقع في دائرتها العقار بنظر أي نزاع قد ينشأ لا قدر الله."
+        },
+        {
+          "id": "cls-test-1",
+          "number": 9,
+          "title": "شرط المعاينة الهندسية ومطابقة كروكي الأمانة",
+          "content": "اتفق الطرفان على مطابقة المخطط الهندسي الصادر من مكتب الأشغال العامة بأمانة العاصمة قبل موعد الإفراغ.",
+          "isMandatory": false
+        }
+      ],
+      "currentVersion": 3,
+      "versionHistory": [
+        {
+          "version": 1,
+          "createdAt": "2026-10-20T16:17:54.237Z",
+          "createdBy": {
+            "id": "usr-101",
+            "name": "أحمد علي الريمي",
+            "role": "advertiser"
+          },
+          "summaryOfChanges": "إنشاء مسودة العقد الرسمية واستيراد بيانات الحجز والشروط المتفق عليها وصك العقار",
+          "clauses": [
+            {
+              "id": "cls-1",
+              "number": 1,
+              "title": "التمهيد وأهلية التعاقد الشرعية والقانونية",
+              "isMandatory": true,
+              "content": "يقر الطرفان (البائع والمشتري) بأهليتهما الشرعية والقانونية المعتبرة شرعاً للتعاقد والتصرف النافي للجهالة، وخلوهما من أي مانع نظامي أو قضائي، وتوافق إرادتهما الحرة على إبرام هذا العقد لبيع وشراء العقار الموصوف ببنوده."
+            },
+            {
+              "id": "cls-2",
+              "number": 2,
+              "title": "محل العقد ومواصفات المبيع وصك البصيرة",
+              "isMandatory": true,
+              "content": "محل هذا البيع هو العقار المسمى [فيلا سوبر ديلوكس حديثة البناء في حدة]، الكائن في [صنعاء (أمانة العاصمة) - صنعاء - حدة]، والبالغ مساحته الإجمالية [9] لبنة عشاري، والمقيد بصك الملكية الشرعية/البصيرة برقم [مقيد بالسجل العقاري المعتمد]."
+            },
+            {
+              "id": "cls-3",
+              "number": 3,
+              "title": "الثمن الإجمالي وجدول الوفاء والعربون",
+              "isMandatory": true,
+              "content": "اتفق الطرفان على أن الثمن الإجمالي المقطوع للعقار هو [350,000 دولار أمريكي]، سدد المشتري منه عربون حجز والتزام قدره [17,500 دولار أمريكي]، ويلتزم المشتري بسداد باقي الثمن وقدره [332,500 دولار أمريكي] بموجب [نقداً بالعملة المحددة] عند تحرير وثيقة الإفراغ والتسليم."
+            },
+            {
+              "id": "cls-4",
+              "number": 4,
+              "title": "المعاينة النافية للجهالة وضمان خلو العقار من النزاع",
+              "isMandatory": true,
+              "content": "يقر المشتري بأنه عاين العقار المبيع المعاينة الشرعية التامة النافية للجهالة وقبله بحالته الراهنة وموقعه وحدوده. كما يقر البائع ويضمن شرعاً وقانوناً خلو المبيع من أي رهن أو حكر أو اختصاص أو حيازة للغير أو أي نزاع قضائي قائم."
+            },
+            {
+              "id": "cls-5",
+              "number": 5,
+              "title": "التسليم والإفراغ ونقل الملكية والتعميد الشرعي",
+              "isMandatory": true,
+              "content": "يلتزم البائع بتسليم العقار المبيع للمشتري خالياً من أي شواغل وتسليم كافة أصول الوثائق والبصائر المعمدة وتعميد وثيقة التنازل لدى الأمين الشرعي المعتمد والسجل العقاري فور استلام كامل الثمن في موعد أقصاه [خلال أسبوعين من إتمام السداد وتعميد الوثائق]."
+            },
+            {
+              "id": "cls-6",
+              "number": 6,
+              "title": "الرسوم والضرائب وأتعاب الوساطة العقارية",
+              "isMandatory": false,
+              "content": "اتفق الطرفان على أن رسوم التوثيق وتعميد الأمين الشرعي وضريبة التصرفات العقارية وأتعاب منصة دلنّي العقارية [تتحملها الأطراف مناصفة وفق العرف التجاري والقانون]."
+            },
+            {
+              "id": "cls-7",
+              "number": 7,
+              "title": "الشرط الجزائي ونكول الأطراف عن الإتمام",
+              "isMandatory": true,
+              "content": "في حال نكول أحد الطرفين أو رجوعه عن إتمام البيع دون مسوغ شرعي أو قانوني قاهر، يلتزم الطرف الناكل بتعويض الطرف الآخر بما يعادل قيمة العربون المتفق عليه كشرط جزائي ملزم قضائياً."
+            },
+            {
+              "id": "cls-8",
+              "number": 8,
+              "title": "القانون الواجب التطبيق والمحاكم المختصة",
+              "isMandatory": true,
+              "content": "يخضع هذا العقد لأحكام الشريعة الإسلامية والقانون المدني وقوانين التوثيق والتسجيل العقاري السارية في الجمهورية اليمنية، وتختص المحكمة الابتدائية الواقع في دائرتها العقار بنظر أي نزاع قد ينشأ لا قدر الله."
+            }
+          ],
+          "financialTerms": {
+            "totalAmount": 350000,
+            "currency": "USD",
+            "depositAmount": 17500,
+            "paymentSchedule": "certified_check"
+          },
+          "status": "draft"
+        },
+        {
+          "version": 2,
+          "createdAt": "2026-10-20T16:17:54.250Z",
+          "createdBy": {
+            "id": "usr-202",
+            "name": "طارق محمد الحيمي",
+            "role": "seeker"
+          },
+          "summaryOfChanges": "إضافة بند الفحص الهندسي والكروكي الميداني",
+          "clauses": [
+            {
+              "id": "cls-1",
+              "number": 1,
+              "title": "التمهيد وأهلية التعاقد الشرعية والقانونية",
+              "isMandatory": true,
+              "content": "يقر الطرفان (البائع والمشتري) بأهليتهما الشرعية والقانونية المعتبرة شرعاً للتعاقد والتصرف النافي للجهالة، وخلوهما من أي مانع نظامي أو قضائي، وتوافق إرادتهما الحرة على إبرام هذا العقد لبيع وشراء العقار الموصوف ببنوده."
+            },
+            {
+              "id": "cls-2",
+              "number": 2,
+              "title": "محل العقد ومواصفات المبيع وصك البصيرة",
+              "isMandatory": true,
+              "content": "محل هذا البيع هو العقار المسمى [فيلا سوبر ديلوكس حديثة البناء في حدة]، الكائن في [صنعاء (أمانة العاصمة) - صنعاء - حدة]، والبالغ مساحته الإجمالية [9] لبنة عشاري، والمقيد بصك الملكية الشرعية/البصيرة برقم [مقيد بالسجل العقاري المعتمد]."
+            },
+            {
+              "id": "cls-3",
+              "number": 3,
+              "title": "الثمن الإجمالي وجدول الوفاء والعربون",
+              "isMandatory": true,
+              "content": "اتفق الطرفان على أن الثمن الإجمالي المقطوع للعقار هو [350,000 دولار أمريكي]، سدد المشتري منه عربون حجز والتزام قدره [17,500 دولار أمريكي]، ويلتزم المشتري بسداد باقي الثمن وقدره [332,500 دولار أمريكي] بموجب [نقداً بالعملة المحددة] عند تحرير وثيقة الإفراغ والتسليم."
+            },
+            {
+              "id": "cls-4",
+              "number": 4,
+              "title": "المعاينة النافية للجهالة وضمان خلو العقار من النزاع",
+              "isMandatory": true,
+              "content": "يقر المشتري بأنه عاين العقار المبيع المعاينة الشرعية التامة النافية للجهالة وقبله بحالته الراهنة وموقعه وحدوده. كما يقر البائع ويضمن شرعاً وقانوناً خلو المبيع من أي رهن أو حكر أو اختصاص أو حيازة للغير أو أي نزاع قضائي قائم."
+            },
+            {
+              "id": "cls-5",
+              "number": 5,
+              "title": "التسليم والإفراغ ونقل الملكية والتعميد الشرعي",
+              "isMandatory": true,
+              "content": "يلتزم البائع بتسليم العقار المبيع للمشتري خالياً من أي شواغل وتسليم كافة أصول الوثائق والبصائر المعمدة وتعميد وثيقة التنازل لدى الأمين الشرعي المعتمد والسجل العقاري فور استلام كامل الثمن في موعد أقصاه [خلال أسبوعين من إتمام السداد وتعميد الوثائق]."
+            },
+            {
+              "id": "cls-6",
+              "number": 6,
+              "title": "الرسوم والضرائب وأتعاب الوساطة العقارية",
+              "isMandatory": false,
+              "content": "اتفق الطرفان على أن رسوم التوثيق وتعميد الأمين الشرعي وضريبة التصرفات العقارية وأتعاب منصة دلنّي العقارية [تتحملها الأطراف مناصفة وفق العرف التجاري والقانون]."
+            },
+            {
+              "id": "cls-7",
+              "number": 7,
+              "title": "الشرط الجزائي ونكول الأطراف عن الإتمام",
+              "isMandatory": true,
+              "content": "في حال نكول أحد الطرفين أو رجوعه عن إتمام البيع دون مسوغ شرعي أو قانوني قاهر، يلتزم الطرف الناكل بتعويض الطرف الآخر بما يعادل قيمة العربون المتفق عليه كشرط جزائي ملزم قضائياً."
+            },
+            {
+              "id": "cls-8",
+              "number": 8,
+              "title": "القانون الواجب التطبيق والمحاكم المختصة",
+              "isMandatory": true,
+              "content": "يخضع هذا العقد لأحكام الشريعة الإسلامية والقانون المدني وقوانين التوثيق والتسجيل العقاري السارية في الجمهورية اليمنية، وتختص المحكمة الابتدائية الواقع في دائرتها العقار بنظر أي نزاع قد ينشأ لا قدر الله."
+            },
+            {
+              "id": "cls-test-1",
+              "number": 9,
+              "title": "شرط المعاينة الهندسية ومطابقة كروكي الأمانة",
+              "content": "اتفق الطرفان على مطابقة المخطط الهندسي الصادر من مكتب الأشغال العامة بأمانة العاصمة قبل موعد الإفراغ.",
+              "isMandatory": false
+            }
+          ],
+          "financialTerms": {
+            "totalAmount": 350000,
+            "currency": "USD",
+            "depositAmount": 17500,
+            "depositCurrency": "USD",
+            "paymentSchedule": "سداد العربون، وتسليم المتبقي نقداً أو بحوالة بنكية معتمدة",
+            "notes": "تمت مراجعة المسودة وإضافة بند المعاينة الهندسية"
+          },
+          "status": "draft"
+        },
+        {
+          "version": 3,
+          "createdAt": "2026-10-20T16:17:54.273Z",
+          "createdBy": {
+            "id": "usr-202",
+            "name": "طارق محمد الحيمي",
+            "role": "seeker"
+          },
+          "summaryOfChanges": "تعديل السعر بعد الاعتماد",
+          "clauses": [
+            {
+              "id": "cls-1",
+              "number": 1,
+              "title": "التمهيد وأهلية التعاقد الشرعية والقانونية",
+              "isMandatory": true,
+              "content": "يقر الطرفان (البائع والمشتري) بأهليتهما الشرعية والقانونية المعتبرة شرعاً للتعاقد والتصرف النافي للجهالة، وخلوهما من أي مانع نظامي أو قضائي، وتوافق إرادتهما الحرة على إبرام هذا العقد لبيع وشراء العقار الموصوف ببنوده."
+            },
+            {
+              "id": "cls-2",
+              "number": 2,
+              "title": "محل العقد ومواصفات المبيع وصك البصيرة",
+              "isMandatory": true,
+              "content": "محل هذا البيع هو العقار المسمى [فيلا سوبر ديلوكس حديثة البناء في حدة]، الكائن في [صنعاء (أمانة العاصمة) - صنعاء - حدة]، والبالغ مساحته الإجمالية [9] لبنة عشاري، والمقيد بصك الملكية الشرعية/البصيرة برقم [مقيد بالسجل العقاري المعتمد]."
+            },
+            {
+              "id": "cls-3",
+              "number": 3,
+              "title": "الثمن الإجمالي وجدول الوفاء والعربون",
+              "isMandatory": true,
+              "content": "اتفق الطرفان على أن الثمن الإجمالي المقطوع للعقار هو [350,000 دولار أمريكي]، سدد المشتري منه عربون حجز والتزام قدره [17,500 دولار أمريكي]، ويلتزم المشتري بسداد باقي الثمن وقدره [332,500 دولار أمريكي] بموجب [نقداً بالعملة المحددة] عند تحرير وثيقة الإفراغ والتسليم."
+            },
+            {
+              "id": "cls-4",
+              "number": 4,
+              "title": "المعاينة النافية للجهالة وضمان خلو العقار من النزاع",
+              "isMandatory": true,
+              "content": "يقر المشتري بأنه عاين العقار المبيع المعاينة الشرعية التامة النافية للجهالة وقبله بحالته الراهنة وموقعه وحدوده. كما يقر البائع ويضمن شرعاً وقانوناً خلو المبيع من أي رهن أو حكر أو اختصاص أو حيازة للغير أو أي نزاع قضائي قائم."
+            },
+            {
+              "id": "cls-5",
+              "number": 5,
+              "title": "التسليم والإفراغ ونقل الملكية والتعميد الشرعي",
+              "isMandatory": true,
+              "content": "يلتزم البائع بتسليم العقار المبيع للمشتري خالياً من أي شواغل وتسليم كافة أصول الوثائق والبصائر المعمدة وتعميد وثيقة التنازل لدى الأمين الشرعي المعتمد والسجل العقاري فور استلام كامل الثمن في موعد أقصاه [خلال أسبوعين من إتمام السداد وتعميد الوثائق]."
+            },
+            {
+              "id": "cls-6",
+              "number": 6,
+              "title": "الرسوم والضرائب وأتعاب الوساطة العقارية",
+              "isMandatory": false,
+              "content": "اتفق الطرفان على أن رسوم التوثيق وتعميد الأمين الشرعي وضريبة التصرفات العقارية وأتعاب منصة دلنّي العقارية [تتحملها الأطراف مناصفة وفق العرف التجاري والقانون]."
+            },
+            {
+              "id": "cls-7",
+              "number": 7,
+              "title": "الشرط الجزائي ونكول الأطراف عن الإتمام",
+              "isMandatory": true,
+              "content": "في حال نكول أحد الطرفين أو رجوعه عن إتمام البيع دون مسوغ شرعي أو قانوني قاهر، يلتزم الطرف الناكل بتعويض الطرف الآخر بما يعادل قيمة العربون المتفق عليه كشرط جزائي ملزم قضائياً."
+            },
+            {
+              "id": "cls-8",
+              "number": 8,
+              "title": "القانون الواجب التطبيق والمحاكم المختصة",
+              "isMandatory": true,
+              "content": "يخضع هذا العقد لأحكام الشريعة الإسلامية والقانون المدني وقوانين التوثيق والتسجيل العقاري السارية في الجمهورية اليمنية، وتختص المحكمة الابتدائية الواقع في دائرتها العقار بنظر أي نزاع قد ينشأ لا قدر الله."
+            },
+            {
+              "id": "cls-test-1",
+              "number": 9,
+              "title": "شرط المعاينة الهندسية ومطابقة كروكي الأمانة",
+              "content": "اتفق الطرفان على مطابقة المخطط الهندسي الصادر من مكتب الأشغال العامة بأمانة العاصمة قبل موعد الإفراغ.",
+              "isMandatory": false
+            }
+          ],
+          "financialTerms": {
+            "totalAmount": 345000,
+            "currency": "USD",
+            "depositAmount": 17500,
+            "depositCurrency": "USD",
+            "paymentSchedule": "سداد العربون، وتسليم المتبقي نقداً أو بحوالة بنكية معتمدة",
+            "notes": "تمت مراجعة المسودة وإضافة بند المعاينة الهندسية"
+          },
+          "status": "pending_approval"
+        }
+      ],
+      "versions": [
+        {
+          "version": 1,
+          "createdAt": "2026-10-20T16:17:54.237Z",
+          "createdBy": {
+            "id": "usr-101",
+            "name": "أحمد علي الريمي",
+            "role": "advertiser"
+          },
+          "summaryOfChanges": "إنشاء مسودة العقد الرسمية واستيراد بيانات الحجز والشروط المتفق عليها وصك العقار",
+          "clauses": [
+            {
+              "id": "cls-1",
+              "number": 1,
+              "title": "التمهيد وأهلية التعاقد الشرعية والقانونية",
+              "isMandatory": true,
+              "content": "يقر الطرفان (البائع والمشتري) بأهليتهما الشرعية والقانونية المعتبرة شرعاً للتعاقد والتصرف النافي للجهالة، وخلوهما من أي مانع نظامي أو قضائي، وتوافق إرادتهما الحرة على إبرام هذا العقد لبيع وشراء العقار الموصوف ببنوده."
+            },
+            {
+              "id": "cls-2",
+              "number": 2,
+              "title": "محل العقد ومواصفات المبيع وصك البصيرة",
+              "isMandatory": true,
+              "content": "محل هذا البيع هو العقار المسمى [فيلا سوبر ديلوكس حديثة البناء في حدة]، الكائن في [صنعاء (أمانة العاصمة) - صنعاء - حدة]، والبالغ مساحته الإجمالية [9] لبنة عشاري، والمقيد بصك الملكية الشرعية/البصيرة برقم [مقيد بالسجل العقاري المعتمد]."
+            },
+            {
+              "id": "cls-3",
+              "number": 3,
+              "title": "الثمن الإجمالي وجدول الوفاء والعربون",
+              "isMandatory": true,
+              "content": "اتفق الطرفان على أن الثمن الإجمالي المقطوع للعقار هو [350,000 دولار أمريكي]، سدد المشتري منه عربون حجز والتزام قدره [17,500 دولار أمريكي]، ويلتزم المشتري بسداد باقي الثمن وقدره [332,500 دولار أمريكي] بموجب [نقداً بالعملة المحددة] عند تحرير وثيقة الإفراغ والتسليم."
+            },
+            {
+              "id": "cls-4",
+              "number": 4,
+              "title": "المعاينة النافية للجهالة وضمان خلو العقار من النزاع",
+              "isMandatory": true,
+              "content": "يقر المشتري بأنه عاين العقار المبيع المعاينة الشرعية التامة النافية للجهالة وقبله بحالته الراهنة وموقعه وحدوده. كما يقر البائع ويضمن شرعاً وقانوناً خلو المبيع من أي رهن أو حكر أو اختصاص أو حيازة للغير أو أي نزاع قضائي قائم."
+            },
+            {
+              "id": "cls-5",
+              "number": 5,
+              "title": "التسليم والإفراغ ونقل الملكية والتعميد الشرعي",
+              "isMandatory": true,
+              "content": "يلتزم البائع بتسليم العقار المبيع للمشتري خالياً من أي شواغل وتسليم كافة أصول الوثائق والبصائر المعمدة وتعميد وثيقة التنازل لدى الأمين الشرعي المعتمد والسجل العقاري فور استلام كامل الثمن في موعد أقصاه [خلال أسبوعين من إتمام السداد وتعميد الوثائق]."
+            },
+            {
+              "id": "cls-6",
+              "number": 6,
+              "title": "الرسوم والضرائب وأتعاب الوساطة العقارية",
+              "isMandatory": false,
+              "content": "اتفق الطرفان على أن رسوم التوثيق وتعميد الأمين الشرعي وضريبة التصرفات العقارية وأتعاب منصة دلنّي العقارية [تتحملها الأطراف مناصفة وفق العرف التجاري والقانون]."
+            },
+            {
+              "id": "cls-7",
+              "number": 7,
+              "title": "الشرط الجزائي ونكول الأطراف عن الإتمام",
+              "isMandatory": true,
+              "content": "في حال نكول أحد الطرفين أو رجوعه عن إتمام البيع دون مسوغ شرعي أو قانوني قاهر، يلتزم الطرف الناكل بتعويض الطرف الآخر بما يعادل قيمة العربون المتفق عليه كشرط جزائي ملزم قضائياً."
+            },
+            {
+              "id": "cls-8",
+              "number": 8,
+              "title": "القانون الواجب التطبيق والمحاكم المختصة",
+              "isMandatory": true,
+              "content": "يخضع هذا العقد لأحكام الشريعة الإسلامية والقانون المدني وقوانين التوثيق والتسجيل العقاري السارية في الجمهورية اليمنية، وتختص المحكمة الابتدائية الواقع في دائرتها العقار بنظر أي نزاع قد ينشأ لا قدر الله."
+            }
+          ],
+          "financialTerms": {
+            "totalAmount": 350000,
+            "currency": "USD",
+            "depositAmount": 17500,
+            "paymentSchedule": "certified_check"
+          },
+          "status": "draft"
+        },
+        {
+          "version": 2,
+          "createdAt": "2026-10-20T16:17:54.250Z",
+          "createdBy": {
+            "id": "usr-202",
+            "name": "طارق محمد الحيمي",
+            "role": "seeker"
+          },
+          "summaryOfChanges": "إضافة بند الفحص الهندسي والكروكي الميداني",
+          "clauses": [
+            {
+              "id": "cls-1",
+              "number": 1,
+              "title": "التمهيد وأهلية التعاقد الشرعية والقانونية",
+              "isMandatory": true,
+              "content": "يقر الطرفان (البائع والمشتري) بأهليتهما الشرعية والقانونية المعتبرة شرعاً للتعاقد والتصرف النافي للجهالة، وخلوهما من أي مانع نظامي أو قضائي، وتوافق إرادتهما الحرة على إبرام هذا العقد لبيع وشراء العقار الموصوف ببنوده."
+            },
+            {
+              "id": "cls-2",
+              "number": 2,
+              "title": "محل العقد ومواصفات المبيع وصك البصيرة",
+              "isMandatory": true,
+              "content": "محل هذا البيع هو العقار المسمى [فيلا سوبر ديلوكس حديثة البناء في حدة]، الكائن في [صنعاء (أمانة العاصمة) - صنعاء - حدة]، والبالغ مساحته الإجمالية [9] لبنة عشاري، والمقيد بصك الملكية الشرعية/البصيرة برقم [مقيد بالسجل العقاري المعتمد]."
+            },
+            {
+              "id": "cls-3",
+              "number": 3,
+              "title": "الثمن الإجمالي وجدول الوفاء والعربون",
+              "isMandatory": true,
+              "content": "اتفق الطرفان على أن الثمن الإجمالي المقطوع للعقار هو [350,000 دولار أمريكي]، سدد المشتري منه عربون حجز والتزام قدره [17,500 دولار أمريكي]، ويلتزم المشتري بسداد باقي الثمن وقدره [332,500 دولار أمريكي] بموجب [نقداً بالعملة المحددة] عند تحرير وثيقة الإفراغ والتسليم."
+            },
+            {
+              "id": "cls-4",
+              "number": 4,
+              "title": "المعاينة النافية للجهالة وضمان خلو العقار من النزاع",
+              "isMandatory": true,
+              "content": "يقر المشتري بأنه عاين العقار المبيع المعاينة الشرعية التامة النافية للجهالة وقبله بحالته الراهنة وموقعه وحدوده. كما يقر البائع ويضمن شرعاً وقانوناً خلو المبيع من أي رهن أو حكر أو اختصاص أو حيازة للغير أو أي نزاع قضائي قائم."
+            },
+            {
+              "id": "cls-5",
+              "number": 5,
+              "title": "التسليم والإفراغ ونقل الملكية والتعميد الشرعي",
+              "isMandatory": true,
+              "content": "يلتزم البائع بتسليم العقار المبيع للمشتري خالياً من أي شواغل وتسليم كافة أصول الوثائق والبصائر المعمدة وتعميد وثيقة التنازل لدى الأمين الشرعي المعتمد والسجل العقاري فور استلام كامل الثمن في موعد أقصاه [خلال أسبوعين من إتمام السداد وتعميد الوثائق]."
+            },
+            {
+              "id": "cls-6",
+              "number": 6,
+              "title": "الرسوم والضرائب وأتعاب الوساطة العقارية",
+              "isMandatory": false,
+              "content": "اتفق الطرفان على أن رسوم التوثيق وتعميد الأمين الشرعي وضريبة التصرفات العقارية وأتعاب منصة دلنّي العقارية [تتحملها الأطراف مناصفة وفق العرف التجاري والقانون]."
+            },
+            {
+              "id": "cls-7",
+              "number": 7,
+              "title": "الشرط الجزائي ونكول الأطراف عن الإتمام",
+              "isMandatory": true,
+              "content": "في حال نكول أحد الطرفين أو رجوعه عن إتمام البيع دون مسوغ شرعي أو قانوني قاهر، يلتزم الطرف الناكل بتعويض الطرف الآخر بما يعادل قيمة العربون المتفق عليه كشرط جزائي ملزم قضائياً."
+            },
+            {
+              "id": "cls-8",
+              "number": 8,
+              "title": "القانون الواجب التطبيق والمحاكم المختصة",
+              "isMandatory": true,
+              "content": "يخضع هذا العقد لأحكام الشريعة الإسلامية والقانون المدني وقوانين التوثيق والتسجيل العقاري السارية في الجمهورية اليمنية، وتختص المحكمة الابتدائية الواقع في دائرتها العقار بنظر أي نزاع قد ينشأ لا قدر الله."
+            },
+            {
+              "id": "cls-test-1",
+              "number": 9,
+              "title": "شرط المعاينة الهندسية ومطابقة كروكي الأمانة",
+              "content": "اتفق الطرفان على مطابقة المخطط الهندسي الصادر من مكتب الأشغال العامة بأمانة العاصمة قبل موعد الإفراغ.",
+              "isMandatory": false
+            }
+          ],
+          "financialTerms": {
+            "totalAmount": 350000,
+            "currency": "USD",
+            "depositAmount": 17500,
+            "depositCurrency": "USD",
+            "paymentSchedule": "سداد العربون، وتسليم المتبقي نقداً أو بحوالة بنكية معتمدة",
+            "notes": "تمت مراجعة المسودة وإضافة بند المعاينة الهندسية"
+          },
+          "status": "draft"
+        },
+        {
+          "version": 3,
+          "createdAt": "2026-10-20T16:17:54.273Z",
+          "createdBy": {
+            "id": "usr-202",
+            "name": "طارق محمد الحيمي",
+            "role": "seeker"
+          },
+          "summaryOfChanges": "تعديل السعر بعد الاعتماد",
+          "clauses": [
+            {
+              "id": "cls-1",
+              "number": 1,
+              "title": "التمهيد وأهلية التعاقد الشرعية والقانونية",
+              "isMandatory": true,
+              "content": "يقر الطرفان (البائع والمشتري) بأهليتهما الشرعية والقانونية المعتبرة شرعاً للتعاقد والتصرف النافي للجهالة، وخلوهما من أي مانع نظامي أو قضائي، وتوافق إرادتهما الحرة على إبرام هذا العقد لبيع وشراء العقار الموصوف ببنوده."
+            },
+            {
+              "id": "cls-2",
+              "number": 2,
+              "title": "محل العقد ومواصفات المبيع وصك البصيرة",
+              "isMandatory": true,
+              "content": "محل هذا البيع هو العقار المسمى [فيلا سوبر ديلوكس حديثة البناء في حدة]، الكائن في [صنعاء (أمانة العاصمة) - صنعاء - حدة]، والبالغ مساحته الإجمالية [9] لبنة عشاري، والمقيد بصك الملكية الشرعية/البصيرة برقم [مقيد بالسجل العقاري المعتمد]."
+            },
+            {
+              "id": "cls-3",
+              "number": 3,
+              "title": "الثمن الإجمالي وجدول الوفاء والعربون",
+              "isMandatory": true,
+              "content": "اتفق الطرفان على أن الثمن الإجمالي المقطوع للعقار هو [350,000 دولار أمريكي]، سدد المشتري منه عربون حجز والتزام قدره [17,500 دولار أمريكي]، ويلتزم المشتري بسداد باقي الثمن وقدره [332,500 دولار أمريكي] بموجب [نقداً بالعملة المحددة] عند تحرير وثيقة الإفراغ والتسليم."
+            },
+            {
+              "id": "cls-4",
+              "number": 4,
+              "title": "المعاينة النافية للجهالة وضمان خلو العقار من النزاع",
+              "isMandatory": true,
+              "content": "يقر المشتري بأنه عاين العقار المبيع المعاينة الشرعية التامة النافية للجهالة وقبله بحالته الراهنة وموقعه وحدوده. كما يقر البائع ويضمن شرعاً وقانوناً خلو المبيع من أي رهن أو حكر أو اختصاص أو حيازة للغير أو أي نزاع قضائي قائم."
+            },
+            {
+              "id": "cls-5",
+              "number": 5,
+              "title": "التسليم والإفراغ ونقل الملكية والتعميد الشرعي",
+              "isMandatory": true,
+              "content": "يلتزم البائع بتسليم العقار المبيع للمشتري خالياً من أي شواغل وتسليم كافة أصول الوثائق والبصائر المعمدة وتعميد وثيقة التنازل لدى الأمين الشرعي المعتمد والسجل العقاري فور استلام كامل الثمن في موعد أقصاه [خلال أسبوعين من إتمام السداد وتعميد الوثائق]."
+            },
+            {
+              "id": "cls-6",
+              "number": 6,
+              "title": "الرسوم والضرائب وأتعاب الوساطة العقارية",
+              "isMandatory": false,
+              "content": "اتفق الطرفان على أن رسوم التوثيق وتعميد الأمين الشرعي وضريبة التصرفات العقارية وأتعاب منصة دلنّي العقارية [تتحملها الأطراف مناصفة وفق العرف التجاري والقانون]."
+            },
+            {
+              "id": "cls-7",
+              "number": 7,
+              "title": "الشرط الجزائي ونكول الأطراف عن الإتمام",
+              "isMandatory": true,
+              "content": "في حال نكول أحد الطرفين أو رجوعه عن إتمام البيع دون مسوغ شرعي أو قانوني قاهر، يلتزم الطرف الناكل بتعويض الطرف الآخر بما يعادل قيمة العربون المتفق عليه كشرط جزائي ملزم قضائياً."
+            },
+            {
+              "id": "cls-8",
+              "number": 8,
+              "title": "القانون الواجب التطبيق والمحاكم المختصة",
+              "isMandatory": true,
+              "content": "يخضع هذا العقد لأحكام الشريعة الإسلامية والقانون المدني وقوانين التوثيق والتسجيل العقاري السارية في الجمهورية اليمنية، وتختص المحكمة الابتدائية الواقع في دائرتها العقار بنظر أي نزاع قد ينشأ لا قدر الله."
+            },
+            {
+              "id": "cls-test-1",
+              "number": 9,
+              "title": "شرط المعاينة الهندسية ومطابقة كروكي الأمانة",
+              "content": "اتفق الطرفان على مطابقة المخطط الهندسي الصادر من مكتب الأشغال العامة بأمانة العاصمة قبل موعد الإفراغ.",
+              "isMandatory": false
+            }
+          ],
+          "financialTerms": {
+            "totalAmount": 345000,
+            "currency": "USD",
+            "depositAmount": 17500,
+            "depositCurrency": "USD",
+            "paymentSchedule": "سداد العربون، وتسليم المتبقي نقداً أو بحوالة بنكية معتمدة",
+            "notes": "تمت مراجعة المسودة وإضافة بند المعاينة الهندسية"
+          },
+          "status": "pending_approval"
+        }
+      ],
+      "firstPartyApprovedAt": "2026-10-20T16:17:54.281Z",
+      "secondPartyApprovedAt": "2026-10-20T16:17:54.287Z",
+      "notes": "تم إنشاء المسودة تلقائياً بواسطة [أحمد علي الريمي] استناداً إلى الحجز [BKG-TEST-4188].",
+      "createdAt": "2026-10-20",
+      "updatedAt": "2026-10-20",
+      "firstPartyApproval": true,
+      "secondPartyApproval": true,
+      "approvedAt": "2026-10-20T16:17:54.287Z",
+      "approvedBy": "طارق محمد الحيمي",
+      "isModificationPendingApproval": false,
+      "signedAt": "2026-10-20T16:17:54.302Z",
+      "requestId": ""
+    },
+    {
+      "id": "cnt-1792513007445",
+      "contractNumber": "CNT-2026-9347",
+      "bookingId": "bkg-1792372476615-376",
+      "bookingNumber": "BKG-2026-2002",
+      "requestId": "req-1792372472372-799",
+      "listingId": "list-103",
+      "listingNumber": "YEM-2026-103",
+      "listingTitle": "أرض سكنية تجارية ممتازة على شارعين في بيت بوس",
+      "contractType": "sale",
+      "status": "signed",
+      "propertySnapshot": {
+        "title": "أرض سكنية تجارية ممتازة على شارعين في بيت بوس",
+        "propertyType": "land",
+        "purpose": "sale",
+        "governorate": "صنعاء (أمانة العاصمة)",
+        "city": "صنعاء",
+        "district": "بيت بوس",
+        "street": "شارع بيت بوس خلف محطة التوفيق",
+        "area": 8,
+        "areaUnit": "لبنة عشاري",
+        "deedNumber": "صك مقيد بالسجل العقاري المعتمد",
+        "boundaries": {
+          "north": "شارع معبد نافذ",
+          "south": "عقار مجاور",
+          "east": "شارع فرعي",
+          "west": "عقار مجاور"
+        }
+      },
+      "firstParty": {
+        "id": "adv-1",
+        "name": "هشام عبد الرحمن القدسي",
+        "phone": "777012345",
+        "role": "seller",
+        "nationalIdOrPassport": "بطاقة شخصية صادرة من الجمهورية اليمنية",
+        "address": "صنعاء (أمانة العاصمة) - صنعاء",
+        "signatureStatus": "signed",
+        "signedAt": "2026-10-20T16:16:47.464Z"
+      },
+      "secondParty": {
+        "id": "usr-seeker",
+        "name": "أصيل محمد الحكيمي",
+        "phone": "778990011",
+        "role": "buyer",
+        "nationalIdOrPassport": "بطاقة شخصية صادرة من الجمهورية اليمنية",
+        "address": "صنعاء",
+        "signatureStatus": "signed",
+        "signedAt": "2026-10-20T16:16:47.472Z"
+      },
+      "witnesses": [
+        {
+          "id": "wit-1",
+          "name": "فضيلة الشيخ / القاضي الأمين الشرعي المعتمد",
+          "phone": "+967 771 000 111",
+          "role": "witness",
+          "nationalIdOrPassport": "ترخيص توثيق شرعي صادر عن وزارة العدل",
+          "signatureStatus": "unsigned"
+        },
+        {
+          "id": "wit-2",
+          "name": "شاهد إثبات ثانٍ",
+          "phone": "+967 772 000 222",
+          "role": "witness",
+          "nationalIdOrPassport": "بطاقة شخصية سارية",
+          "signatureStatus": "unsigned"
+        }
+      ],
+      "brokerOrAgent": {
+        "id": "dalani-broker",
+        "name": "منصة دلنّي العقارية",
+        "phone": "+967 1 445 566",
+        "commissionAmount": 3600000,
+        "commissionPayer": "shared_equally"
+      },
+      "financialTerms": {
+        "totalAmount": 360000000,
+        "currency": "YER",
+        "depositAmount": 18000000,
+        "depositCurrency": "YER",
+        "paymentSchedule": "سداد العربون، وتسليم المتبقي بشيك مصرفي مصدق عند توقيع وثيقة الإفراغ والتسليم",
+        "notes": "تمت مراجعة المسودة وإضافة بند المعاينة الهندسية"
+      },
+      "durationTerms": {
+        "startDate": "2026-10-20",
+        "handoverDate": "2026-11-01"
+      },
+      "clauses": [
+        {
+          "id": "cls-1",
+          "number": 1,
+          "title": "التمهيد وأهلية التعاقد الشرعية والقانونية",
+          "isMandatory": true,
+          "content": "يقر الطرفان (البائع والمشتري) بأهليتهما الشرعية والقانونية المعتبرة شرعاً للتعاقد والتصرف النافي للجهالة، وخلوهما من أي مانع نظامي أو قضائي، وتوافق إرادتهما الحرة على إبرام هذا العقد لبيع وشراء العقار الموصوف ببنوده."
+        },
+        {
+          "id": "cls-2",
+          "number": 2,
+          "title": "محل العقد ومواصفات المبيع وصك البصيرة",
+          "isMandatory": true,
+          "content": "محل هذا البيع هو العقار المسمى [أرض سكنية تجارية ممتازة على شارعين في بيت بوس]، الكائن في [صنعاء (أمانة العاصمة) - صنعاء - بيت بوس]، والبالغ مساحته الإجمالية [8] لبنة عشاري، والمقيد بصك الملكية الشرعية/البصيرة برقم [مقيد بالسجل العقاري المعتمد]."
+        },
+        {
+          "id": "cls-3",
+          "number": 3,
+          "title": "الثمن الإجمالي وجدول الوفاء والعربون",
+          "isMandatory": true,
+          "content": "اتفق الطرفان على أن الثمن الإجمالي المقطوع للعقار هو [360,000,000 ريال يمني]، سدد المشتري منه عربون حجز والتزام قدره [18,000,000 ريال يمني]، ويلتزم المشتري بسداد باقي الثمن وقدره [342,000,000 ريال يمني] بموجب [شيك مصرفي مصدق] عند تحرير وثيقة الإفراغ والتسليم."
+        },
+        {
+          "id": "cls-4",
+          "number": 4,
+          "title": "المعاينة النافية للجهالة وضمان خلو العقار من النزاع",
+          "isMandatory": true,
+          "content": "يقر المشتري بأنه عاين العقار المبيع المعاينة الشرعية التامة النافية للجهالة وقبله بحالته الراهنة وموقعه وحدوده. كما يقر البائع ويضمن شرعاً وقانوناً خلو المبيع من أي رهن أو حكر أو اختصاص أو حيازة للغير أو أي نزاع قضائي قائم."
+        },
+        {
+          "id": "cls-5",
+          "number": 5,
+          "title": "التسليم والإفراغ ونقل الملكية والتعميد الشرعي",
+          "isMandatory": true,
+          "content": "يلتزم البائع بتسليم العقار المبيع للمشتري خالياً من أي شواغل وتسليم كافة أصول الوثائق والبصائر المعمدة وتعميد وثيقة التنازل لدى الأمين الشرعي المعتمد والسجل العقاري فور استلام كامل الثمن في موعد أقصاه [2026-11-01]."
+        },
+        {
+          "id": "cls-6",
+          "number": 6,
+          "title": "الرسوم والضرائب وأتعاب الوساطة العقارية",
+          "isMandatory": false,
+          "content": "اتفق الطرفان على أن رسوم التوثيق وتعميد الأمين الشرعي وضريبة التصرفات العقارية وأتعاب منصة دلنّي العقارية [تتحملها الأطراف مناصفة وفق العرف التجاري والقانون]."
+        },
+        {
+          "id": "cls-7",
+          "number": 7,
+          "title": "الشرط الجزائي ونكول الأطراف عن الإتمام",
+          "isMandatory": true,
+          "content": "في حال نكول أحد الطرفين أو رجوعه عن إتمام البيع دون مسوغ شرعي أو قانوني قاهر، يلتزم الطرف الناكل بتعويض الطرف الآخر بما يعادل قيمة العربون المتفق عليه كشرط جزائي ملزم قضائياً."
+        },
+        {
+          "id": "cls-8",
+          "number": 8,
+          "title": "القانون الواجب التطبيق والمحاكم المختصة",
+          "isMandatory": true,
+          "content": "يخضع هذا العقد لأحكام الشريعة الإسلامية والقانون المدني وقوانين التوثيق والتسجيل العقاري السارية في الجمهورية اليمنية، وتختص المحكمة الابتدائية الواقع في دائرتها العقار بنظر أي نزاع قد ينشأ لا قدر الله."
+        },
+        {
+          "id": "cls-special-1",
+          "number": 9,
+          "title": "شرط خاص متفق عليه بين الطرفين (1)",
+          "isMandatory": false,
+          "content": "فحص وثائق الملكية والبصيرة الشرعية قبل سداد الدفعة النهائية"
+        },
+        {
+          "id": "cls-special-2",
+          "number": 10,
+          "title": "شرط خاص متفق عليه بين الطرفين (2)",
+          "isMandatory": false,
+          "content": "سداد كافة فواتير الخدمات السابقة حتى تاريخ استلام العقار"
+        },
+        {
+          "id": "cls-test-1",
+          "number": 11,
+          "title": "شرط المعاينة الهندسية ومطابقة كروكي الأمانة",
+          "content": "اتفق الطرفان على مطابقة المخطط الهندسي الصادر من مكتب الأشغال العامة بأمانة العاصمة قبل موعد الإفراغ.",
+          "isMandatory": false
+        }
+      ],
+      "currentVersion": 2,
+      "versionHistory": [
+        {
+          "version": 1,
+          "createdAt": "2026-10-20T16:16:47.445Z",
+          "createdBy": {
+            "id": "usr-101",
+            "name": "أحمد علي الريمي",
+            "role": "advertiser"
+          },
+          "summaryOfChanges": "إنشاء مسودة العقد الرسمية واستيراد بيانات الحجز والشروط المتفق عليها وصك العقار",
+          "clauses": [
+            {
+              "id": "cls-1",
+              "number": 1,
+              "title": "التمهيد وأهلية التعاقد الشرعية والقانونية",
+              "isMandatory": true,
+              "content": "يقر الطرفان (البائع والمشتري) بأهليتهما الشرعية والقانونية المعتبرة شرعاً للتعاقد والتصرف النافي للجهالة، وخلوهما من أي مانع نظامي أو قضائي، وتوافق إرادتهما الحرة على إبرام هذا العقد لبيع وشراء العقار الموصوف ببنوده."
+            },
+            {
+              "id": "cls-2",
+              "number": 2,
+              "title": "محل العقد ومواصفات المبيع وصك البصيرة",
+              "isMandatory": true,
+              "content": "محل هذا البيع هو العقار المسمى [أرض سكنية تجارية ممتازة على شارعين في بيت بوس]، الكائن في [صنعاء (أمانة العاصمة) - صنعاء - بيت بوس]، والبالغ مساحته الإجمالية [8] لبنة عشاري، والمقيد بصك الملكية الشرعية/البصيرة برقم [مقيد بالسجل العقاري المعتمد]."
+            },
+            {
+              "id": "cls-3",
+              "number": 3,
+              "title": "الثمن الإجمالي وجدول الوفاء والعربون",
+              "isMandatory": true,
+              "content": "اتفق الطرفان على أن الثمن الإجمالي المقطوع للعقار هو [360,000,000 ريال يمني]، سدد المشتري منه عربون حجز والتزام قدره [18,000,000 ريال يمني]، ويلتزم المشتري بسداد باقي الثمن وقدره [342,000,000 ريال يمني] بموجب [شيك مصرفي مصدق] عند تحرير وثيقة الإفراغ والتسليم."
+            },
+            {
+              "id": "cls-4",
+              "number": 4,
+              "title": "المعاينة النافية للجهالة وضمان خلو العقار من النزاع",
+              "isMandatory": true,
+              "content": "يقر المشتري بأنه عاين العقار المبيع المعاينة الشرعية التامة النافية للجهالة وقبله بحالته الراهنة وموقعه وحدوده. كما يقر البائع ويضمن شرعاً وقانوناً خلو المبيع من أي رهن أو حكر أو اختصاص أو حيازة للغير أو أي نزاع قضائي قائم."
+            },
+            {
+              "id": "cls-5",
+              "number": 5,
+              "title": "التسليم والإفراغ ونقل الملكية والتعميد الشرعي",
+              "isMandatory": true,
+              "content": "يلتزم البائع بتسليم العقار المبيع للمشتري خالياً من أي شواغل وتسليم كافة أصول الوثائق والبصائر المعمدة وتعميد وثيقة التنازل لدى الأمين الشرعي المعتمد والسجل العقاري فور استلام كامل الثمن في موعد أقصاه [2026-11-01]."
+            },
+            {
+              "id": "cls-6",
+              "number": 6,
+              "title": "الرسوم والضرائب وأتعاب الوساطة العقارية",
+              "isMandatory": false,
+              "content": "اتفق الطرفان على أن رسوم التوثيق وتعميد الأمين الشرعي وضريبة التصرفات العقارية وأتعاب منصة دلنّي العقارية [تتحملها الأطراف مناصفة وفق العرف التجاري والقانون]."
+            },
+            {
+              "id": "cls-7",
+              "number": 7,
+              "title": "الشرط الجزائي ونكول الأطراف عن الإتمام",
+              "isMandatory": true,
+              "content": "في حال نكول أحد الطرفين أو رجوعه عن إتمام البيع دون مسوغ شرعي أو قانوني قاهر، يلتزم الطرف الناكل بتعويض الطرف الآخر بما يعادل قيمة العربون المتفق عليه كشرط جزائي ملزم قضائياً."
+            },
+            {
+              "id": "cls-8",
+              "number": 8,
+              "title": "القانون الواجب التطبيق والمحاكم المختصة",
+              "isMandatory": true,
+              "content": "يخضع هذا العقد لأحكام الشريعة الإسلامية والقانون المدني وقوانين التوثيق والتسجيل العقاري السارية في الجمهورية اليمنية، وتختص المحكمة الابتدائية الواقع في دائرتها العقار بنظر أي نزاع قد ينشأ لا قدر الله."
+            },
+            {
+              "id": "cls-special-1",
+              "number": 9,
+              "title": "شرط خاص متفق عليه بين الطرفين (1)",
+              "isMandatory": false,
+              "content": "فحص وثائق الملكية والبصيرة الشرعية قبل سداد الدفعة النهائية"
+            },
+            {
+              "id": "cls-special-2",
+              "number": 10,
+              "title": "شرط خاص متفق عليه بين الطرفين (2)",
+              "isMandatory": false,
+              "content": "سداد كافة فواتير الخدمات السابقة حتى تاريخ استلام العقار"
+            }
+          ],
+          "financialTerms": {
+            "totalAmount": 360000000,
+            "currency": "YER",
+            "depositAmount": 18000000,
+            "paymentSchedule": "certified_check"
+          },
+          "status": "draft"
+        },
+        {
+          "version": 2,
+          "createdAt": "2026-10-20T16:16:47.457Z",
+          "createdBy": {
+            "id": "usr-202",
+            "name": "طارق محمد الحيمي",
+            "role": "seeker"
+          },
+          "summaryOfChanges": "إضافة بند الفحص الهندسي والكروكي الميداني",
+          "clauses": [
+            {
+              "id": "cls-1",
+              "number": 1,
+              "title": "التمهيد وأهلية التعاقد الشرعية والقانونية",
+              "isMandatory": true,
+              "content": "يقر الطرفان (البائع والمشتري) بأهليتهما الشرعية والقانونية المعتبرة شرعاً للتعاقد والتصرف النافي للجهالة، وخلوهما من أي مانع نظامي أو قضائي، وتوافق إرادتهما الحرة على إبرام هذا العقد لبيع وشراء العقار الموصوف ببنوده."
+            },
+            {
+              "id": "cls-2",
+              "number": 2,
+              "title": "محل العقد ومواصفات المبيع وصك البصيرة",
+              "isMandatory": true,
+              "content": "محل هذا البيع هو العقار المسمى [أرض سكنية تجارية ممتازة على شارعين في بيت بوس]، الكائن في [صنعاء (أمانة العاصمة) - صنعاء - بيت بوس]، والبالغ مساحته الإجمالية [8] لبنة عشاري، والمقيد بصك الملكية الشرعية/البصيرة برقم [مقيد بالسجل العقاري المعتمد]."
+            },
+            {
+              "id": "cls-3",
+              "number": 3,
+              "title": "الثمن الإجمالي وجدول الوفاء والعربون",
+              "isMandatory": true,
+              "content": "اتفق الطرفان على أن الثمن الإجمالي المقطوع للعقار هو [360,000,000 ريال يمني]، سدد المشتري منه عربون حجز والتزام قدره [18,000,000 ريال يمني]، ويلتزم المشتري بسداد باقي الثمن وقدره [342,000,000 ريال يمني] بموجب [شيك مصرفي مصدق] عند تحرير وثيقة الإفراغ والتسليم."
+            },
+            {
+              "id": "cls-4",
+              "number": 4,
+              "title": "المعاينة النافية للجهالة وضمان خلو العقار من النزاع",
+              "isMandatory": true,
+              "content": "يقر المشتري بأنه عاين العقار المبيع المعاينة الشرعية التامة النافية للجهالة وقبله بحالته الراهنة وموقعه وحدوده. كما يقر البائع ويضمن شرعاً وقانوناً خلو المبيع من أي رهن أو حكر أو اختصاص أو حيازة للغير أو أي نزاع قضائي قائم."
+            },
+            {
+              "id": "cls-5",
+              "number": 5,
+              "title": "التسليم والإفراغ ونقل الملكية والتعميد الشرعي",
+              "isMandatory": true,
+              "content": "يلتزم البائع بتسليم العقار المبيع للمشتري خالياً من أي شواغل وتسليم كافة أصول الوثائق والبصائر المعمدة وتعميد وثيقة التنازل لدى الأمين الشرعي المعتمد والسجل العقاري فور استلام كامل الثمن في موعد أقصاه [2026-11-01]."
+            },
+            {
+              "id": "cls-6",
+              "number": 6,
+              "title": "الرسوم والضرائب وأتعاب الوساطة العقارية",
+              "isMandatory": false,
+              "content": "اتفق الطرفان على أن رسوم التوثيق وتعميد الأمين الشرعي وضريبة التصرفات العقارية وأتعاب منصة دلنّي العقارية [تتحملها الأطراف مناصفة وفق العرف التجاري والقانون]."
+            },
+            {
+              "id": "cls-7",
+              "number": 7,
+              "title": "الشرط الجزائي ونكول الأطراف عن الإتمام",
+              "isMandatory": true,
+              "content": "في حال نكول أحد الطرفين أو رجوعه عن إتمام البيع دون مسوغ شرعي أو قانوني قاهر، يلتزم الطرف الناكل بتعويض الطرف الآخر بما يعادل قيمة العربون المتفق عليه كشرط جزائي ملزم قضائياً."
+            },
+            {
+              "id": "cls-8",
+              "number": 8,
+              "title": "القانون الواجب التطبيق والمحاكم المختصة",
+              "isMandatory": true,
+              "content": "يخضع هذا العقد لأحكام الشريعة الإسلامية والقانون المدني وقوانين التوثيق والتسجيل العقاري السارية في الجمهورية اليمنية، وتختص المحكمة الابتدائية الواقع في دائرتها العقار بنظر أي نزاع قد ينشأ لا قدر الله."
+            },
+            {
+              "id": "cls-special-1",
+              "number": 9,
+              "title": "شرط خاص متفق عليه بين الطرفين (1)",
+              "isMandatory": false,
+              "content": "فحص وثائق الملكية والبصيرة الشرعية قبل سداد الدفعة النهائية"
+            },
+            {
+              "id": "cls-special-2",
+              "number": 10,
+              "title": "شرط خاص متفق عليه بين الطرفين (2)",
+              "isMandatory": false,
+              "content": "سداد كافة فواتير الخدمات السابقة حتى تاريخ استلام العقار"
+            },
+            {
+              "id": "cls-test-1",
+              "number": 11,
+              "title": "شرط المعاينة الهندسية ومطابقة كروكي الأمانة",
+              "content": "اتفق الطرفان على مطابقة المخطط الهندسي الصادر من مكتب الأشغال العامة بأمانة العاصمة قبل موعد الإفراغ.",
+              "isMandatory": false
+            }
+          ],
+          "financialTerms": {
+            "totalAmount": 360000000,
+            "currency": "YER",
+            "depositAmount": 18000000,
+            "depositCurrency": "YER",
+            "paymentSchedule": "سداد العربون، وتسليم المتبقي بشيك مصرفي مصدق عند توقيع وثيقة الإفراغ والتسليم",
+            "notes": "تمت مراجعة المسودة وإضافة بند المعاينة الهندسية"
+          },
+          "status": "draft"
+        }
+      ],
+      "versions": [
+        {
+          "version": 1,
+          "createdAt": "2026-10-20T16:16:47.445Z",
+          "createdBy": {
+            "id": "usr-101",
+            "name": "أحمد علي الريمي",
+            "role": "advertiser"
+          },
+          "summaryOfChanges": "إنشاء مسودة العقد الرسمية واستيراد بيانات الحجز والشروط المتفق عليها وصك العقار",
+          "clauses": [
+            {
+              "id": "cls-1",
+              "number": 1,
+              "title": "التمهيد وأهلية التعاقد الشرعية والقانونية",
+              "isMandatory": true,
+              "content": "يقر الطرفان (البائع والمشتري) بأهليتهما الشرعية والقانونية المعتبرة شرعاً للتعاقد والتصرف النافي للجهالة، وخلوهما من أي مانع نظامي أو قضائي، وتوافق إرادتهما الحرة على إبرام هذا العقد لبيع وشراء العقار الموصوف ببنوده."
+            },
+            {
+              "id": "cls-2",
+              "number": 2,
+              "title": "محل العقد ومواصفات المبيع وصك البصيرة",
+              "isMandatory": true,
+              "content": "محل هذا البيع هو العقار المسمى [أرض سكنية تجارية ممتازة على شارعين في بيت بوس]، الكائن في [صنعاء (أمانة العاصمة) - صنعاء - بيت بوس]، والبالغ مساحته الإجمالية [8] لبنة عشاري، والمقيد بصك الملكية الشرعية/البصيرة برقم [مقيد بالسجل العقاري المعتمد]."
+            },
+            {
+              "id": "cls-3",
+              "number": 3,
+              "title": "الثمن الإجمالي وجدول الوفاء والعربون",
+              "isMandatory": true,
+              "content": "اتفق الطرفان على أن الثمن الإجمالي المقطوع للعقار هو [360,000,000 ريال يمني]، سدد المشتري منه عربون حجز والتزام قدره [18,000,000 ريال يمني]، ويلتزم المشتري بسداد باقي الثمن وقدره [342,000,000 ريال يمني] بموجب [شيك مصرفي مصدق] عند تحرير وثيقة الإفراغ والتسليم."
+            },
+            {
+              "id": "cls-4",
+              "number": 4,
+              "title": "المعاينة النافية للجهالة وضمان خلو العقار من النزاع",
+              "isMandatory": true,
+              "content": "يقر المشتري بأنه عاين العقار المبيع المعاينة الشرعية التامة النافية للجهالة وقبله بحالته الراهنة وموقعه وحدوده. كما يقر البائع ويضمن شرعاً وقانوناً خلو المبيع من أي رهن أو حكر أو اختصاص أو حيازة للغير أو أي نزاع قضائي قائم."
+            },
+            {
+              "id": "cls-5",
+              "number": 5,
+              "title": "التسليم والإفراغ ونقل الملكية والتعميد الشرعي",
+              "isMandatory": true,
+              "content": "يلتزم البائع بتسليم العقار المبيع للمشتري خالياً من أي شواغل وتسليم كافة أصول الوثائق والبصائر المعمدة وتعميد وثيقة التنازل لدى الأمين الشرعي المعتمد والسجل العقاري فور استلام كامل الثمن في موعد أقصاه [2026-11-01]."
+            },
+            {
+              "id": "cls-6",
+              "number": 6,
+              "title": "الرسوم والضرائب وأتعاب الوساطة العقارية",
+              "isMandatory": false,
+              "content": "اتفق الطرفان على أن رسوم التوثيق وتعميد الأمين الشرعي وضريبة التصرفات العقارية وأتعاب منصة دلنّي العقارية [تتحملها الأطراف مناصفة وفق العرف التجاري والقانون]."
+            },
+            {
+              "id": "cls-7",
+              "number": 7,
+              "title": "الشرط الجزائي ونكول الأطراف عن الإتمام",
+              "isMandatory": true,
+              "content": "في حال نكول أحد الطرفين أو رجوعه عن إتمام البيع دون مسوغ شرعي أو قانوني قاهر، يلتزم الطرف الناكل بتعويض الطرف الآخر بما يعادل قيمة العربون المتفق عليه كشرط جزائي ملزم قضائياً."
+            },
+            {
+              "id": "cls-8",
+              "number": 8,
+              "title": "القانون الواجب التطبيق والمحاكم المختصة",
+              "isMandatory": true,
+              "content": "يخضع هذا العقد لأحكام الشريعة الإسلامية والقانون المدني وقوانين التوثيق والتسجيل العقاري السارية في الجمهورية اليمنية، وتختص المحكمة الابتدائية الواقع في دائرتها العقار بنظر أي نزاع قد ينشأ لا قدر الله."
+            },
+            {
+              "id": "cls-special-1",
+              "number": 9,
+              "title": "شرط خاص متفق عليه بين الطرفين (1)",
+              "isMandatory": false,
+              "content": "فحص وثائق الملكية والبصيرة الشرعية قبل سداد الدفعة النهائية"
+            },
+            {
+              "id": "cls-special-2",
+              "number": 10,
+              "title": "شرط خاص متفق عليه بين الطرفين (2)",
+              "isMandatory": false,
+              "content": "سداد كافة فواتير الخدمات السابقة حتى تاريخ استلام العقار"
+            }
+          ],
+          "financialTerms": {
+            "totalAmount": 360000000,
+            "currency": "YER",
+            "depositAmount": 18000000,
+            "paymentSchedule": "certified_check"
+          },
+          "status": "draft"
+        },
+        {
+          "version": 2,
+          "createdAt": "2026-10-20T16:16:47.457Z",
+          "createdBy": {
+            "id": "usr-202",
+            "name": "طارق محمد الحيمي",
+            "role": "seeker"
+          },
+          "summaryOfChanges": "إضافة بند الفحص الهندسي والكروكي الميداني",
+          "clauses": [
+            {
+              "id": "cls-1",
+              "number": 1,
+              "title": "التمهيد وأهلية التعاقد الشرعية والقانونية",
+              "isMandatory": true,
+              "content": "يقر الطرفان (البائع والمشتري) بأهليتهما الشرعية والقانونية المعتبرة شرعاً للتعاقد والتصرف النافي للجهالة، وخلوهما من أي مانع نظامي أو قضائي، وتوافق إرادتهما الحرة على إبرام هذا العقد لبيع وشراء العقار الموصوف ببنوده."
+            },
+            {
+              "id": "cls-2",
+              "number": 2,
+              "title": "محل العقد ومواصفات المبيع وصك البصيرة",
+              "isMandatory": true,
+              "content": "محل هذا البيع هو العقار المسمى [أرض سكنية تجارية ممتازة على شارعين في بيت بوس]، الكائن في [صنعاء (أمانة العاصمة) - صنعاء - بيت بوس]، والبالغ مساحته الإجمالية [8] لبنة عشاري، والمقيد بصك الملكية الشرعية/البصيرة برقم [مقيد بالسجل العقاري المعتمد]."
+            },
+            {
+              "id": "cls-3",
+              "number": 3,
+              "title": "الثمن الإجمالي وجدول الوفاء والعربون",
+              "isMandatory": true,
+              "content": "اتفق الطرفان على أن الثمن الإجمالي المقطوع للعقار هو [360,000,000 ريال يمني]، سدد المشتري منه عربون حجز والتزام قدره [18,000,000 ريال يمني]، ويلتزم المشتري بسداد باقي الثمن وقدره [342,000,000 ريال يمني] بموجب [شيك مصرفي مصدق] عند تحرير وثيقة الإفراغ والتسليم."
+            },
+            {
+              "id": "cls-4",
+              "number": 4,
+              "title": "المعاينة النافية للجهالة وضمان خلو العقار من النزاع",
+              "isMandatory": true,
+              "content": "يقر المشتري بأنه عاين العقار المبيع المعاينة الشرعية التامة النافية للجهالة وقبله بحالته الراهنة وموقعه وحدوده. كما يقر البائع ويضمن شرعاً وقانوناً خلو المبيع من أي رهن أو حكر أو اختصاص أو حيازة للغير أو أي نزاع قضائي قائم."
+            },
+            {
+              "id": "cls-5",
+              "number": 5,
+              "title": "التسليم والإفراغ ونقل الملكية والتعميد الشرعي",
+              "isMandatory": true,
+              "content": "يلتزم البائع بتسليم العقار المبيع للمشتري خالياً من أي شواغل وتسليم كافة أصول الوثائق والبصائر المعمدة وتعميد وثيقة التنازل لدى الأمين الشرعي المعتمد والسجل العقاري فور استلام كامل الثمن في موعد أقصاه [2026-11-01]."
+            },
+            {
+              "id": "cls-6",
+              "number": 6,
+              "title": "الرسوم والضرائب وأتعاب الوساطة العقارية",
+              "isMandatory": false,
+              "content": "اتفق الطرفان على أن رسوم التوثيق وتعميد الأمين الشرعي وضريبة التصرفات العقارية وأتعاب منصة دلنّي العقارية [تتحملها الأطراف مناصفة وفق العرف التجاري والقانون]."
+            },
+            {
+              "id": "cls-7",
+              "number": 7,
+              "title": "الشرط الجزائي ونكول الأطراف عن الإتمام",
+              "isMandatory": true,
+              "content": "في حال نكول أحد الطرفين أو رجوعه عن إتمام البيع دون مسوغ شرعي أو قانوني قاهر، يلتزم الطرف الناكل بتعويض الطرف الآخر بما يعادل قيمة العربون المتفق عليه كشرط جزائي ملزم قضائياً."
+            },
+            {
+              "id": "cls-8",
+              "number": 8,
+              "title": "القانون الواجب التطبيق والمحاكم المختصة",
+              "isMandatory": true,
+              "content": "يخضع هذا العقد لأحكام الشريعة الإسلامية والقانون المدني وقوانين التوثيق والتسجيل العقاري السارية في الجمهورية اليمنية، وتختص المحكمة الابتدائية الواقع في دائرتها العقار بنظر أي نزاع قد ينشأ لا قدر الله."
+            },
+            {
+              "id": "cls-special-1",
+              "number": 9,
+              "title": "شرط خاص متفق عليه بين الطرفين (1)",
+              "isMandatory": false,
+              "content": "فحص وثائق الملكية والبصيرة الشرعية قبل سداد الدفعة النهائية"
+            },
+            {
+              "id": "cls-special-2",
+              "number": 10,
+              "title": "شرط خاص متفق عليه بين الطرفين (2)",
+              "isMandatory": false,
+              "content": "سداد كافة فواتير الخدمات السابقة حتى تاريخ استلام العقار"
+            },
+            {
+              "id": "cls-test-1",
+              "number": 11,
+              "title": "شرط المعاينة الهندسية ومطابقة كروكي الأمانة",
+              "content": "اتفق الطرفان على مطابقة المخطط الهندسي الصادر من مكتب الأشغال العامة بأمانة العاصمة قبل موعد الإفراغ.",
+              "isMandatory": false
+            }
+          ],
+          "financialTerms": {
+            "totalAmount": 360000000,
+            "currency": "YER",
+            "depositAmount": 18000000,
+            "depositCurrency": "YER",
+            "paymentSchedule": "سداد العربون، وتسليم المتبقي بشيك مصرفي مصدق عند توقيع وثيقة الإفراغ والتسليم",
+            "notes": "تمت مراجعة المسودة وإضافة بند المعاينة الهندسية"
+          },
+          "status": "draft"
+        }
+      ],
+      "firstPartyApprovedAt": "2026-10-20T16:16:47.464Z",
+      "secondPartyApprovedAt": "2026-10-20T16:16:47.472Z",
+      "notes": "تم إنشاء المسودة تلقائياً بواسطة [أحمد علي الريمي] استناداً إلى الحجز [BKG-2026-2002].",
+      "createdAt": "2026-10-20",
+      "updatedAt": "2026-10-20",
+      "firstPartyApproval": true,
+      "secondPartyApproval": true,
+      "approvedAt": "2026-10-20T16:16:47.472Z",
+      "approvedBy": "طارق محمد الحيمي",
+      "isModificationPendingApproval": false,
+      "signedAt": "2026-10-20T16:16:47.472Z"
+    },
+    {
+      "id": "cnt-1792512925155",
+      "contractNumber": "CNT-2026-9632",
+      "bookingId": "bkg-1792372494039-300",
+      "bookingNumber": "BKG-2026-2003",
+      "requestId": "req-1792372481169-547",
+      "listingId": "list-103",
+      "listingNumber": "YEM-2026-103",
+      "listingTitle": "أرض سكنية تجارية ممتازة على شارعين في بيت بوس",
+      "contractType": "sale",
+      "status": "pending_approval",
+      "propertySnapshot": {
+        "title": "أرض سكنية تجارية ممتازة على شارعين في بيت بوس",
+        "propertyType": "land",
+        "purpose": "sale",
+        "governorate": "صنعاء (أمانة العاصمة)",
+        "city": "صنعاء",
+        "district": "بيت بوس",
+        "street": "شارع بيت بوس خلف محطة التوفيق",
+        "area": 8,
+        "areaUnit": "لبنة عشاري",
+        "deedNumber": "صك مقيد بالسجل العقاري المعتمد",
+        "boundaries": {
+          "north": "شارع معبد نافذ",
+          "south": "عقار مجاور",
+          "east": "شارع فرعي",
+          "west": "عقار مجاور"
+        }
+      },
+      "firstParty": {
+        "id": "adv-1",
+        "name": "هشام عبد الرحمن القدسي",
+        "phone": "777012345",
+        "role": "seller",
+        "nationalIdOrPassport": "بطاقة شخصية صادرة من الجمهورية اليمنية",
+        "address": "صنعاء (أمانة العاصمة) - صنعاء",
+        "signatureStatus": "signed",
+        "signedAt": "2026-10-20T16:15:25.175Z"
+      },
+      "secondParty": {
+        "id": "usr-seeker",
+        "name": "أصيل محمد الحكيمي",
+        "phone": "778990011",
+        "role": "buyer",
+        "nationalIdOrPassport": "بطاقة شخصية صادرة من الجمهورية اليمنية",
+        "address": "صنعاء",
+        "signatureStatus": "unsigned"
+      },
+      "witnesses": [
+        {
+          "id": "wit-1",
+          "name": "فضيلة الشيخ / القاضي الأمين الشرعي المعتمد",
+          "phone": "+967 771 000 111",
+          "role": "witness",
+          "nationalIdOrPassport": "ترخيص توثيق شرعي صادر عن وزارة العدل",
+          "signatureStatus": "unsigned"
+        },
+        {
+          "id": "wit-2",
+          "name": "شاهد إثبات ثانٍ",
+          "phone": "+967 772 000 222",
+          "role": "witness",
+          "nationalIdOrPassport": "بطاقة شخصية سارية",
+          "signatureStatus": "unsigned"
+        }
+      ],
+      "brokerOrAgent": {
+        "id": "dalani-broker",
+        "name": "منصة دلنّي العقارية",
+        "phone": "+967 1 445 566",
+        "commissionAmount": 3600000,
+        "commissionPayer": "shared_equally"
+      },
+      "financialTerms": {
+        "totalAmount": 360000000,
+        "currency": "YER",
+        "depositAmount": 18000000,
+        "depositCurrency": "YER",
+        "paymentSchedule": "سداد العربون، وتسليم المتبقي بشيك مصرفي مصدق عند توقيع وثيقة الإفراغ والتسليم",
+        "notes": "تمت مراجعة المسودة وإضافة بند المعاينة الهندسية"
+      },
+      "durationTerms": {
+        "startDate": "2026-10-20",
+        "handoverDate": "2026-11-01"
+      },
+      "clauses": [
+        {
+          "id": "cls-1",
+          "number": 1,
+          "title": "التمهيد وأهلية التعاقد الشرعية والقانونية",
+          "isMandatory": true,
+          "content": "يقر الطرفان (البائع والمشتري) بأهليتهما الشرعية والقانونية المعتبرة شرعاً للتعاقد والتصرف النافي للجهالة، وخلوهما من أي مانع نظامي أو قضائي، وتوافق إرادتهما الحرة على إبرام هذا العقد لبيع وشراء العقار الموصوف ببنوده."
+        },
+        {
+          "id": "cls-2",
+          "number": 2,
+          "title": "محل العقد ومواصفات المبيع وصك البصيرة",
+          "isMandatory": true,
+          "content": "محل هذا البيع هو العقار المسمى [أرض سكنية تجارية ممتازة على شارعين في بيت بوس]، الكائن في [صنعاء (أمانة العاصمة) - صنعاء - بيت بوس]، والبالغ مساحته الإجمالية [8] لبنة عشاري، والمقيد بصك الملكية الشرعية/البصيرة برقم [مقيد بالسجل العقاري المعتمد]."
+        },
+        {
+          "id": "cls-3",
+          "number": 3,
+          "title": "الثمن الإجمالي وجدول الوفاء والعربون",
+          "isMandatory": true,
+          "content": "اتفق الطرفان على أن الثمن الإجمالي المقطوع للعقار هو [360,000,000 ريال يمني]، سدد المشتري منه عربون حجز والتزام قدره [18,000,000 ريال يمني]، ويلتزم المشتري بسداد باقي الثمن وقدره [342,000,000 ريال يمني] بموجب [شيك مصرفي مصدق] عند تحرير وثيقة الإفراغ والتسليم."
+        },
+        {
+          "id": "cls-4",
+          "number": 4,
+          "title": "المعاينة النافية للجهالة وضمان خلو العقار من النزاع",
+          "isMandatory": true,
+          "content": "يقر المشتري بأنه عاين العقار المبيع المعاينة الشرعية التامة النافية للجهالة وقبله بحالته الراهنة وموقعه وحدوده. كما يقر البائع ويضمن شرعاً وقانوناً خلو المبيع من أي رهن أو حكر أو اختصاص أو حيازة للغير أو أي نزاع قضائي قائم."
+        },
+        {
+          "id": "cls-5",
+          "number": 5,
+          "title": "التسليم والإفراغ ونقل الملكية والتعميد الشرعي",
+          "isMandatory": true,
+          "content": "يلتزم البائع بتسليم العقار المبيع للمشتري خالياً من أي شواغل وتسليم كافة أصول الوثائق والبصائر المعمدة وتعميد وثيقة التنازل لدى الأمين الشرعي المعتمد والسجل العقاري فور استلام كامل الثمن في موعد أقصاه [2026-11-01]."
+        },
+        {
+          "id": "cls-6",
+          "number": 6,
+          "title": "الرسوم والضرائب وأتعاب الوساطة العقارية",
+          "isMandatory": false,
+          "content": "اتفق الطرفان على أن رسوم التوثيق وتعميد الأمين الشرعي وضريبة التصرفات العقارية وأتعاب منصة دلنّي العقارية [تتحملها الأطراف مناصفة وفق العرف التجاري والقانون]."
+        },
+        {
+          "id": "cls-7",
+          "number": 7,
+          "title": "الشرط الجزائي ونكول الأطراف عن الإتمام",
+          "isMandatory": true,
+          "content": "في حال نكول أحد الطرفين أو رجوعه عن إتمام البيع دون مسوغ شرعي أو قانوني قاهر، يلتزم الطرف الناكل بتعويض الطرف الآخر بما يعادل قيمة العربون المتفق عليه كشرط جزائي ملزم قضائياً."
+        },
+        {
+          "id": "cls-8",
+          "number": 8,
+          "title": "القانون الواجب التطبيق والمحاكم المختصة",
+          "isMandatory": true,
+          "content": "يخضع هذا العقد لأحكام الشريعة الإسلامية والقانون المدني وقوانين التوثيق والتسجيل العقاري السارية في الجمهورية اليمنية، وتختص المحكمة الابتدائية الواقع في دائرتها العقار بنظر أي نزاع قد ينشأ لا قدر الله."
+        },
+        {
+          "id": "cls-special-1",
+          "number": 9,
+          "title": "شرط خاص متفق عليه بين الطرفين (1)",
+          "isMandatory": false,
+          "content": "فحص وثائق الملكية والبصيرة الشرعية قبل سداد الدفعة النهائية"
+        },
+        {
+          "id": "cls-special-2",
+          "number": 10,
+          "title": "شرط خاص متفق عليه بين الطرفين (2)",
+          "isMandatory": false,
+          "content": "سداد كافة فواتير الخدمات السابقة حتى تاريخ استلام العقار"
+        },
+        {
+          "id": "cls-test-1",
+          "number": 11,
+          "title": "شرط المعاينة الهندسية ومطابقة كروكي الأمانة",
+          "content": "اتفق الطرفان على مطابقة المخطط الهندسي الصادر من مكتب الأشغال العامة بأمانة العاصمة قبل موعد الإفراغ.",
+          "isMandatory": false
+        }
+      ],
+      "currentVersion": 2,
+      "versionHistory": [
+        {
+          "version": 1,
+          "createdAt": "2026-10-20T16:15:25.155Z",
+          "createdBy": {
+            "id": "usr-101",
+            "name": "أحمد علي الريمي",
+            "role": "advertiser"
+          },
+          "summaryOfChanges": "إنشاء مسودة العقد الرسمية واستيراد بيانات الحجز والشروط المتفق عليها وصك العقار",
+          "clauses": [
+            {
+              "id": "cls-1",
+              "number": 1,
+              "title": "التمهيد وأهلية التعاقد الشرعية والقانونية",
+              "isMandatory": true,
+              "content": "يقر الطرفان (البائع والمشتري) بأهليتهما الشرعية والقانونية المعتبرة شرعاً للتعاقد والتصرف النافي للجهالة، وخلوهما من أي مانع نظامي أو قضائي، وتوافق إرادتهما الحرة على إبرام هذا العقد لبيع وشراء العقار الموصوف ببنوده."
+            },
+            {
+              "id": "cls-2",
+              "number": 2,
+              "title": "محل العقد ومواصفات المبيع وصك البصيرة",
+              "isMandatory": true,
+              "content": "محل هذا البيع هو العقار المسمى [أرض سكنية تجارية ممتازة على شارعين في بيت بوس]، الكائن في [صنعاء (أمانة العاصمة) - صنعاء - بيت بوس]، والبالغ مساحته الإجمالية [8] لبنة عشاري، والمقيد بصك الملكية الشرعية/البصيرة برقم [مقيد بالسجل العقاري المعتمد]."
+            },
+            {
+              "id": "cls-3",
+              "number": 3,
+              "title": "الثمن الإجمالي وجدول الوفاء والعربون",
+              "isMandatory": true,
+              "content": "اتفق الطرفان على أن الثمن الإجمالي المقطوع للعقار هو [360,000,000 ريال يمني]، سدد المشتري منه عربون حجز والتزام قدره [18,000,000 ريال يمني]، ويلتزم المشتري بسداد باقي الثمن وقدره [342,000,000 ريال يمني] بموجب [شيك مصرفي مصدق] عند تحرير وثيقة الإفراغ والتسليم."
+            },
+            {
+              "id": "cls-4",
+              "number": 4,
+              "title": "المعاينة النافية للجهالة وضمان خلو العقار من النزاع",
+              "isMandatory": true,
+              "content": "يقر المشتري بأنه عاين العقار المبيع المعاينة الشرعية التامة النافية للجهالة وقبله بحالته الراهنة وموقعه وحدوده. كما يقر البائع ويضمن شرعاً وقانوناً خلو المبيع من أي رهن أو حكر أو اختصاص أو حيازة للغير أو أي نزاع قضائي قائم."
+            },
+            {
+              "id": "cls-5",
+              "number": 5,
+              "title": "التسليم والإفراغ ونقل الملكية والتعميد الشرعي",
+              "isMandatory": true,
+              "content": "يلتزم البائع بتسليم العقار المبيع للمشتري خالياً من أي شواغل وتسليم كافة أصول الوثائق والبصائر المعمدة وتعميد وثيقة التنازل لدى الأمين الشرعي المعتمد والسجل العقاري فور استلام كامل الثمن في موعد أقصاه [2026-11-01]."
+            },
+            {
+              "id": "cls-6",
+              "number": 6,
+              "title": "الرسوم والضرائب وأتعاب الوساطة العقارية",
+              "isMandatory": false,
+              "content": "اتفق الطرفان على أن رسوم التوثيق وتعميد الأمين الشرعي وضريبة التصرفات العقارية وأتعاب منصة دلنّي العقارية [تتحملها الأطراف مناصفة وفق العرف التجاري والقانون]."
+            },
+            {
+              "id": "cls-7",
+              "number": 7,
+              "title": "الشرط الجزائي ونكول الأطراف عن الإتمام",
+              "isMandatory": true,
+              "content": "في حال نكول أحد الطرفين أو رجوعه عن إتمام البيع دون مسوغ شرعي أو قانوني قاهر، يلتزم الطرف الناكل بتعويض الطرف الآخر بما يعادل قيمة العربون المتفق عليه كشرط جزائي ملزم قضائياً."
+            },
+            {
+              "id": "cls-8",
+              "number": 8,
+              "title": "القانون الواجب التطبيق والمحاكم المختصة",
+              "isMandatory": true,
+              "content": "يخضع هذا العقد لأحكام الشريعة الإسلامية والقانون المدني وقوانين التوثيق والتسجيل العقاري السارية في الجمهورية اليمنية، وتختص المحكمة الابتدائية الواقع في دائرتها العقار بنظر أي نزاع قد ينشأ لا قدر الله."
+            },
+            {
+              "id": "cls-special-1",
+              "number": 9,
+              "title": "شرط خاص متفق عليه بين الطرفين (1)",
+              "isMandatory": false,
+              "content": "فحص وثائق الملكية والبصيرة الشرعية قبل سداد الدفعة النهائية"
+            },
+            {
+              "id": "cls-special-2",
+              "number": 10,
+              "title": "شرط خاص متفق عليه بين الطرفين (2)",
+              "isMandatory": false,
+              "content": "سداد كافة فواتير الخدمات السابقة حتى تاريخ استلام العقار"
+            }
+          ],
+          "financialTerms": {
+            "totalAmount": 360000000,
+            "currency": "YER",
+            "depositAmount": 18000000,
+            "paymentSchedule": "certified_check"
+          },
+          "status": "draft"
+        },
+        {
+          "version": 2,
+          "createdAt": "2026-10-20T16:15:25.168Z",
+          "createdBy": {
+            "id": "usr-202",
+            "name": "طارق محمد الحيمي",
+            "role": "seeker"
+          },
+          "summaryOfChanges": "إضافة بند الفحص الهندسي والكروكي الميداني",
+          "clauses": [
+            {
+              "id": "cls-1",
+              "number": 1,
+              "title": "التمهيد وأهلية التعاقد الشرعية والقانونية",
+              "isMandatory": true,
+              "content": "يقر الطرفان (البائع والمشتري) بأهليتهما الشرعية والقانونية المعتبرة شرعاً للتعاقد والتصرف النافي للجهالة، وخلوهما من أي مانع نظامي أو قضائي، وتوافق إرادتهما الحرة على إبرام هذا العقد لبيع وشراء العقار الموصوف ببنوده."
+            },
+            {
+              "id": "cls-2",
+              "number": 2,
+              "title": "محل العقد ومواصفات المبيع وصك البصيرة",
+              "isMandatory": true,
+              "content": "محل هذا البيع هو العقار المسمى [أرض سكنية تجارية ممتازة على شارعين في بيت بوس]، الكائن في [صنعاء (أمانة العاصمة) - صنعاء - بيت بوس]، والبالغ مساحته الإجمالية [8] لبنة عشاري، والمقيد بصك الملكية الشرعية/البصيرة برقم [مقيد بالسجل العقاري المعتمد]."
+            },
+            {
+              "id": "cls-3",
+              "number": 3,
+              "title": "الثمن الإجمالي وجدول الوفاء والعربون",
+              "isMandatory": true,
+              "content": "اتفق الطرفان على أن الثمن الإجمالي المقطوع للعقار هو [360,000,000 ريال يمني]، سدد المشتري منه عربون حجز والتزام قدره [18,000,000 ريال يمني]، ويلتزم المشتري بسداد باقي الثمن وقدره [342,000,000 ريال يمني] بموجب [شيك مصرفي مصدق] عند تحرير وثيقة الإفراغ والتسليم."
+            },
+            {
+              "id": "cls-4",
+              "number": 4,
+              "title": "المعاينة النافية للجهالة وضمان خلو العقار من النزاع",
+              "isMandatory": true,
+              "content": "يقر المشتري بأنه عاين العقار المبيع المعاينة الشرعية التامة النافية للجهالة وقبله بحالته الراهنة وموقعه وحدوده. كما يقر البائع ويضمن شرعاً وقانوناً خلو المبيع من أي رهن أو حكر أو اختصاص أو حيازة للغير أو أي نزاع قضائي قائم."
+            },
+            {
+              "id": "cls-5",
+              "number": 5,
+              "title": "التسليم والإفراغ ونقل الملكية والتعميد الشرعي",
+              "isMandatory": true,
+              "content": "يلتزم البائع بتسليم العقار المبيع للمشتري خالياً من أي شواغل وتسليم كافة أصول الوثائق والبصائر المعمدة وتعميد وثيقة التنازل لدى الأمين الشرعي المعتمد والسجل العقاري فور استلام كامل الثمن في موعد أقصاه [2026-11-01]."
+            },
+            {
+              "id": "cls-6",
+              "number": 6,
+              "title": "الرسوم والضرائب وأتعاب الوساطة العقارية",
+              "isMandatory": false,
+              "content": "اتفق الطرفان على أن رسوم التوثيق وتعميد الأمين الشرعي وضريبة التصرفات العقارية وأتعاب منصة دلنّي العقارية [تتحملها الأطراف مناصفة وفق العرف التجاري والقانون]."
+            },
+            {
+              "id": "cls-7",
+              "number": 7,
+              "title": "الشرط الجزائي ونكول الأطراف عن الإتمام",
+              "isMandatory": true,
+              "content": "في حال نكول أحد الطرفين أو رجوعه عن إتمام البيع دون مسوغ شرعي أو قانوني قاهر، يلتزم الطرف الناكل بتعويض الطرف الآخر بما يعادل قيمة العربون المتفق عليه كشرط جزائي ملزم قضائياً."
+            },
+            {
+              "id": "cls-8",
+              "number": 8,
+              "title": "القانون الواجب التطبيق والمحاكم المختصة",
+              "isMandatory": true,
+              "content": "يخضع هذا العقد لأحكام الشريعة الإسلامية والقانون المدني وقوانين التوثيق والتسجيل العقاري السارية في الجمهورية اليمنية، وتختص المحكمة الابتدائية الواقع في دائرتها العقار بنظر أي نزاع قد ينشأ لا قدر الله."
+            },
+            {
+              "id": "cls-special-1",
+              "number": 9,
+              "title": "شرط خاص متفق عليه بين الطرفين (1)",
+              "isMandatory": false,
+              "content": "فحص وثائق الملكية والبصيرة الشرعية قبل سداد الدفعة النهائية"
+            },
+            {
+              "id": "cls-special-2",
+              "number": 10,
+              "title": "شرط خاص متفق عليه بين الطرفين (2)",
+              "isMandatory": false,
+              "content": "سداد كافة فواتير الخدمات السابقة حتى تاريخ استلام العقار"
+            },
+            {
+              "id": "cls-test-1",
+              "number": 11,
+              "title": "شرط المعاينة الهندسية ومطابقة كروكي الأمانة",
+              "content": "اتفق الطرفان على مطابقة المخطط الهندسي الصادر من مكتب الأشغال العامة بأمانة العاصمة قبل موعد الإفراغ.",
+              "isMandatory": false
+            }
+          ],
+          "financialTerms": {
+            "totalAmount": 360000000,
+            "currency": "YER",
+            "depositAmount": 18000000,
+            "depositCurrency": "YER",
+            "paymentSchedule": "سداد العربون، وتسليم المتبقي بشيك مصرفي مصدق عند توقيع وثيقة الإفراغ والتسليم",
+            "notes": "تمت مراجعة المسودة وإضافة بند المعاينة الهندسية"
+          },
+          "status": "draft"
+        }
+      ],
+      "versions": [
+        {
+          "version": 1,
+          "createdAt": "2026-10-20T16:15:25.155Z",
+          "createdBy": {
+            "id": "usr-101",
+            "name": "أحمد علي الريمي",
+            "role": "advertiser"
+          },
+          "summaryOfChanges": "إنشاء مسودة العقد الرسمية واستيراد بيانات الحجز والشروط المتفق عليها وصك العقار",
+          "clauses": [
+            {
+              "id": "cls-1",
+              "number": 1,
+              "title": "التمهيد وأهلية التعاقد الشرعية والقانونية",
+              "isMandatory": true,
+              "content": "يقر الطرفان (البائع والمشتري) بأهليتهما الشرعية والقانونية المعتبرة شرعاً للتعاقد والتصرف النافي للجهالة، وخلوهما من أي مانع نظامي أو قضائي، وتوافق إرادتهما الحرة على إبرام هذا العقد لبيع وشراء العقار الموصوف ببنوده."
+            },
+            {
+              "id": "cls-2",
+              "number": 2,
+              "title": "محل العقد ومواصفات المبيع وصك البصيرة",
+              "isMandatory": true,
+              "content": "محل هذا البيع هو العقار المسمى [أرض سكنية تجارية ممتازة على شارعين في بيت بوس]، الكائن في [صنعاء (أمانة العاصمة) - صنعاء - بيت بوس]، والبالغ مساحته الإجمالية [8] لبنة عشاري، والمقيد بصك الملكية الشرعية/البصيرة برقم [مقيد بالسجل العقاري المعتمد]."
+            },
+            {
+              "id": "cls-3",
+              "number": 3,
+              "title": "الثمن الإجمالي وجدول الوفاء والعربون",
+              "isMandatory": true,
+              "content": "اتفق الطرفان على أن الثمن الإجمالي المقطوع للعقار هو [360,000,000 ريال يمني]، سدد المشتري منه عربون حجز والتزام قدره [18,000,000 ريال يمني]، ويلتزم المشتري بسداد باقي الثمن وقدره [342,000,000 ريال يمني] بموجب [شيك مصرفي مصدق] عند تحرير وثيقة الإفراغ والتسليم."
+            },
+            {
+              "id": "cls-4",
+              "number": 4,
+              "title": "المعاينة النافية للجهالة وضمان خلو العقار من النزاع",
+              "isMandatory": true,
+              "content": "يقر المشتري بأنه عاين العقار المبيع المعاينة الشرعية التامة النافية للجهالة وقبله بحالته الراهنة وموقعه وحدوده. كما يقر البائع ويضمن شرعاً وقانوناً خلو المبيع من أي رهن أو حكر أو اختصاص أو حيازة للغير أو أي نزاع قضائي قائم."
+            },
+            {
+              "id": "cls-5",
+              "number": 5,
+              "title": "التسليم والإفراغ ونقل الملكية والتعميد الشرعي",
+              "isMandatory": true,
+              "content": "يلتزم البائع بتسليم العقار المبيع للمشتري خالياً من أي شواغل وتسليم كافة أصول الوثائق والبصائر المعمدة وتعميد وثيقة التنازل لدى الأمين الشرعي المعتمد والسجل العقاري فور استلام كامل الثمن في موعد أقصاه [2026-11-01]."
+            },
+            {
+              "id": "cls-6",
+              "number": 6,
+              "title": "الرسوم والضرائب وأتعاب الوساطة العقارية",
+              "isMandatory": false,
+              "content": "اتفق الطرفان على أن رسوم التوثيق وتعميد الأمين الشرعي وضريبة التصرفات العقارية وأتعاب منصة دلنّي العقارية [تتحملها الأطراف مناصفة وفق العرف التجاري والقانون]."
+            },
+            {
+              "id": "cls-7",
+              "number": 7,
+              "title": "الشرط الجزائي ونكول الأطراف عن الإتمام",
+              "isMandatory": true,
+              "content": "في حال نكول أحد الطرفين أو رجوعه عن إتمام البيع دون مسوغ شرعي أو قانوني قاهر، يلتزم الطرف الناكل بتعويض الطرف الآخر بما يعادل قيمة العربون المتفق عليه كشرط جزائي ملزم قضائياً."
+            },
+            {
+              "id": "cls-8",
+              "number": 8,
+              "title": "القانون الواجب التطبيق والمحاكم المختصة",
+              "isMandatory": true,
+              "content": "يخضع هذا العقد لأحكام الشريعة الإسلامية والقانون المدني وقوانين التوثيق والتسجيل العقاري السارية في الجمهورية اليمنية، وتختص المحكمة الابتدائية الواقع في دائرتها العقار بنظر أي نزاع قد ينشأ لا قدر الله."
+            },
+            {
+              "id": "cls-special-1",
+              "number": 9,
+              "title": "شرط خاص متفق عليه بين الطرفين (1)",
+              "isMandatory": false,
+              "content": "فحص وثائق الملكية والبصيرة الشرعية قبل سداد الدفعة النهائية"
+            },
+            {
+              "id": "cls-special-2",
+              "number": 10,
+              "title": "شرط خاص متفق عليه بين الطرفين (2)",
+              "isMandatory": false,
+              "content": "سداد كافة فواتير الخدمات السابقة حتى تاريخ استلام العقار"
+            }
+          ],
+          "financialTerms": {
+            "totalAmount": 360000000,
+            "currency": "YER",
+            "depositAmount": 18000000,
+            "paymentSchedule": "certified_check"
+          },
+          "status": "draft"
+        },
+        {
+          "version": 2,
+          "createdAt": "2026-10-20T16:15:25.168Z",
+          "createdBy": {
+            "id": "usr-202",
+            "name": "طارق محمد الحيمي",
+            "role": "seeker"
+          },
+          "summaryOfChanges": "إضافة بند الفحص الهندسي والكروكي الميداني",
+          "clauses": [
+            {
+              "id": "cls-1",
+              "number": 1,
+              "title": "التمهيد وأهلية التعاقد الشرعية والقانونية",
+              "isMandatory": true,
+              "content": "يقر الطرفان (البائع والمشتري) بأهليتهما الشرعية والقانونية المعتبرة شرعاً للتعاقد والتصرف النافي للجهالة، وخلوهما من أي مانع نظامي أو قضائي، وتوافق إرادتهما الحرة على إبرام هذا العقد لبيع وشراء العقار الموصوف ببنوده."
+            },
+            {
+              "id": "cls-2",
+              "number": 2,
+              "title": "محل العقد ومواصفات المبيع وصك البصيرة",
+              "isMandatory": true,
+              "content": "محل هذا البيع هو العقار المسمى [أرض سكنية تجارية ممتازة على شارعين في بيت بوس]، الكائن في [صنعاء (أمانة العاصمة) - صنعاء - بيت بوس]، والبالغ مساحته الإجمالية [8] لبنة عشاري، والمقيد بصك الملكية الشرعية/البصيرة برقم [مقيد بالسجل العقاري المعتمد]."
+            },
+            {
+              "id": "cls-3",
+              "number": 3,
+              "title": "الثمن الإجمالي وجدول الوفاء والعربون",
+              "isMandatory": true,
+              "content": "اتفق الطرفان على أن الثمن الإجمالي المقطوع للعقار هو [360,000,000 ريال يمني]، سدد المشتري منه عربون حجز والتزام قدره [18,000,000 ريال يمني]، ويلتزم المشتري بسداد باقي الثمن وقدره [342,000,000 ريال يمني] بموجب [شيك مصرفي مصدق] عند تحرير وثيقة الإفراغ والتسليم."
+            },
+            {
+              "id": "cls-4",
+              "number": 4,
+              "title": "المعاينة النافية للجهالة وضمان خلو العقار من النزاع",
+              "isMandatory": true,
+              "content": "يقر المشتري بأنه عاين العقار المبيع المعاينة الشرعية التامة النافية للجهالة وقبله بحالته الراهنة وموقعه وحدوده. كما يقر البائع ويضمن شرعاً وقانوناً خلو المبيع من أي رهن أو حكر أو اختصاص أو حيازة للغير أو أي نزاع قضائي قائم."
+            },
+            {
+              "id": "cls-5",
+              "number": 5,
+              "title": "التسليم والإفراغ ونقل الملكية والتعميد الشرعي",
+              "isMandatory": true,
+              "content": "يلتزم البائع بتسليم العقار المبيع للمشتري خالياً من أي شواغل وتسليم كافة أصول الوثائق والبصائر المعمدة وتعميد وثيقة التنازل لدى الأمين الشرعي المعتمد والسجل العقاري فور استلام كامل الثمن في موعد أقصاه [2026-11-01]."
+            },
+            {
+              "id": "cls-6",
+              "number": 6,
+              "title": "الرسوم والضرائب وأتعاب الوساطة العقارية",
+              "isMandatory": false,
+              "content": "اتفق الطرفان على أن رسوم التوثيق وتعميد الأمين الشرعي وضريبة التصرفات العقارية وأتعاب منصة دلنّي العقارية [تتحملها الأطراف مناصفة وفق العرف التجاري والقانون]."
+            },
+            {
+              "id": "cls-7",
+              "number": 7,
+              "title": "الشرط الجزائي ونكول الأطراف عن الإتمام",
+              "isMandatory": true,
+              "content": "في حال نكول أحد الطرفين أو رجوعه عن إتمام البيع دون مسوغ شرعي أو قانوني قاهر، يلتزم الطرف الناكل بتعويض الطرف الآخر بما يعادل قيمة العربون المتفق عليه كشرط جزائي ملزم قضائياً."
+            },
+            {
+              "id": "cls-8",
+              "number": 8,
+              "title": "القانون الواجب التطبيق والمحاكم المختصة",
+              "isMandatory": true,
+              "content": "يخضع هذا العقد لأحكام الشريعة الإسلامية والقانون المدني وقوانين التوثيق والتسجيل العقاري السارية في الجمهورية اليمنية، وتختص المحكمة الابتدائية الواقع في دائرتها العقار بنظر أي نزاع قد ينشأ لا قدر الله."
+            },
+            {
+              "id": "cls-special-1",
+              "number": 9,
+              "title": "شرط خاص متفق عليه بين الطرفين (1)",
+              "isMandatory": false,
+              "content": "فحص وثائق الملكية والبصيرة الشرعية قبل سداد الدفعة النهائية"
+            },
+            {
+              "id": "cls-special-2",
+              "number": 10,
+              "title": "شرط خاص متفق عليه بين الطرفين (2)",
+              "isMandatory": false,
+              "content": "سداد كافة فواتير الخدمات السابقة حتى تاريخ استلام العقار"
+            },
+            {
+              "id": "cls-test-1",
+              "number": 11,
+              "title": "شرط المعاينة الهندسية ومطابقة كروكي الأمانة",
+              "content": "اتفق الطرفان على مطابقة المخطط الهندسي الصادر من مكتب الأشغال العامة بأمانة العاصمة قبل موعد الإفراغ.",
+              "isMandatory": false
+            }
+          ],
+          "financialTerms": {
+            "totalAmount": 360000000,
+            "currency": "YER",
+            "depositAmount": 18000000,
+            "depositCurrency": "YER",
+            "paymentSchedule": "سداد العربون، وتسليم المتبقي بشيك مصرفي مصدق عند توقيع وثيقة الإفراغ والتسليم",
+            "notes": "تمت مراجعة المسودة وإضافة بند المعاينة الهندسية"
+          },
+          "status": "draft"
+        }
+      ],
+      "firstPartyApprovedAt": "2026-10-20T16:15:25.175Z",
+      "notes": "تم إنشاء المسودة تلقائياً بواسطة [أحمد علي الريمي] استناداً إلى الحجز [BKG-2026-2003].",
+      "createdAt": "2026-10-20",
+      "updatedAt": "2026-10-20",
+      "isModificationPendingApproval": false
+    },
+    {
+      "id": "cnt-1792512814818",
+      "contractNumber": "CNT-2026-3437",
+      "bookingId": "bkg-1792375972482-734",
+      "bookingNumber": "BKG-2026-2004",
+      "requestId": "req-1792375968434-298",
+      "listingId": "list-103",
+      "listingNumber": "YEM-2026-103",
+      "listingTitle": "أرض سكنية تجارية ممتازة على شارعين في بيت بوس",
+      "contractType": "sale",
+      "status": "draft",
+      "propertySnapshot": {
+        "title": "أرض سكنية تجارية ممتازة على شارعين في بيت بوس",
+        "propertyType": "land",
+        "purpose": "sale",
+        "governorate": "صنعاء (أمانة العاصمة)",
+        "city": "صنعاء",
+        "district": "بيت بوس",
+        "street": "شارع بيت بوس خلف محطة التوفيق",
+        "area": 8,
+        "areaUnit": "لبنة عشاري",
+        "deedNumber": "صك مقيد بالسجل العقاري المعتمد",
+        "boundaries": {
+          "north": "شارع معبد نافذ",
+          "south": "عقار مجاور",
+          "east": "شارع فرعي",
+          "west": "عقار مجاور"
+        }
+      },
+      "firstParty": {
+        "id": "adv-1",
+        "name": "هشام عبد الرحمن القدسي",
+        "phone": "777012345",
+        "role": "seller",
+        "nationalIdOrPassport": "بطاقة شخصية صادرة من الجمهورية اليمنية",
+        "address": "صنعاء (أمانة العاصمة) - صنعاء",
+        "signatureStatus": "unsigned"
+      },
+      "secondParty": {
+        "id": "usr-seeker",
+        "name": "أصيل محمد الحكيمي",
+        "phone": "778990011",
+        "role": "buyer",
+        "nationalIdOrPassport": "بطاقة شخصية صادرة من الجمهورية اليمنية",
+        "address": "صنعاء",
+        "signatureStatus": "unsigned"
+      },
+      "witnesses": [
+        {
+          "id": "wit-1",
+          "name": "فضيلة الشيخ / القاضي الأمين الشرعي المعتمد",
+          "phone": "+967 771 000 111",
+          "role": "witness",
+          "nationalIdOrPassport": "ترخيص توثيق شرعي صادر عن وزارة العدل",
+          "signatureStatus": "unsigned"
+        },
+        {
+          "id": "wit-2",
+          "name": "شاهد إثبات ثانٍ",
+          "phone": "+967 772 000 222",
+          "role": "witness",
+          "nationalIdOrPassport": "بطاقة شخصية سارية",
+          "signatureStatus": "unsigned"
+        }
+      ],
+      "brokerOrAgent": {
+        "id": "dalani-broker",
+        "name": "منصة دلنّي العقارية",
+        "phone": "+967 1 445 566",
+        "commissionAmount": 3600000,
+        "commissionPayer": "shared_equally"
+      },
+      "financialTerms": {
+        "totalAmount": 360000000,
+        "currency": "YER",
+        "depositAmount": 18000000,
+        "depositCurrency": "YER",
+        "paymentSchedule": "سداد العربون، وتسليم المتبقي بشيك مصرفي مصدق عند توقيع وثيقة الإفراغ والتسليم",
+        "notes": "تمت مراجعة المسودة وإضافة بند المعاينة الهندسية"
+      },
+      "durationTerms": {
+        "startDate": "2026-10-20",
+        "handoverDate": "2026-11-01"
+      },
+      "clauses": [
+        {
+          "id": "cls-1",
+          "number": 1,
+          "title": "التمهيد وأهلية التعاقد الشرعية والقانونية",
+          "isMandatory": true,
+          "content": "يقر الطرفان (البائع والمشتري) بأهليتهما الشرعية والقانونية المعتبرة شرعاً للتعاقد والتصرف النافي للجهالة، وخلوهما من أي مانع نظامي أو قضائي، وتوافق إرادتهما الحرة على إبرام هذا العقد لبيع وشراء العقار الموصوف ببنوده."
+        },
+        {
+          "id": "cls-2",
+          "number": 2,
+          "title": "محل العقد ومواصفات المبيع وصك البصيرة",
+          "isMandatory": true,
+          "content": "محل هذا البيع هو العقار المسمى [أرض سكنية تجارية ممتازة على شارعين في بيت بوس]، الكائن في [صنعاء (أمانة العاصمة) - صنعاء - بيت بوس]، والبالغ مساحته الإجمالية [8] لبنة عشاري، والمقيد بصك الملكية الشرعية/البصيرة برقم [مقيد بالسجل العقاري المعتمد]."
+        },
+        {
+          "id": "cls-3",
+          "number": 3,
+          "title": "الثمن الإجمالي وجدول الوفاء والعربون",
+          "isMandatory": true,
+          "content": "اتفق الطرفان على أن الثمن الإجمالي المقطوع للعقار هو [360,000,000 ريال يمني]، سدد المشتري منه عربون حجز والتزام قدره [18,000,000 ريال يمني]، ويلتزم المشتري بسداد باقي الثمن وقدره [342,000,000 ريال يمني] بموجب [شيك مصرفي مصدق] عند تحرير وثيقة الإفراغ والتسليم."
+        },
+        {
+          "id": "cls-4",
+          "number": 4,
+          "title": "المعاينة النافية للجهالة وضمان خلو العقار من النزاع",
+          "isMandatory": true,
+          "content": "يقر المشتري بأنه عاين العقار المبيع المعاينة الشرعية التامة النافية للجهالة وقبله بحالته الراهنة وموقعه وحدوده. كما يقر البائع ويضمن شرعاً وقانوناً خلو المبيع من أي رهن أو حكر أو اختصاص أو حيازة للغير أو أي نزاع قضائي قائم."
+        },
+        {
+          "id": "cls-5",
+          "number": 5,
+          "title": "التسليم والإفراغ ونقل الملكية والتعميد الشرعي",
+          "isMandatory": true,
+          "content": "يلتزم البائع بتسليم العقار المبيع للمشتري خالياً من أي شواغل وتسليم كافة أصول الوثائق والبصائر المعمدة وتعميد وثيقة التنازل لدى الأمين الشرعي المعتمد والسجل العقاري فور استلام كامل الثمن في موعد أقصاه [2026-11-01]."
+        },
+        {
+          "id": "cls-6",
+          "number": 6,
+          "title": "الرسوم والضرائب وأتعاب الوساطة العقارية",
+          "isMandatory": false,
+          "content": "اتفق الطرفان على أن رسوم التوثيق وتعميد الأمين الشرعي وضريبة التصرفات العقارية وأتعاب منصة دلنّي العقارية [تتحملها الأطراف مناصفة وفق العرف التجاري والقانون]."
+        },
+        {
+          "id": "cls-7",
+          "number": 7,
+          "title": "الشرط الجزائي ونكول الأطراف عن الإتمام",
+          "isMandatory": true,
+          "content": "في حال نكول أحد الطرفين أو رجوعه عن إتمام البيع دون مسوغ شرعي أو قانوني قاهر، يلتزم الطرف الناكل بتعويض الطرف الآخر بما يعادل قيمة العربون المتفق عليه كشرط جزائي ملزم قضائياً."
+        },
+        {
+          "id": "cls-8",
+          "number": 8,
+          "title": "القانون الواجب التطبيق والمحاكم المختصة",
+          "isMandatory": true,
+          "content": "يخضع هذا العقد لأحكام الشريعة الإسلامية والقانون المدني وقوانين التوثيق والتسجيل العقاري السارية في الجمهورية اليمنية، وتختص المحكمة الابتدائية الواقع في دائرتها العقار بنظر أي نزاع قد ينشأ لا قدر الله."
+        },
+        {
+          "id": "cls-special-1",
+          "number": 9,
+          "title": "شرط خاص متفق عليه بين الطرفين (1)",
+          "isMandatory": false,
+          "content": "فحص وثائق الملكية والبصيرة الشرعية قبل سداد الدفعة النهائية"
+        },
+        {
+          "id": "cls-special-2",
+          "number": 10,
+          "title": "شرط خاص متفق عليه بين الطرفين (2)",
+          "isMandatory": false,
+          "content": "سداد كافة فواتير الخدمات السابقة حتى تاريخ استلام العقار"
+        },
+        {
+          "id": "cls-test-1",
+          "number": 11,
+          "title": "شرط المعاينة الهندسية ومطابقة كروكي الأمانة",
+          "content": "اتفق الطرفان على مطابقة المخطط الهندسي الصادر من مكتب الأشغال العامة بأمانة العاصمة قبل موعد الإفراغ.",
+          "isMandatory": false
+        }
+      ],
+      "currentVersion": 2,
+      "versionHistory": [
+        {
+          "version": 1,
+          "createdAt": "2026-10-20T16:13:34.818Z",
+          "createdBy": {
+            "id": "usr-101",
+            "name": "أحمد علي الريمي",
+            "role": "advertiser"
+          },
+          "summaryOfChanges": "إنشاء مسودة العقد الرسمية واستيراد بيانات الحجز والشروط المتفق عليها وصك العقار",
+          "clauses": [
+            {
+              "id": "cls-1",
+              "number": 1,
+              "title": "التمهيد وأهلية التعاقد الشرعية والقانونية",
+              "isMandatory": true,
+              "content": "يقر الطرفان (البائع والمشتري) بأهليتهما الشرعية والقانونية المعتبرة شرعاً للتعاقد والتصرف النافي للجهالة، وخلوهما من أي مانع نظامي أو قضائي، وتوافق إرادتهما الحرة على إبرام هذا العقد لبيع وشراء العقار الموصوف ببنوده."
+            },
+            {
+              "id": "cls-2",
+              "number": 2,
+              "title": "محل العقد ومواصفات المبيع وصك البصيرة",
+              "isMandatory": true,
+              "content": "محل هذا البيع هو العقار المسمى [أرض سكنية تجارية ممتازة على شارعين في بيت بوس]، الكائن في [صنعاء (أمانة العاصمة) - صنعاء - بيت بوس]، والبالغ مساحته الإجمالية [8] لبنة عشاري، والمقيد بصك الملكية الشرعية/البصيرة برقم [مقيد بالسجل العقاري المعتمد]."
+            },
+            {
+              "id": "cls-3",
+              "number": 3,
+              "title": "الثمن الإجمالي وجدول الوفاء والعربون",
+              "isMandatory": true,
+              "content": "اتفق الطرفان على أن الثمن الإجمالي المقطوع للعقار هو [360,000,000 ريال يمني]، سدد المشتري منه عربون حجز والتزام قدره [18,000,000 ريال يمني]، ويلتزم المشتري بسداد باقي الثمن وقدره [342,000,000 ريال يمني] بموجب [شيك مصرفي مصدق] عند تحرير وثيقة الإفراغ والتسليم."
+            },
+            {
+              "id": "cls-4",
+              "number": 4,
+              "title": "المعاينة النافية للجهالة وضمان خلو العقار من النزاع",
+              "isMandatory": true,
+              "content": "يقر المشتري بأنه عاين العقار المبيع المعاينة الشرعية التامة النافية للجهالة وقبله بحالته الراهنة وموقعه وحدوده. كما يقر البائع ويضمن شرعاً وقانوناً خلو المبيع من أي رهن أو حكر أو اختصاص أو حيازة للغير أو أي نزاع قضائي قائم."
+            },
+            {
+              "id": "cls-5",
+              "number": 5,
+              "title": "التسليم والإفراغ ونقل الملكية والتعميد الشرعي",
+              "isMandatory": true,
+              "content": "يلتزم البائع بتسليم العقار المبيع للمشتري خالياً من أي شواغل وتسليم كافة أصول الوثائق والبصائر المعمدة وتعميد وثيقة التنازل لدى الأمين الشرعي المعتمد والسجل العقاري فور استلام كامل الثمن في موعد أقصاه [2026-11-01]."
+            },
+            {
+              "id": "cls-6",
+              "number": 6,
+              "title": "الرسوم والضرائب وأتعاب الوساطة العقارية",
+              "isMandatory": false,
+              "content": "اتفق الطرفان على أن رسوم التوثيق وتعميد الأمين الشرعي وضريبة التصرفات العقارية وأتعاب منصة دلنّي العقارية [تتحملها الأطراف مناصفة وفق العرف التجاري والقانون]."
+            },
+            {
+              "id": "cls-7",
+              "number": 7,
+              "title": "الشرط الجزائي ونكول الأطراف عن الإتمام",
+              "isMandatory": true,
+              "content": "في حال نكول أحد الطرفين أو رجوعه عن إتمام البيع دون مسوغ شرعي أو قانوني قاهر، يلتزم الطرف الناكل بتعويض الطرف الآخر بما يعادل قيمة العربون المتفق عليه كشرط جزائي ملزم قضائياً."
+            },
+            {
+              "id": "cls-8",
+              "number": 8,
+              "title": "القانون الواجب التطبيق والمحاكم المختصة",
+              "isMandatory": true,
+              "content": "يخضع هذا العقد لأحكام الشريعة الإسلامية والقانون المدني وقوانين التوثيق والتسجيل العقاري السارية في الجمهورية اليمنية، وتختص المحكمة الابتدائية الواقع في دائرتها العقار بنظر أي نزاع قد ينشأ لا قدر الله."
+            },
+            {
+              "id": "cls-special-1",
+              "number": 9,
+              "title": "شرط خاص متفق عليه بين الطرفين (1)",
+              "isMandatory": false,
+              "content": "فحص وثائق الملكية والبصيرة الشرعية قبل سداد الدفعة النهائية"
+            },
+            {
+              "id": "cls-special-2",
+              "number": 10,
+              "title": "شرط خاص متفق عليه بين الطرفين (2)",
+              "isMandatory": false,
+              "content": "سداد كافة فواتير الخدمات السابقة حتى تاريخ استلام العقار"
+            }
+          ],
+          "financialTerms": {
+            "totalAmount": 360000000,
+            "currency": "YER",
+            "depositAmount": 18000000,
+            "paymentSchedule": "certified_check"
+          },
+          "status": "draft"
+        },
+        {
+          "version": 2,
+          "createdAt": "2026-10-20T16:13:34.830Z",
+          "createdBy": {
+            "id": "usr-202",
+            "name": "طارق محمد الحيمي",
+            "role": "seeker"
+          },
+          "summaryOfChanges": "إضافة بند الفحص الهندسي والكروكي الميداني",
+          "clauses": [
+            {
+              "id": "cls-1",
+              "number": 1,
+              "title": "التمهيد وأهلية التعاقد الشرعية والقانونية",
+              "isMandatory": true,
+              "content": "يقر الطرفان (البائع والمشتري) بأهليتهما الشرعية والقانونية المعتبرة شرعاً للتعاقد والتصرف النافي للجهالة، وخلوهما من أي مانع نظامي أو قضائي، وتوافق إرادتهما الحرة على إبرام هذا العقد لبيع وشراء العقار الموصوف ببنوده."
+            },
+            {
+              "id": "cls-2",
+              "number": 2,
+              "title": "محل العقد ومواصفات المبيع وصك البصيرة",
+              "isMandatory": true,
+              "content": "محل هذا البيع هو العقار المسمى [أرض سكنية تجارية ممتازة على شارعين في بيت بوس]، الكائن في [صنعاء (أمانة العاصمة) - صنعاء - بيت بوس]، والبالغ مساحته الإجمالية [8] لبنة عشاري، والمقيد بصك الملكية الشرعية/البصيرة برقم [مقيد بالسجل العقاري المعتمد]."
+            },
+            {
+              "id": "cls-3",
+              "number": 3,
+              "title": "الثمن الإجمالي وجدول الوفاء والعربون",
+              "isMandatory": true,
+              "content": "اتفق الطرفان على أن الثمن الإجمالي المقطوع للعقار هو [360,000,000 ريال يمني]، سدد المشتري منه عربون حجز والتزام قدره [18,000,000 ريال يمني]، ويلتزم المشتري بسداد باقي الثمن وقدره [342,000,000 ريال يمني] بموجب [شيك مصرفي مصدق] عند تحرير وثيقة الإفراغ والتسليم."
+            },
+            {
+              "id": "cls-4",
+              "number": 4,
+              "title": "المعاينة النافية للجهالة وضمان خلو العقار من النزاع",
+              "isMandatory": true,
+              "content": "يقر المشتري بأنه عاين العقار المبيع المعاينة الشرعية التامة النافية للجهالة وقبله بحالته الراهنة وموقعه وحدوده. كما يقر البائع ويضمن شرعاً وقانوناً خلو المبيع من أي رهن أو حكر أو اختصاص أو حيازة للغير أو أي نزاع قضائي قائم."
+            },
+            {
+              "id": "cls-5",
+              "number": 5,
+              "title": "التسليم والإفراغ ونقل الملكية والتعميد الشرعي",
+              "isMandatory": true,
+              "content": "يلتزم البائع بتسليم العقار المبيع للمشتري خالياً من أي شواغل وتسليم كافة أصول الوثائق والبصائر المعمدة وتعميد وثيقة التنازل لدى الأمين الشرعي المعتمد والسجل العقاري فور استلام كامل الثمن في موعد أقصاه [2026-11-01]."
+            },
+            {
+              "id": "cls-6",
+              "number": 6,
+              "title": "الرسوم والضرائب وأتعاب الوساطة العقارية",
+              "isMandatory": false,
+              "content": "اتفق الطرفان على أن رسوم التوثيق وتعميد الأمين الشرعي وضريبة التصرفات العقارية وأتعاب منصة دلنّي العقارية [تتحملها الأطراف مناصفة وفق العرف التجاري والقانون]."
+            },
+            {
+              "id": "cls-7",
+              "number": 7,
+              "title": "الشرط الجزائي ونكول الأطراف عن الإتمام",
+              "isMandatory": true,
+              "content": "في حال نكول أحد الطرفين أو رجوعه عن إتمام البيع دون مسوغ شرعي أو قانوني قاهر، يلتزم الطرف الناكل بتعويض الطرف الآخر بما يعادل قيمة العربون المتفق عليه كشرط جزائي ملزم قضائياً."
+            },
+            {
+              "id": "cls-8",
+              "number": 8,
+              "title": "القانون الواجب التطبيق والمحاكم المختصة",
+              "isMandatory": true,
+              "content": "يخضع هذا العقد لأحكام الشريعة الإسلامية والقانون المدني وقوانين التوثيق والتسجيل العقاري السارية في الجمهورية اليمنية، وتختص المحكمة الابتدائية الواقع في دائرتها العقار بنظر أي نزاع قد ينشأ لا قدر الله."
+            },
+            {
+              "id": "cls-special-1",
+              "number": 9,
+              "title": "شرط خاص متفق عليه بين الطرفين (1)",
+              "isMandatory": false,
+              "content": "فحص وثائق الملكية والبصيرة الشرعية قبل سداد الدفعة النهائية"
+            },
+            {
+              "id": "cls-special-2",
+              "number": 10,
+              "title": "شرط خاص متفق عليه بين الطرفين (2)",
+              "isMandatory": false,
+              "content": "سداد كافة فواتير الخدمات السابقة حتى تاريخ استلام العقار"
+            },
+            {
+              "id": "cls-test-1",
+              "number": 11,
+              "title": "شرط المعاينة الهندسية ومطابقة كروكي الأمانة",
+              "content": "اتفق الطرفان على مطابقة المخطط الهندسي الصادر من مكتب الأشغال العامة بأمانة العاصمة قبل موعد الإفراغ.",
+              "isMandatory": false
+            }
+          ],
+          "financialTerms": {
+            "totalAmount": 360000000,
+            "currency": "YER",
+            "depositAmount": 18000000,
+            "depositCurrency": "YER",
+            "paymentSchedule": "سداد العربون، وتسليم المتبقي بشيك مصرفي مصدق عند توقيع وثيقة الإفراغ والتسليم",
+            "notes": "تمت مراجعة المسودة وإضافة بند المعاينة الهندسية"
+          },
+          "status": "draft"
+        }
+      ],
+      "versions": [
+        {
+          "version": 1,
+          "createdAt": "2026-10-20T16:13:34.818Z",
+          "createdBy": {
+            "id": "usr-101",
+            "name": "أحمد علي الريمي",
+            "role": "advertiser"
+          },
+          "summaryOfChanges": "إنشاء مسودة العقد الرسمية واستيراد بيانات الحجز والشروط المتفق عليها وصك العقار",
+          "clauses": [
+            {
+              "id": "cls-1",
+              "number": 1,
+              "title": "التمهيد وأهلية التعاقد الشرعية والقانونية",
+              "isMandatory": true,
+              "content": "يقر الطرفان (البائع والمشتري) بأهليتهما الشرعية والقانونية المعتبرة شرعاً للتعاقد والتصرف النافي للجهالة، وخلوهما من أي مانع نظامي أو قضائي، وتوافق إرادتهما الحرة على إبرام هذا العقد لبيع وشراء العقار الموصوف ببنوده."
+            },
+            {
+              "id": "cls-2",
+              "number": 2,
+              "title": "محل العقد ومواصفات المبيع وصك البصيرة",
+              "isMandatory": true,
+              "content": "محل هذا البيع هو العقار المسمى [أرض سكنية تجارية ممتازة على شارعين في بيت بوس]، الكائن في [صنعاء (أمانة العاصمة) - صنعاء - بيت بوس]، والبالغ مساحته الإجمالية [8] لبنة عشاري، والمقيد بصك الملكية الشرعية/البصيرة برقم [مقيد بالسجل العقاري المعتمد]."
+            },
+            {
+              "id": "cls-3",
+              "number": 3,
+              "title": "الثمن الإجمالي وجدول الوفاء والعربون",
+              "isMandatory": true,
+              "content": "اتفق الطرفان على أن الثمن الإجمالي المقطوع للعقار هو [360,000,000 ريال يمني]، سدد المشتري منه عربون حجز والتزام قدره [18,000,000 ريال يمني]، ويلتزم المشتري بسداد باقي الثمن وقدره [342,000,000 ريال يمني] بموجب [شيك مصرفي مصدق] عند تحرير وثيقة الإفراغ والتسليم."
+            },
+            {
+              "id": "cls-4",
+              "number": 4,
+              "title": "المعاينة النافية للجهالة وضمان خلو العقار من النزاع",
+              "isMandatory": true,
+              "content": "يقر المشتري بأنه عاين العقار المبيع المعاينة الشرعية التامة النافية للجهالة وقبله بحالته الراهنة وموقعه وحدوده. كما يقر البائع ويضمن شرعاً وقانوناً خلو المبيع من أي رهن أو حكر أو اختصاص أو حيازة للغير أو أي نزاع قضائي قائم."
+            },
+            {
+              "id": "cls-5",
+              "number": 5,
+              "title": "التسليم والإفراغ ونقل الملكية والتعميد الشرعي",
+              "isMandatory": true,
+              "content": "يلتزم البائع بتسليم العقار المبيع للمشتري خالياً من أي شواغل وتسليم كافة أصول الوثائق والبصائر المعمدة وتعميد وثيقة التنازل لدى الأمين الشرعي المعتمد والسجل العقاري فور استلام كامل الثمن في موعد أقصاه [2026-11-01]."
+            },
+            {
+              "id": "cls-6",
+              "number": 6,
+              "title": "الرسوم والضرائب وأتعاب الوساطة العقارية",
+              "isMandatory": false,
+              "content": "اتفق الطرفان على أن رسوم التوثيق وتعميد الأمين الشرعي وضريبة التصرفات العقارية وأتعاب منصة دلنّي العقارية [تتحملها الأطراف مناصفة وفق العرف التجاري والقانون]."
+            },
+            {
+              "id": "cls-7",
+              "number": 7,
+              "title": "الشرط الجزائي ونكول الأطراف عن الإتمام",
+              "isMandatory": true,
+              "content": "في حال نكول أحد الطرفين أو رجوعه عن إتمام البيع دون مسوغ شرعي أو قانوني قاهر، يلتزم الطرف الناكل بتعويض الطرف الآخر بما يعادل قيمة العربون المتفق عليه كشرط جزائي ملزم قضائياً."
+            },
+            {
+              "id": "cls-8",
+              "number": 8,
+              "title": "القانون الواجب التطبيق والمحاكم المختصة",
+              "isMandatory": true,
+              "content": "يخضع هذا العقد لأحكام الشريعة الإسلامية والقانون المدني وقوانين التوثيق والتسجيل العقاري السارية في الجمهورية اليمنية، وتختص المحكمة الابتدائية الواقع في دائرتها العقار بنظر أي نزاع قد ينشأ لا قدر الله."
+            },
+            {
+              "id": "cls-special-1",
+              "number": 9,
+              "title": "شرط خاص متفق عليه بين الطرفين (1)",
+              "isMandatory": false,
+              "content": "فحص وثائق الملكية والبصيرة الشرعية قبل سداد الدفعة النهائية"
+            },
+            {
+              "id": "cls-special-2",
+              "number": 10,
+              "title": "شرط خاص متفق عليه بين الطرفين (2)",
+              "isMandatory": false,
+              "content": "سداد كافة فواتير الخدمات السابقة حتى تاريخ استلام العقار"
+            }
+          ],
+          "financialTerms": {
+            "totalAmount": 360000000,
+            "currency": "YER",
+            "depositAmount": 18000000,
+            "paymentSchedule": "certified_check"
+          },
+          "status": "draft"
+        },
+        {
+          "version": 2,
+          "createdAt": "2026-10-20T16:13:34.830Z",
+          "createdBy": {
+            "id": "usr-202",
+            "name": "طارق محمد الحيمي",
+            "role": "seeker"
+          },
+          "summaryOfChanges": "إضافة بند الفحص الهندسي والكروكي الميداني",
+          "clauses": [
+            {
+              "id": "cls-1",
+              "number": 1,
+              "title": "التمهيد وأهلية التعاقد الشرعية والقانونية",
+              "isMandatory": true,
+              "content": "يقر الطرفان (البائع والمشتري) بأهليتهما الشرعية والقانونية المعتبرة شرعاً للتعاقد والتصرف النافي للجهالة، وخلوهما من أي مانع نظامي أو قضائي، وتوافق إرادتهما الحرة على إبرام هذا العقد لبيع وشراء العقار الموصوف ببنوده."
+            },
+            {
+              "id": "cls-2",
+              "number": 2,
+              "title": "محل العقد ومواصفات المبيع وصك البصيرة",
+              "isMandatory": true,
+              "content": "محل هذا البيع هو العقار المسمى [أرض سكنية تجارية ممتازة على شارعين في بيت بوس]، الكائن في [صنعاء (أمانة العاصمة) - صنعاء - بيت بوس]، والبالغ مساحته الإجمالية [8] لبنة عشاري، والمقيد بصك الملكية الشرعية/البصيرة برقم [مقيد بالسجل العقاري المعتمد]."
+            },
+            {
+              "id": "cls-3",
+              "number": 3,
+              "title": "الثمن الإجمالي وجدول الوفاء والعربون",
+              "isMandatory": true,
+              "content": "اتفق الطرفان على أن الثمن الإجمالي المقطوع للعقار هو [360,000,000 ريال يمني]، سدد المشتري منه عربون حجز والتزام قدره [18,000,000 ريال يمني]، ويلتزم المشتري بسداد باقي الثمن وقدره [342,000,000 ريال يمني] بموجب [شيك مصرفي مصدق] عند تحرير وثيقة الإفراغ والتسليم."
+            },
+            {
+              "id": "cls-4",
+              "number": 4,
+              "title": "المعاينة النافية للجهالة وضمان خلو العقار من النزاع",
+              "isMandatory": true,
+              "content": "يقر المشتري بأنه عاين العقار المبيع المعاينة الشرعية التامة النافية للجهالة وقبله بحالته الراهنة وموقعه وحدوده. كما يقر البائع ويضمن شرعاً وقانوناً خلو المبيع من أي رهن أو حكر أو اختصاص أو حيازة للغير أو أي نزاع قضائي قائم."
+            },
+            {
+              "id": "cls-5",
+              "number": 5,
+              "title": "التسليم والإفراغ ونقل الملكية والتعميد الشرعي",
+              "isMandatory": true,
+              "content": "يلتزم البائع بتسليم العقار المبيع للمشتري خالياً من أي شواغل وتسليم كافة أصول الوثائق والبصائر المعمدة وتعميد وثيقة التنازل لدى الأمين الشرعي المعتمد والسجل العقاري فور استلام كامل الثمن في موعد أقصاه [2026-11-01]."
+            },
+            {
+              "id": "cls-6",
+              "number": 6,
+              "title": "الرسوم والضرائب وأتعاب الوساطة العقارية",
+              "isMandatory": false,
+              "content": "اتفق الطرفان على أن رسوم التوثيق وتعميد الأمين الشرعي وضريبة التصرفات العقارية وأتعاب منصة دلنّي العقارية [تتحملها الأطراف مناصفة وفق العرف التجاري والقانون]."
+            },
+            {
+              "id": "cls-7",
+              "number": 7,
+              "title": "الشرط الجزائي ونكول الأطراف عن الإتمام",
+              "isMandatory": true,
+              "content": "في حال نكول أحد الطرفين أو رجوعه عن إتمام البيع دون مسوغ شرعي أو قانوني قاهر، يلتزم الطرف الناكل بتعويض الطرف الآخر بما يعادل قيمة العربون المتفق عليه كشرط جزائي ملزم قضائياً."
+            },
+            {
+              "id": "cls-8",
+              "number": 8,
+              "title": "القانون الواجب التطبيق والمحاكم المختصة",
+              "isMandatory": true,
+              "content": "يخضع هذا العقد لأحكام الشريعة الإسلامية والقانون المدني وقوانين التوثيق والتسجيل العقاري السارية في الجمهورية اليمنية، وتختص المحكمة الابتدائية الواقع في دائرتها العقار بنظر أي نزاع قد ينشأ لا قدر الله."
+            },
+            {
+              "id": "cls-special-1",
+              "number": 9,
+              "title": "شرط خاص متفق عليه بين الطرفين (1)",
+              "isMandatory": false,
+              "content": "فحص وثائق الملكية والبصيرة الشرعية قبل سداد الدفعة النهائية"
+            },
+            {
+              "id": "cls-special-2",
+              "number": 10,
+              "title": "شرط خاص متفق عليه بين الطرفين (2)",
+              "isMandatory": false,
+              "content": "سداد كافة فواتير الخدمات السابقة حتى تاريخ استلام العقار"
+            },
+            {
+              "id": "cls-test-1",
+              "number": 11,
+              "title": "شرط المعاينة الهندسية ومطابقة كروكي الأمانة",
+              "content": "اتفق الطرفان على مطابقة المخطط الهندسي الصادر من مكتب الأشغال العامة بأمانة العاصمة قبل موعد الإفراغ.",
+              "isMandatory": false
+            }
+          ],
+          "financialTerms": {
+            "totalAmount": 360000000,
+            "currency": "YER",
+            "depositAmount": 18000000,
+            "depositCurrency": "YER",
+            "paymentSchedule": "سداد العربون، وتسليم المتبقي بشيك مصرفي مصدق عند توقيع وثيقة الإفراغ والتسليم",
+            "notes": "تمت مراجعة المسودة وإضافة بند المعاينة الهندسية"
+          },
+          "status": "draft"
+        }
+      ],
+      "notes": "تم إنشاء المسودة تلقائياً بواسطة [أحمد علي الريمي] استناداً إلى الحجز [BKG-2026-2004].",
+      "createdAt": "2026-10-20",
+      "updatedAt": "2026-10-20",
+      "isModificationPendingApproval": false
+    },
+    {
+      "id": "cnt-301",
+      "contractNumber": "CNT-2026-3001",
+      "bookingId": "bkg-201",
+      "bookingNumber": "BKG-2026-2001",
+      "requestId": "req-102",
+      "listingId": "list-102",
+      "listingNumber": "YEM-2026-102",
+      "listingTitle": "فيلا ملكية للبيع - بيت بوس حي الشباب",
+      "contractType": "sale",
+      "status": "under_review",
+      "propertySnapshot": {
+        "title": "فيلا ملكية للبيع - بيت بوس حي الشباب",
+        "propertyType": "villa",
+        "purpose": "sale",
+        "governorate": "صنعاء (أمانة العاصمة)",
+        "city": "صنعاء",
+        "district": "بيت بوس",
+        "street": "حي الشباب - شارع 14 متر متفرع من شارع الخمسين",
+        "area": 450,
+        "areaUnit": "م²",
+        "deedNumber": "بصيرة شرعية رقم 1445/728 مقيدة بالمحكمة وسجل الأراضي",
+        "boundaries": {
+          "north": "شارع معبد نافذ بعرض 14 متر",
+          "south": "ملك الأخ محمد ناصر القحطاني بطول 25 متر",
+          "east": "شارع فرعي بعرض 10 متر بطول 18 متر",
+          "west": "ملك ورثة الحاج عبد الله العواضي بطول 18 متر"
+        }
+      },
+      "firstParty": {
+        "id": "adv-1",
+        "name": "هشام عبد الرحمن القدسي",
+        "phone": "777012345",
+        "role": "seller",
+        "nationalIdOrPassport": "بطاقة شخصية رقم 01010049281 صادرة من أمانة العاصمة",
+        "address": "صنعاء - حي حدة السكني",
+        "signatureStatus": "signed",
+        "signedAt": "2026-10-18 10:30"
+      },
+      "secondParty": {
+        "id": "usr-seeker",
+        "name": "أصيل محمد الحكيمي",
+        "phone": "778990011",
+        "role": "buyer",
+        "nationalIdOrPassport": "بطاقة شخصية رقم 01020081734 صادرة من أمانة العاصمة",
+        "address": "صنعاء - حي بيت بوس",
+        "signatureStatus": "unsigned"
+      },
+      "witnesses": [
+        {
+          "id": "wit-1",
+          "name": "فضيلة الشيخ / عبد الرحمن العنسي (الأمين الشرعي المعتمد)",
+          "phone": "+967 771 998 877",
+          "role": "witness",
+          "nationalIdOrPassport": "ترخيص توثيق شرعي رقم 1447/08 صادر عن وزارة العدل",
+          "signatureStatus": "signed",
+          "signedAt": "2026-10-18 11:00"
+        },
+        {
+          "id": "wit-2",
+          "name": "م. فؤاد مسعد العنسي (شاهد إثبات)",
+          "phone": "+967 773 445 566",
+          "role": "witness",
+          "nationalIdOrPassport": "بطاقة شخصية رقم 01010033221",
+          "signatureStatus": "unsigned"
+        }
+      ],
+      "brokerOrAgent": {
+        "id": "org-1",
+        "name": "شركة الوسيط العقاري اليمني",
+        "phone": "+967 1 445 566",
+        "commissionAmount": 3200,
+        "commissionPayer": "shared_equally"
+      },
+      "financialTerms": {
+        "totalAmount": 320000,
+        "currency": "USD",
+        "depositAmount": 16000,
+        "depositCurrency": "USD",
+        "paymentSchedule": "تم سداد 16,000 دولار كعربون حجز وضمان التزام عبر منصة دلنّي، ويلتزم المشتري بسداد باقي الثمن البالغ 304,000 دولار أمريكي بشيك مصرفي مصدق عند الإفراغ والتسليم."
+      },
+      "durationTerms": {
+        "startDate": "2026-10-18",
+        "handoverDate": "2026-11-01"
+      },
+      "clauses": [
+        {
+          "id": "cls-1",
+          "number": 1,
+          "title": "التمهيد وأهلية التعاقد الشرعية والقانونية",
+          "isMandatory": true,
+          "content": "يقر الطرفان (البائع والمشتري) بأهليتهما الشرعية والقانونية المعتبرة شرعاً للتعاقد والتصرف النافي للجهالة، وخلوهما من أي مانع نظامي أو قضائي، وتوافق إرادتهما الحرة على إبرام هذا العقد لبيع وشراء العقار الموصوف ببنوده."
+        },
+        {
+          "id": "cls-2",
+          "number": 2,
+          "title": "محل العقد ومواصفات المبيع وصك البصيرة",
+          "isMandatory": true,
+          "content": "محل هذا البيع هو العقار المسمى [شقة مفروشة راقية للإيجار مطلة على كورنيش خورمكسر]، الكائن في [عدن - عدن - خورمكسر]، والبالغ مساحته الإجمالية [165] م²، والمقيد بصك الملكية الشرعية/البصيرة برقم [مقيد بالسجل العقاري المعتمد]."
+        },
+        {
+          "id": "cls-3",
+          "number": 3,
+          "title": "الثمن الإجمالي وجدول الوفاء والعربون",
+          "isMandatory": true,
+          "content": "اتفق الطرفان على أن الثمن الإجمالي المقطوع للعقار هو [310,000 دولار أمريكي]، سدد المشتري منه عربون حجز والتزام قدره [20,000 دولار أمريكي]، ويلتزم المشتري بسداد باقي الثمن وقدره [290,000 دولار أمريكي] بموجب [شيك مصرفي مصدق] عند تحرير وثيقة الإفراغ والتسليم."
+        },
+        {
+          "id": "cls-4",
+          "number": 4,
+          "title": "المعاينة النافية للجهالة وضمان خلو العقار من النزاع",
+          "isMandatory": true,
+          "content": "يقر المشتري بأنه عاين العقار المبيع المعاينة الشرعية التامة النافية للجهالة وقبله بحالته الراهنة وموقعه وحدوده. كما يقر البائع ويضمن شرعاً وقانوناً خلو المبيع من أي رهن أو حكر أو اختصاص أو حيازة للغير أو أي نزاع قضائي قائم."
+        },
+        {
+          "id": "cls-5",
+          "number": 5,
+          "title": "التسليم والإفراغ ونقل الملكية والتعميد الشرعي",
+          "isMandatory": true,
+          "content": "يلتزم البائع بتسليم العقار المبيع للمشتري خالياً من أي شواغل وتسليم كافة أصول الوثائق والبصائر المعمدة وتعميد وثيقة التنازل لدى الأمين الشرعي المعتمد والسجل العقاري فور استلام كامل الثمن في موعد أقصاه [2026-11-05]."
+        },
+        {
+          "id": "cls-6",
+          "number": 6,
+          "title": "الرسوم والضرائب وأتعاب الوساطة العقارية",
+          "isMandatory": false,
+          "content": "اتفق الطرفان على أن رسوم التوثيق وتعميد الأمين الشرعي وضريبة التصرفات العقارية وأتعاب منصة دلنّي العقارية [تتحملها الأطراف مناصفة وفق العرف التجاري والقانون]."
+        },
+        {
+          "id": "cls-7",
+          "number": 7,
+          "title": "الشرط الجزائي ونكول الأطراف عن الإتمام",
+          "isMandatory": true,
+          "content": "في حال نكول أحد الطرفين أو رجوعه عن إتمام البيع دون مسوغ شرعي أو قانوني قاهر، يلتزم الطرف الناكل بتعويض الطرف الآخر بما يعادل قيمة العربون المتفق عليه كشرط جزائي ملزم قضائياً."
+        },
+        {
+          "id": "cls-8",
+          "number": 8,
+          "title": "القانون الواجب التطبيق والمحاكم المختصة",
+          "isMandatory": true,
+          "content": "يخضع هذا العقد لأحكام الشريعة الإسلامية والقانون المدني وقوانين التوثيق والتسجيل العقاري السارية في الجمهورية اليمنية، وتختص المحكمة الابتدائية الواقع في دائرتها العقار بنظر أي نزاع قد ينشأ لا قدر الله."
+        },
+        {
+          "id": "cls-special-1",
+          "number": 9,
+          "title": "شرط خاص متفق عليه بين الطرفين (1)",
+          "isMandatory": false,
+          "content": "سداد فواتير الكهرباء السابقة"
+        },
+        {
+          "id": "cls-special-2",
+          "number": 10,
+          "title": "شرط خاص متفق عليه بين الطرفين (2)",
+          "isMandatory": false,
+          "content": "تسليم البصيرة الأصلية للأمين الشرعي"
+        }
+      ],
+      "currentVersion": 1,
+      "versionHistory": [
+        {
+          "version": 1,
+          "createdAt": "2026-10-18 10:00",
+          "createdBy": {
+            "id": "adv-1",
+            "name": "هشام عبد الرحمن القدسي",
+            "role": "advertiser"
+          },
+          "summaryOfChanges": "مسودة العقد الأولى مستوردة تلقائياً من بيانات الحجز والشروط المعتمدة ومواصفات العقار بالبصيرة الشرعية",
+          "clauses": [
+            {
+              "id": "cls-1",
+              "number": 1,
+              "title": "التمهيد وأهلية التعاقد الشرعية والقانونية",
+              "isMandatory": true,
+              "content": "يقر الطرفان (البائع والمشتري) بأهليتهما الشرعية والقانونية المعتبرة شرعاً للتعاقد والتصرف النافي للجهالة، وخلوهما من أي مانع نظامي أو قضائي، وتوافق إرادتهما الحرة على إبرام هذا العقد لبيع وشراء العقار الموصوف ببنوده."
+            },
+            {
+              "id": "cls-2",
+              "number": 2,
+              "title": "محل العقد ومواصفات المبيع وصك البصيرة",
+              "isMandatory": true,
+              "content": "محل هذا البيع هو العقار المسمى [شقة مفروشة راقية للإيجار مطلة على كورنيش خورمكسر]، الكائن في [عدن - عدن - خورمكسر]، والبالغ مساحته الإجمالية [165] م²، والمقيد بصك الملكية الشرعية/البصيرة برقم [مقيد بالسجل العقاري المعتمد]."
+            },
+            {
+              "id": "cls-3",
+              "number": 3,
+              "title": "الثمن الإجمالي وجدول الوفاء والعربون",
+              "isMandatory": true,
+              "content": "اتفق الطرفان على أن الثمن الإجمالي المقطوع للعقار هو [310,000 دولار أمريكي]، سدد المشتري منه عربون حجز والتزام قدره [20,000 دولار أمريكي]، ويلتزم المشتري بسداد باقي الثمن وقدره [290,000 دولار أمريكي] بموجب [شيك مصرفي مصدق] عند تحرير وثيقة الإفراغ والتسليم."
+            },
+            {
+              "id": "cls-4",
+              "number": 4,
+              "title": "المعاينة النافية للجهالة وضمان خلو العقار من النزاع",
+              "isMandatory": true,
+              "content": "يقر المشتري بأنه عاين العقار المبيع المعاينة الشرعية التامة النافية للجهالة وقبله بحالته الراهنة وموقعه وحدوده. كما يقر البائع ويضمن شرعاً وقانوناً خلو المبيع من أي رهن أو حكر أو اختصاص أو حيازة للغير أو أي نزاع قضائي قائم."
+            },
+            {
+              "id": "cls-5",
+              "number": 5,
+              "title": "التسليم والإفراغ ونقل الملكية والتعميد الشرعي",
+              "isMandatory": true,
+              "content": "يلتزم البائع بتسليم العقار المبيع للمشتري خالياً من أي شواغل وتسليم كافة أصول الوثائق والبصائر المعمدة وتعميد وثيقة التنازل لدى الأمين الشرعي المعتمد والسجل العقاري فور استلام كامل الثمن في موعد أقصاه [2026-11-05]."
+            },
+            {
+              "id": "cls-6",
+              "number": 6,
+              "title": "الرسوم والضرائب وأتعاب الوساطة العقارية",
+              "isMandatory": false,
+              "content": "اتفق الطرفان على أن رسوم التوثيق وتعميد الأمين الشرعي وضريبة التصرفات العقارية وأتعاب منصة دلنّي العقارية [تتحملها الأطراف مناصفة وفق العرف التجاري والقانون]."
+            },
+            {
+              "id": "cls-7",
+              "number": 7,
+              "title": "الشرط الجزائي ونكول الأطراف عن الإتمام",
+              "isMandatory": true,
+              "content": "في حال نكول أحد الطرفين أو رجوعه عن إتمام البيع دون مسوغ شرعي أو قانوني قاهر، يلتزم الطرف الناكل بتعويض الطرف الآخر بما يعادل قيمة العربون المتفق عليه كشرط جزائي ملزم قضائياً."
+            },
+            {
+              "id": "cls-8",
+              "number": 8,
+              "title": "القانون الواجب التطبيق والمحاكم المختصة",
+              "isMandatory": true,
+              "content": "يخضع هذا العقد لأحكام الشريعة الإسلامية والقانون المدني وقوانين التوثيق والتسجيل العقاري السارية في الجمهورية اليمنية، وتختص المحكمة الابتدائية الواقع في دائرتها العقار بنظر أي نزاع قد ينشأ لا قدر الله."
+            },
+            {
+              "id": "cls-special-1",
+              "number": 9,
+              "title": "شرط خاص متفق عليه بين الطرفين (1)",
+              "isMandatory": false,
+              "content": "سداد فواتير الكهرباء السابقة"
+            },
+            {
+              "id": "cls-special-2",
+              "number": 10,
+              "title": "شرط خاص متفق عليه بين الطرفين (2)",
+              "isMandatory": false,
+              "content": "تسليم البصيرة الأصلية للأمين الشرعي"
+            }
+          ],
+          "financialTerms": {
+            "totalAmount": 320000,
+            "currency": "USD",
+            "depositAmount": 16000,
+            "paymentSchedule": "شيك مصرفي مصدق عند الإفراغ والتسليم"
+          },
+          "status": "under_review"
+        }
+      ],
+      "firstPartyApprovedAt": "2026-10-18 10:30",
+      "notes": "تمت مطابقة أصل البصيرة الشرعية وصك الملكية، ومراجعة المسودة تمهيداً لاعتماد الطرف الثاني (المشتري).",
+      "createdAt": "2026-10-18",
+      "updatedAt": "2026-10-18",
+      "versions": [
+        {
+          "version": 1,
+          "createdAt": "2026-10-18 10:00",
+          "createdBy": {
+            "id": "adv-1",
+            "name": "هشام عبد الرحمن القدسي",
+            "role": "advertiser"
+          },
+          "summaryOfChanges": "مسودة العقد الأولى مستوردة تلقائياً من بيانات الحجز والشروط المعتمدة ومواصفات العقار بالبصيرة الشرعية",
+          "clauses": [
+            {
+              "id": "cls-1",
+              "number": 1,
+              "title": "التمهيد وأهلية التعاقد الشرعية والقانونية",
+              "isMandatory": true,
+              "content": "يقر الطرفان (البائع والمشتري) بأهليتهما الشرعية والقانونية المعتبرة شرعاً للتعاقد والتصرف النافي للجهالة، وخلوهما من أي مانع نظامي أو قضائي، وتوافق إرادتهما الحرة على إبرام هذا العقد لبيع وشراء العقار الموصوف ببنوده."
+            },
+            {
+              "id": "cls-2",
+              "number": 2,
+              "title": "محل العقد ومواصفات المبيع وصك البصيرة",
+              "isMandatory": true,
+              "content": "محل هذا البيع هو العقار المسمى [شقة مفروشة راقية للإيجار مطلة على كورنيش خورمكسر]، الكائن في [عدن - عدن - خورمكسر]، والبالغ مساحته الإجمالية [165] م²، والمقيد بصك الملكية الشرعية/البصيرة برقم [مقيد بالسجل العقاري المعتمد]."
+            },
+            {
+              "id": "cls-3",
+              "number": 3,
+              "title": "الثمن الإجمالي وجدول الوفاء والعربون",
+              "isMandatory": true,
+              "content": "اتفق الطرفان على أن الثمن الإجمالي المقطوع للعقار هو [310,000 دولار أمريكي]، سدد المشتري منه عربون حجز والتزام قدره [20,000 دولار أمريكي]، ويلتزم المشتري بسداد باقي الثمن وقدره [290,000 دولار أمريكي] بموجب [شيك مصرفي مصدق] عند تحرير وثيقة الإفراغ والتسليم."
+            },
+            {
+              "id": "cls-4",
+              "number": 4,
+              "title": "المعاينة النافية للجهالة وضمان خلو العقار من النزاع",
+              "isMandatory": true,
+              "content": "يقر المشتري بأنه عاين العقار المبيع المعاينة الشرعية التامة النافية للجهالة وقبله بحالته الراهنة وموقعه وحدوده. كما يقر البائع ويضمن شرعاً وقانوناً خلو المبيع من أي رهن أو حكر أو اختصاص أو حيازة للغير أو أي نزاع قضائي قائم."
+            },
+            {
+              "id": "cls-5",
+              "number": 5,
+              "title": "التسليم والإفراغ ونقل الملكية والتعميد الشرعي",
+              "isMandatory": true,
+              "content": "يلتزم البائع بتسليم العقار المبيع للمشتري خالياً من أي شواغل وتسليم كافة أصول الوثائق والبصائر المعمدة وتعميد وثيقة التنازل لدى الأمين الشرعي المعتمد والسجل العقاري فور استلام كامل الثمن في موعد أقصاه [2026-11-05]."
+            },
+            {
+              "id": "cls-6",
+              "number": 6,
+              "title": "الرسوم والضرائب وأتعاب الوساطة العقارية",
+              "isMandatory": false,
+              "content": "اتفق الطرفان على أن رسوم التوثيق وتعميد الأمين الشرعي وضريبة التصرفات العقارية وأتعاب منصة دلنّي العقارية [تتحملها الأطراف مناصفة وفق العرف التجاري والقانون]."
+            },
+            {
+              "id": "cls-7",
+              "number": 7,
+              "title": "الشرط الجزائي ونكول الأطراف عن الإتمام",
+              "isMandatory": true,
+              "content": "في حال نكول أحد الطرفين أو رجوعه عن إتمام البيع دون مسوغ شرعي أو قانوني قاهر، يلتزم الطرف الناكل بتعويض الطرف الآخر بما يعادل قيمة العربون المتفق عليه كشرط جزائي ملزم قضائياً."
+            },
+            {
+              "id": "cls-8",
+              "number": 8,
+              "title": "القانون الواجب التطبيق والمحاكم المختصة",
+              "isMandatory": true,
+              "content": "يخضع هذا العقد لأحكام الشريعة الإسلامية والقانون المدني وقوانين التوثيق والتسجيل العقاري السارية في الجمهورية اليمنية، وتختص المحكمة الابتدائية الواقع في دائرتها العقار بنظر أي نزاع قد ينشأ لا قدر الله."
+            },
+            {
+              "id": "cls-special-1",
+              "number": 9,
+              "title": "شرط خاص متفق عليه بين الطرفين (1)",
+              "isMandatory": false,
+              "content": "سداد فواتير الكهرباء السابقة"
+            },
+            {
+              "id": "cls-special-2",
+              "number": 10,
+              "title": "شرط خاص متفق عليه بين الطرفين (2)",
+              "isMandatory": false,
+              "content": "تسليم البصيرة الأصلية للأمين الشرعي"
+            }
+          ],
+          "financialTerms": {
+            "totalAmount": 320000,
+            "currency": "USD",
+            "depositAmount": 16000,
+            "paymentSchedule": "شيك مصرفي مصدق عند الإفراغ والتسليم"
+          },
+          "status": "under_review"
+        }
+      ],
+      "isModificationPendingApproval": false
     }
   ]
 }

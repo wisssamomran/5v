@@ -174,6 +174,8 @@ export const BookingDealWorkspaceModal: React.FC<BookingDealWorkspaceModalProps>
   // Real-time booking representation
   const booking: PropertyBooking | undefined = workspaceData?.booking || bookings.find(b => b.id === bookingId);
   const listing: Listing | undefined = workspaceData?.listing || listings.find(l => l.id === booking?.listingId);
+  const currentContract = workspaceData?.contract || contracts.find(c => (booking?.id && c.bookingId === booking.id) || (booking?.contractId && c.id === booking.contractId));
+  const hasContract = Boolean(currentContract || booking?.contractId);
   const userRoleInDeal = workspaceData?.userRoleInDeal || 'seeker';
 
   const isSeeker = booking?.seekerId === currentUser.id;
@@ -338,6 +340,24 @@ export const BookingDealWorkspaceModal: React.FC<BookingDealWorkspaceModalProps>
     }
   };
 
+  // Handle Generate Contract Draft from Booking (Requirement 1, 2, 3)
+  const handleGenerateContract = async () => {
+    if (!booking) return;
+    setIsGeneratingContract(true);
+    try {
+      const res = await generateContractFromBooking(booking.id);
+      if (res.success && res.contract) {
+        showToast(res.message || 'تم إنشاء مسودة العقد بنجاح واستيراد كافة بيانات الحجز والشروط', 'success');
+        await loadData();
+        setShowContractDocumentModal(true);
+      } else {
+        showToast(res.message || 'تعذر إنشاء مسودة العقد', 'error');
+      }
+    } finally {
+      setIsGeneratingContract(false);
+    }
+  };
+
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-slate-950/80 backdrop-blur-xs overflow-y-auto animate-in fade-in duration-200"
@@ -482,6 +502,23 @@ export const BookingDealWorkspaceModal: React.FC<BookingDealWorkspaceModalProps>
                     <span>إتمام الصفقة رسمياً</span>
                   </button>
                 )}
+
+                {isBookingActive && (hasContract || isTermsApproved) && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (hasContract) {
+                        setShowContractDocumentModal(true);
+                      } else {
+                        setActiveTab('contract');
+                      }
+                    }}
+                    className="px-3 py-1.5 rounded-xl bg-[#16324F] hover:bg-[#0f2438] text-white font-bold text-xs shadow-2xs flex items-center gap-1 cursor-pointer"
+                  >
+                    <FileCheck className="w-3.5 h-3.5 text-[#12A889]" />
+                    <span>{hasContract ? 'عرض وثيقة العقد' : 'إنشاء وثيقة العقد'}</span>
+                  </button>
+                )}
               </div>
             </div>
           )}
@@ -552,6 +589,28 @@ export const BookingDealWorkspaceModal: React.FC<BookingDealWorkspaceModalProps>
           >
             <ShieldCheck className="w-4 h-4" />
             <span>تفاصيل العقار والطرفين والضوابط</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setActiveTab('contract')}
+            className={`pb-3 px-3 flex items-center gap-2 border-b-2 transition-all cursor-pointer whitespace-nowrap ${
+              activeTab === 'contract'
+                ? 'border-[#12A889] text-[#12A889]'
+                : 'border-transparent text-slate-500 hover:text-slate-800'
+            }`}
+          >
+            <FileCheck className="w-4 h-4" />
+            <span>العقد والتوثيق الرسمي</span>
+            {hasContract ? (
+              <span className="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-bold">
+                {currentContract?.status === 'signed' ? 'موقع رسمياً' : currentContract?.status === 'approved' ? 'معتمد' : 'مسودة موثقة'}
+              </span>
+            ) : isTermsApproved ? (
+              <span className="px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 text-[10px] font-bold animate-pulse">
+                جاهز للإنشاء
+              </span>
+            ) : null}
           </button>
         </div>
 
@@ -1232,6 +1291,348 @@ export const BookingDealWorkspaceModal: React.FC<BookingDealWorkspaceModalProps>
                   </div>
                 </div>
               )}
+
+              {/* TAB 5: CONTRACT & OFFICIAL DOCUMENTATION (منظومة العقود والتوثيق) */}
+              {activeTab === 'contract' && (
+                <div className="space-y-6">
+                  {currentContract ? (
+                    <>
+                      {/* 1. CONTRACT MAIN STATUS BANNER */}
+                      <div className="bg-white rounded-3xl border border-slate-200 p-5 shadow-xs space-y-4">
+                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
+                          <div className="flex items-center gap-3">
+                            <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center justify-center shrink-0">
+                              <FileCheck className="w-6 h-6 text-[#12A889]" />
+                            </div>
+                            <div>
+                              <div className="flex items-center gap-2 flex-wrap">
+                                <span className="font-black text-slate-900 text-base">
+                                  {currentContract.contractType === 'sale'
+                                    ? 'وثيقة عقد بيع عقار شرعي قطعي'
+                                    : 'وثيقة عقد إيجار عقار سكني/تجاري موثق'}
+                                </span>
+                                <span className="font-mono text-xs font-black bg-slate-100 text-slate-800 px-2.5 py-0.5 rounded-lg border border-slate-200">
+                                  {currentContract.contractNumber}
+                                </span>
+                                <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-lg bg-emerald-100 text-emerald-800 border border-emerald-200">
+                                  إصدار (v{currentContract.currentVersion})
+                                </span>
+                              </div>
+                              <p className="text-xs text-slate-500 mt-1">
+                                موثق رسمياً وفق أحكام قانون المعاملات المدنية والشرعية اليمنية ومحكوم بضوابط حماية الصفقات
+                              </p>
+                            </div>
+                          </div>
+
+                          <div className="flex items-center gap-2 flex-wrap self-end sm:self-auto">
+                            <button
+                              type="button"
+                              onClick={() => setShowContractDocumentModal(true)}
+                              className="px-4 py-2.5 rounded-xl bg-[#12A889] hover:bg-[#0f8e74] text-white font-black text-xs shadow-xs flex items-center gap-1.5 transition-all cursor-pointer"
+                            >
+                              <FileText className="w-4 h-4" />
+                              <span>فتح وثيقة العقد للمراجعة والطباعة</span>
+                            </button>
+                          </div>
+                        </div>
+
+                        {/* Anti-Silent Modification Warning if pending approval */}
+                        {currentContract.isModificationPendingApproval && (
+                          <div className="p-3.5 bg-amber-50 rounded-2xl border border-amber-200 text-xs text-amber-950 flex items-start gap-2.5">
+                            <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                            <div>
+                              <div className="font-black text-amber-900">
+                                تنبيه حوكمة صارم (تعديل قيد الاعتماد - منع التعديل الصامت):
+                              </div>
+                              <p className="text-[11px] leading-relaxed mt-0.5">
+                                تم تقديم مسودة تعديل جديدة على هذا العقد المعتمد، وقد عُلّق سريان الاعتماد السابق تلقائياً لحين موافقة الطرفين صراحةً على التعديلات وتوثيق الإصدار الجديد.
+                              </p>
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Contract Lifecycle and Status Badges */}
+                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+                          <div className="p-3 rounded-2xl bg-slate-50 border border-slate-100 space-y-1">
+                            <div className="text-slate-400 text-[10px] font-bold">حالة العقد القانونية:</div>
+                            <div className="font-black flex items-center gap-1.5">
+                              {currentContract.status === 'signed' ? (
+                                <span className="text-teal-700 font-extrabold flex items-center gap-1">
+                                  <CheckCircle2 className="w-3.5 h-3.5" /> موقع رسمياً
+                                </span>
+                              ) : currentContract.status === 'approved' ? (
+                                <span className="text-emerald-700 font-extrabold flex items-center gap-1">
+                                  <Check className="w-3.5 h-3.5" /> معتمد من الطرفين
+                                </span>
+                              ) : currentContract.status === 'pending_approval' ? (
+                                <span className="text-purple-700 font-extrabold flex items-center gap-1">
+                                  <Clock className="w-3.5 h-3.5" /> بانتظار الاعتماد
+                                </span>
+                              ) : currentContract.status === 'cancelled' ? (
+                                <span className="text-rose-700 font-extrabold flex items-center gap-1">
+                                  <AlertCircle className="w-3.5 h-3.5" /> ملغي ومؤرشف
+                                </span>
+                              ) : (
+                                <span className="text-amber-700 font-extrabold flex items-center gap-1">
+                                  <Edit3 className="w-3.5 h-3.5" /> مسودة قيد التدقيق
+                                </span>
+                              )}
+                            </div>
+                          </div>
+
+                          <div className="p-3 rounded-2xl bg-slate-50 border border-slate-100 space-y-1">
+                            <div className="text-slate-400 text-[10px] font-bold">إجمالي قيمة الصفقة:</div>
+                            <div className="font-black text-slate-900 font-mono">
+                              {currentContract.financialTerms.totalAmount.toLocaleString()} {currentContract.financialTerms.currency}
+                            </div>
+                          </div>
+
+                          <div className="p-3 rounded-2xl bg-slate-50 border border-slate-100 space-y-1">
+                            <div className="text-slate-400 text-[10px] font-bold">العربون المعتمد:</div>
+                            <div className="font-black text-slate-900 font-mono">
+                              {currentContract.financialTerms.depositAmount
+                                ? `${currentContract.financialTerms.depositAmount.toLocaleString()} ${currentContract.financialTerms.currency}`
+                                : 'لا يوجد عربون'}
+                            </div>
+                          </div>
+
+                          <div className="p-3 rounded-2xl bg-slate-50 border border-slate-100 space-y-1">
+                            <div className="text-slate-400 text-[10px] font-bold">إصدارات العقد المسجلة:</div>
+                            <div className="font-black text-slate-900">
+                              {currentContract.versions.length} إصدارات موثقة
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* 2. PARTIES AND APPROVALS CARD */}
+                      <div className="bg-white rounded-3xl border border-slate-200 p-5 shadow-xs space-y-4">
+                        <h4 className="font-black text-slate-900 text-sm flex items-center gap-2">
+                          <User className="w-4 h-4 text-[#12A889]" />
+                          <span>أطراف العقد والاعتمادات والتوقيعات الرسمية</span>
+                        </h4>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                          {/* First Party (Seller/Lessor) */}
+                          <div className="p-4 rounded-2xl border border-slate-200 bg-slate-50/70 space-y-3">
+                            <div className="flex items-center justify-between border-b border-slate-200 pb-2">
+                              <span className="font-extrabold text-slate-800">
+                                الطرف الأول ({currentContract.firstParty.role === 'seller' ? 'البائع / المالك' : 'المؤجر'})
+                              </span>
+                              <div className="flex items-center gap-1.5">
+                                {currentContract.firstParty.signatureStatus === 'signed' ? (
+                                  <span className="px-2 py-0.5 rounded-md bg-teal-100 text-teal-800 font-bold text-[10px] flex items-center gap-1">
+                                    <CheckCircle2 className="w-3 h-3" /> تم التوقيع الإلكتروني
+                                  </span>
+                                ) : currentContract.firstPartyApproval ? (
+                                  <span className="px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800 font-bold text-[10px] flex items-center gap-1">
+                                    <Check className="w-3 h-3" /> معتمد
+                                  </span>
+                                ) : (
+                                  <span className="px-2 py-0.5 rounded-md bg-amber-100 text-amber-800 font-bold text-[10px]">
+                                    قيد المراجعة
+                                  </span>
+                                )}
+                              </div>
+                            </div>
+
+                            <div className="space-y-1.5 text-slate-700">
+                              <div className="font-bold text-slate-900 text-sm">
+                                {currentContract.firstParty.name}
+                              </div>
+                              <div className="flex items-center gap-2 text-slate-500 font-mono" dir="ltr">
+                                <Phone className="w-3.5 h-3.5" />
+                                <span>{currentContract.firstParty.phone}</span>
+                              </div>
+                              {currentContract.firstParty.signedAt && (
+                                <div className="text-[10px] text-teal-800 font-medium">
+                                  وُقّع في: {new Date(currentContract.firstParty.signedAt).toLocaleString('ar-YE', { dateStyle: 'short', timeStyle: 'short' })}
+                                </div>
+                              )}
+                            </div>
+                          </div>
+
+                          {/* Second Party (Buyer/Lessee) */}
+                          <div className="p-4 rounded-2xl border border-slate-200 bg-slate-50/70 space-y-3">
+                            <div className="flex items-center justify-between border-b border-slate-200 pb-2">
+                              <span className="font-extrabold text-slate-800">
+                                الطرف الثاني ({currentContract.secondParty.role === 'buyer' ? 'المشتري' : 'المستأجر'})
+                              </span>
+                              <div className="flex items-center gap-1.5">
+                                {currentContract.secondParty.signatureStatus === 'signed' ? (
+                                  <span className="px-2 py-0.5 rounded-md bg-teal-100 text-teal-800 font-bold text-[10px] flex items-center gap-1">
+                                    <CheckCircle2 className="w-3 h-3" /> تم التوقيع الإلكتروني
+                                  </span>
+                                ) : currentContract.secondPartyApproval ? (
+                                  <span className="px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800 font-bold text-[10px] flex items-center gap-1">
+                                    <Check className="w-3 h-3" /> معتمد
+                                  </span>
+                                ) : (
+                                  <span className="px-2 py-0.5 rounded-md bg-amber-100 text-amber-800 font-bold text-[10px]">
+                                    قيد المراجعة
+                                  </span>
+                                )}
+                              </div>
+                            </div>
+
+                            <div className="space-y-1.5 text-slate-700">
+                              <div className="font-bold text-slate-900 text-sm">
+                                {currentContract.secondParty.name}
+                              </div>
+                              <div className="flex items-center gap-2 text-slate-500 font-mono" dir="ltr">
+                                <Phone className="w-3.5 h-3.5" />
+                                <span>{currentContract.secondParty.phone}</span>
+                              </div>
+                              {currentContract.secondParty.signedAt && (
+                                <div className="text-[10px] text-teal-800 font-medium">
+                                  وُقّع في: {new Date(currentContract.secondParty.signedAt).toLocaleString('ar-YE', { dateStyle: 'short', timeStyle: 'short' })}
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* 3. LEGAL CLAUSES SUMMARY & PREVIEW */}
+                      <div className="bg-white rounded-3xl border border-slate-200 p-5 shadow-xs space-y-4">
+                        <div className="flex items-center justify-between">
+                          <h4 className="font-black text-slate-900 text-sm flex items-center gap-2">
+                            <FileText className="w-4 h-4 text-[#12A889]" />
+                            <span>بنود العقد المستوردة والاشتراطات الخاصة ({currentContract.clauses.length} بنود)</span>
+                          </h4>
+                          <button
+                            type="button"
+                            onClick={() => setShowContractDocumentModal(true)}
+                            className="text-xs font-bold text-[#12A889] hover:underline flex items-center gap-1 cursor-pointer"
+                          >
+                            <span>مراجعة وتعديل الصياغة</span>
+                            <ArrowRight className="w-3.5 h-3.5 rotate-180" />
+                          </button>
+                        </div>
+
+                        <div className="space-y-2 max-h-56 overflow-y-auto pr-1">
+                          {currentContract.clauses.map((clause, idx) => (
+                            <div
+                              key={clause.id || idx}
+                              className="p-3 rounded-2xl bg-slate-50 border border-slate-200 text-xs space-y-1"
+                            >
+                              <div className="font-bold text-slate-900 flex items-center gap-2">
+                                <span className="w-5 h-5 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center text-[10px] font-mono shrink-0">
+                                  {clause.number || idx + 1}
+                                </span>
+                                <span>{clause.title}</span>
+                                {clause.isMandatory && (
+                                  <span className="text-[10px] bg-slate-200 text-slate-600 px-1.5 py-0.2 rounded font-normal">
+                                    بند نظامي
+                                  </span>
+                                )}
+                              </div>
+                              <p className="text-slate-600 text-[11px] leading-relaxed line-clamp-2 pr-7">
+                                {clause.content}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* 4. AUDIT TRAIL AND VERSIONS CARD */}
+                      <div className="bg-white rounded-3xl border border-slate-200 p-5 shadow-xs space-y-3">
+                        <div className="flex items-center justify-between">
+                          <h4 className="font-black text-slate-900 text-sm flex items-center gap-2">
+                            <History className="w-4 h-4 text-purple-600" />
+                            <span>سجل الإصدارات الموثقة وتاريخ التعديلات</span>
+                          </h4>
+                          <span className="text-xs text-slate-400 font-mono">
+                            {currentContract.versions.length} نسخ محفوظة
+                          </span>
+                        </div>
+
+                        <div className="space-y-2 max-h-40 overflow-y-auto pr-1 text-xs">
+                          {currentContract.versions.slice().reverse().map(ver => (
+                            <div
+                              key={ver.version}
+                              className={`p-3 rounded-2xl border flex items-center justify-between gap-3 ${
+                                ver.version === currentContract.currentVersion
+                                  ? 'bg-emerald-50/60 border-emerald-200'
+                                  : 'bg-slate-50 border-slate-200'
+                              }`}
+                            >
+                              <div className="space-y-0.5">
+                                <div className="font-bold text-slate-900 flex items-center gap-2">
+                                  <span>الإصدار رقم (v{ver.version})</span>
+                                  {ver.version === currentContract.currentVersion && (
+                                    <span className="px-1.5 py-0.2 rounded bg-emerald-200 text-emerald-900 text-[10px] font-bold">
+                                      الإصدار الساري
+                                    </span>
+                                  )}
+                                </div>
+                                <p className="text-slate-600 text-[11px]">
+                                  {ver.summaryOfChanges || 'إنشاء أو تعديل مسودة العقد'}
+                                </p>
+                              </div>
+
+                              <div className="text-left text-[10px] text-slate-400 font-mono shrink-0">
+                                <div>{ver.createdBy?.name || 'النظام'}</div>
+                                <div>{new Date(ver.createdAt).toLocaleString('ar-YE', { dateStyle: 'short', timeStyle: 'short' })}</div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </>
+                  ) : (
+                    /* NO CONTRACT YET - CALL TO ACTION */
+                    <div className="bg-white rounded-3xl border border-slate-200 p-8 text-center space-y-5 shadow-xs">
+                      <div className="w-16 h-16 rounded-3xl bg-emerald-50 text-[#12A889] border border-emerald-200 flex items-center justify-center mx-auto shadow-inner">
+                        <FileCheck className="w-8 h-8" />
+                      </div>
+
+                      <div className="max-w-md mx-auto space-y-2">
+                        <h3 className="font-black text-slate-900 text-lg">
+                          إنشاء مسودة العقد الرسمي المعتمد
+                        </h3>
+                        <p className="text-xs text-slate-600 leading-relaxed">
+                          يمكنك تحويل هذا الحجز إلى مسودة عقد رسمية (عقد بيع قطعي أو عقد إيجار موثق) مع استيراد كافة بيانات العقار والطرفين والشروط المتفق عليها تلقائياً دون إعادة إدخالها.
+                        </p>
+                      </div>
+
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-lg mx-auto text-xs text-right">
+                        <div className="p-3 bg-slate-50 rounded-2xl border border-slate-200 space-y-1">
+                          <div className="font-bold text-slate-800 flex items-center gap-1.5">
+                            <CheckCircle2 className="w-3.5 h-3.5 text-[#12A889]" />
+                            <span>استيراد أوتوماتيكي شامل</span>
+                          </div>
+                          <p className="text-[11px] text-slate-500">
+                            يتم سحب السعر، العملة، جدول الدفعات، أطوال وحدود البصيرة، وتاريخ الاستلام.
+                          </p>
+                        </div>
+
+                        <div className="p-3 bg-slate-50 rounded-2xl border border-slate-200 space-y-1">
+                          <div className="font-bold text-slate-800 flex items-center gap-1.5">
+                            <ShieldCheck className="w-3.5 h-3.5 text-[#12A889]" />
+                            <span>حوكمة ومنع التعديل الصامت</span>
+                          </div>
+                          <p className="text-[11px] text-slate-500">
+                            حفظ كافة الإصدارات، وتوثيق موافقة الطرفين، ومنع أي تغيير على النسخة المعتمدة دون إشعار صريح.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="pt-2">
+                        <button
+                          type="button"
+                          disabled={isGeneratingContract}
+                          onClick={handleGenerateContract}
+                          className="px-6 py-3.5 rounded-2xl bg-[#12A889] hover:bg-[#0f8e74] text-white font-black text-sm shadow-md hover:shadow-lg flex items-center gap-2 mx-auto transition-all cursor-pointer disabled:opacity-50"
+                        >
+                          <Sparkles className="w-5 h-5" />
+                          <span>{isGeneratingContract ? 'جاري تحرير مسودة العقد واستيراد البيانات...' : 'إنشاء مسودة العقد الرسمي الآن'}</span>
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
             </>
           )}
         </div>
@@ -1729,6 +2130,20 @@ export const BookingDealWorkspaceModal: React.FC<BookingDealWorkspaceModalProps>
             </div>
           </div>
         </div>
+      )}
+
+      {/* 6. CONTRACT DOCUMENT & PRINT MODAL */}
+      {showContractDocumentModal && (
+        <ContractDocumentModal
+          bookingId={booking?.id}
+          contractId={currentContract?.id || booking?.contractId}
+          isOpen={showContractDocumentModal}
+          onClose={() => {
+            setShowContractDocumentModal(false);
+            loadData();
+          }}
+          onSelectListing={onSelectListing}
+        />
       )}
     </div>
   );

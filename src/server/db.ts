@@ -493,26 +493,54 @@ export function normalizeContract(c: any): PropertyContract {
     },
     clauses: clauses,
     currentVersion,
-    versionHistory: Array.isArray(c.versionHistory) && c.versionHistory.length > 0 ? c.versionHistory : [
-      {
-        version: 1,
-        createdAt: c.createdAt || '2026-10-18 10:00',
-        createdBy: {
-          id: c.firstParty?.id || 'adv-1',
-          name: c.firstParty?.name || 'هشام عبد الرحمن القدسي',
-          role: 'advertiser'
-        },
-        summaryOfChanges: 'مسودة العقد الأولية المنشأة تلقائياً بناءً على بيانات الحجز والشروط المتفق عليها',
-        clauses: clauses,
-        financialTerms: c.financialTerms || {
-          totalAmount: 320000,
-          currency: 'USD',
-          depositAmount: 16000,
-          paymentSchedule: 'شيك مصرفي مصدق عند الإفراغ والتسليم'
-        },
-        status: status
-      }
-    ],
+    versionHistory: Array.isArray(c.versionHistory) && c.versionHistory.length > 0
+      ? c.versionHistory
+      : Array.isArray(c.versions) && c.versions.length > 0
+      ? c.versions
+      : [
+          {
+            version: 1,
+            createdAt: c.createdAt || '2026-10-18 10:00',
+            createdBy: {
+              id: c.firstParty?.id || 'adv-1',
+              name: c.firstParty?.name || 'هشام عبد الرحمن القدسي',
+              role: 'advertiser'
+            },
+            summaryOfChanges: 'مسودة العقد الأولية المنشأة تلقائياً بناءً على بيانات الحجز والشروط المتفق عليها',
+            clauses: clauses,
+            financialTerms: c.financialTerms || {
+              totalAmount: 320000,
+              currency: 'USD',
+              depositAmount: 16000,
+              paymentSchedule: 'شيك مصرفي مصدق عند الإفراغ والتسليم'
+            },
+            status: status
+          }
+        ],
+    versions: Array.isArray(c.versionHistory) && c.versionHistory.length > 0
+      ? c.versionHistory
+      : Array.isArray(c.versions) && c.versions.length > 0
+      ? c.versions
+      : [
+          {
+            version: 1,
+            createdAt: c.createdAt || '2026-10-18 10:00',
+            createdBy: {
+              id: c.firstParty?.id || 'adv-1',
+              name: c.firstParty?.name || 'هشام عبد الرحمن القدسي',
+              role: 'advertiser'
+            },
+            summaryOfChanges: 'مسودة العقد الأولية المنشأة تلقائياً بناءً على بيانات الحجز والشروط المتفق عليها',
+            clauses: clauses,
+            financialTerms: c.financialTerms || {
+              totalAmount: 320000,
+              currency: 'USD',
+              depositAmount: 16000,
+              paymentSchedule: 'شيك مصرفي مصدق عند الإفراغ والتسليم'
+            },
+            status: status
+          }
+        ],
     firstPartyApprovedAt: c.firstPartyApprovedAt,
     secondPartyApprovedAt: c.secondPartyApprovedAt,
     approvedBy: c.approvedBy,
@@ -1352,6 +1380,32 @@ class LocalDatabase {
     }
     this.persist();
     return entry;
+  }
+
+  public logAudit(entry: {
+    actorId: string;
+    actorName: string;
+    actorRole: UserRole;
+    action: string;
+    targetType: any;
+    targetId: string;
+    targetNumber?: string;
+    details?: string;
+    severity?: 'info' | 'warning' | 'error';
+  }): AuditLogEntry {
+    return this.addAuditLog({
+      id: `log-${Date.now()}-${Math.floor(Math.random() * 1000)}`,
+      timestamp: new Date().toISOString(),
+      userId: entry.actorId,
+      userName: entry.actorName,
+      userRole: entry.actorRole,
+      action: entry.action,
+      targetType: entry.targetType,
+      targetId: entry.targetId,
+      result: entry.severity === 'warning' ? 'warning' : 'success',
+      details: entry.details,
+      ipAddress: '127.0.0.1'
+    });
   }
 
   // --- Users Operations ---
@@ -2294,7 +2348,7 @@ class LocalDatabase {
       listingNumber: booking.listingNumber,
       listingTitle: booking.listingTitle,
       contractType,
-      status: 'under_review',
+      status: 'draft',
       propertySnapshot: {
         title: listing?.title || booking.listingTitle,
         propertyType: listing?.propertyType || 'apartment',
@@ -2320,8 +2374,7 @@ class LocalDatabase {
         role: contractType === 'sale' ? 'seller' : 'lessor',
         nationalIdOrPassport: 'بطاقة شخصية صادرة من الجمهورية اليمنية',
         address: listing?.location?.city ? `${listing.location.governorate} - ${listing.location.city}` : 'صنعاء',
-        signatureStatus: actor.id === booking.advertiserId ? 'signed' : 'unsigned',
-        signedAt: actor.id === booking.advertiserId ? nowStr : undefined
+        signatureStatus: 'unsigned'
       },
       secondParty: {
         id: seekerUser?.id || booking.seekerId,
@@ -2330,8 +2383,7 @@ class LocalDatabase {
         role: contractType === 'sale' ? 'buyer' : 'lessee',
         nationalIdOrPassport: 'بطاقة شخصية صادرة من الجمهورية اليمنية',
         address: 'صنعاء',
-        signatureStatus: actor.id === booking.seekerId ? 'signed' : 'unsigned',
-        signedAt: actor.id === booking.seekerId ? nowStr : undefined
+        signatureStatus: 'unsigned'
       },
       witnesses: [
         {
@@ -2387,14 +2439,34 @@ class LocalDatabase {
             role: actor.role
           },
           summaryOfChanges: 'إنشاء مسودة العقد الرسمية واستيراد بيانات الحجز والشروط المتفق عليها وصك العقار',
-          clauses,
+          clauses: clauses.map(c => ({ ...c })),
           financialTerms: {
             totalAmount: price,
             currency,
             depositAmount: deposit,
             paymentSchedule: terms?.paymentMethod || 'certified_check'
           },
-          status: 'under_review'
+          status: 'draft'
+        }
+      ],
+      versions: [
+        {
+          version: 1,
+          createdAt: nowStr,
+          createdBy: {
+            id: actor.id,
+            name: actor.name,
+            role: actor.role
+          },
+          summaryOfChanges: 'إنشاء مسودة العقد الرسمية واستيراد بيانات الحجز والشروط المتفق عليها وصك العقار',
+          clauses: clauses.map(c => ({ ...c })),
+          financialTerms: {
+            totalAmount: price,
+            currency,
+            depositAmount: deposit,
+            paymentSchedule: terms?.paymentMethod || 'certified_check'
+          },
+          status: 'draft'
         }
       ],
       firstPartyApprovedAt: actor.id === booking.advertiserId ? nowStr : undefined,
@@ -2466,9 +2538,13 @@ class LocalDatabase {
       contract.modificationRequestedBy = actor.name;
       contract.modificationReason = updates.summaryOfChanges || 'طلب تعديل بنود العقد المعتمد';
       contract.status = 'pending_approval';
-      // Reset approvals requiring explicit re-approval
-      contract.firstPartyApprovedAt = actor.id === contract.firstParty?.id ? new Date().toISOString() : undefined;
-      contract.secondPartyApprovedAt = actor.id === contract.secondParty?.id ? new Date().toISOString() : undefined;
+      // Reset approvals requiring explicit re-approval from both parties (Requirement 6)
+      contract.firstPartyApprovedAt = undefined;
+      contract.secondPartyApprovedAt = undefined;
+      contract.firstPartyApproval = false;
+      contract.secondPartyApproval = false;
+      if (contract.firstParty) contract.firstParty.signatureStatus = 'pending';
+      if (contract.secondParty) contract.secondParty.signatureStatus = 'pending';
     }
 
     const newVersionNum = (contract.currentVersion || 1) + 1;
@@ -2506,10 +2582,12 @@ class LocalDatabase {
         role: actor.role
       },
       summaryOfChanges: updates.summaryOfChanges || `تحديث بنود وشروط العقد للإصدار رقم ${newVersionNum}`,
-      clauses: contract.clauses,
-      financialTerms: contract.financialTerms,
+      clauses: contract.clauses.map(c => ({ ...c })),
+      financialTerms: { ...contract.financialTerms },
       status: contract.status
     });
+
+    contract.versions = contract.versionHistory;
 
     // Log audit log
     this.logAudit({
@@ -2552,33 +2630,27 @@ class LocalDatabase {
 
     if (partyType === 'firstParty' || actor.id === contract.firstParty?.id) {
       contract.firstPartyApprovedAt = nowStr;
-      if (contract.firstParty) {
-        contract.firstParty.signatureStatus = 'signed';
-        contract.firstParty.signedAt = nowStr;
-      }
+      contract.firstPartyApproval = true;
     } else if (partyType === 'secondParty' || actor.id === contract.secondParty?.id) {
       contract.secondPartyApprovedAt = nowStr;
-      if (contract.secondParty) {
-        contract.secondParty.signatureStatus = 'signed';
-        contract.secondParty.signedAt = nowStr;
-      }
+      contract.secondPartyApproval = true;
     } else if (partyType === 'admin') {
       contract.firstPartyApprovedAt = contract.firstPartyApprovedAt || nowStr;
       contract.secondPartyApprovedAt = contract.secondPartyApprovedAt || nowStr;
+      contract.firstPartyApproval = true;
+      contract.secondPartyApproval = true;
     }
 
-    const isBothApproved = Boolean(contract.firstPartyApprovedAt && contract.secondPartyApprovedAt);
+    const isBothApproved = Boolean(contract.firstPartyApproval && contract.secondPartyApproval);
     if (isBothApproved || partyType === 'admin') {
       contract.status = 'approved';
       contract.approvedAt = nowStr;
       contract.approvedBy = actor.name;
+      contract.firstPartyApproval = true;
+      contract.secondPartyApproval = true;
       contract.isModificationPendingApproval = false;
       contract.modificationRequestedBy = undefined;
       contract.modificationReason = undefined;
-
-      if (contract.firstParty?.signatureStatus === 'signed' && contract.secondParty?.signatureStatus === 'signed') {
-        contract.status = 'signed';
-      }
     } else {
       contract.status = 'pending_approval';
     }
@@ -2649,6 +2721,7 @@ class LocalDatabase {
 
     if (contract.firstParty?.signatureStatus === 'signed' && contract.secondParty?.signatureStatus === 'signed') {
       contract.status = 'signed';
+      contract.signedAt = nowStr;
       contract.approvedAt = contract.approvedAt || nowStr;
       contract.approvedBy = contract.approvedBy || actor.name;
 
@@ -2881,5 +2954,6 @@ class LocalDatabase {
     this.persist();
     return contract;
   }
+}
 
 export const db = new LocalDatabase();

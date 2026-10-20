@@ -521,12 +521,16 @@ export interface PropertyContract {
   // Revisions & Versioning (Requirement 5)
   currentVersion: number;
   versionHistory: ContractVersion[];
+  versions: ContractVersion[];
 
   // Approvals & Signatures (Requirement 6, 8, 10)
   firstPartyApprovedAt?: string;
   secondPartyApprovedAt?: string;
+  firstPartyApproval?: boolean;
+  secondPartyApproval?: boolean;
   approvedBy?: string;
   approvedAt?: string;
+  signedAt?: string;
 
   // Anti-Silent Modification tracking:
   isModificationPendingApproval?: boolean;

@@ -1469,26 +1469,52 @@ app.get('/api/bookings/:id/deal', (req: Request, res: Response) => {
     nextStepActionFor = 'both';
     nextStepDescription = 'تم تعديل شروط معتمدة سابقاً، ويلزم قبول الطرف الآخر لإعادة سريان الاتفاق.';
   } else if (booking.termsStatus === 'accepted') {
-    nextStepTitle = 'جاهز لإبرام العقد النهائي وإتمام الصفقة';
-    nextStepActionFor = 'advertiser';
-    nextStepDescription = 'كافة الشروط الأساسية معتمدة من الطرفين. يمكن للمعلن الآن إتمام الصفقة ونقل الملكية.';
+    nextStepTitle = 'جاهز لإنشاء وثيقة العقد الرسمي';
+    nextStepActionFor = 'both';
+    nextStepDescription = 'كافة الشروط المالية والزمنية معتمدة، يمكنك الآن إنشاء مسودة العقد واستيراد كافة بيانات الصفقة والشروط.';
   } else {
     nextStepTitle = 'التفاوض واعتماد الشروط';
     nextStepActionFor = 'both';
     nextStepDescription = 'يرجى تقديم مقترح شروط البيع أو الإيجار للوصول إلى اتفاق نهائي.';
   }
 
+  const contract = db.getContractByBookingId(booking.id);
+
+  if (contract) {
+    if (contract.status === 'draft') {
+      nextStepTitle = 'مراجعة وتدقيق مسودة العقد الرسمي';
+      nextStepActionFor = 'both';
+      nextStepDescription = `تم إنشاء مسودة العقد رقم [${contract.contractNumber}] وهي بانتظار المراجعة والتدقيق وتحديد البنود.`;
+    } else if (contract.status === 'pending_approval' || contract.status === 'under_review') {
+      nextStepTitle = 'اعتماد وثيقة العقد من الطرفين';
+      nextStepActionFor = 'both';
+      nextStepDescription = `العقد رقم [${contract.contractNumber}] جاهز للاعتماد الصريح من الطرف الأول والطرف الثاني.`;
+    } else if (contract.status === 'approved') {
+      nextStepTitle = 'التوقيع الإلكتروني على العقد المعتمد';
+      nextStepActionFor = 'both';
+      nextStepDescription = `تم اعتماد العقد رقم [${contract.contractNumber}] من الطرفين وهو جاهز للتوقيع الرسمي والطباعة.`;
+    } else if (contract.status === 'signed') {
+      nextStepTitle = 'عقد رسمي موقع ومكتمل التوثيق';
+      nextStepActionFor = 'none';
+      nextStepDescription = `تم توقيع العقد رقم [${contract.contractNumber}] رسمياً وحفظ كافة نسخه في السجل الدائم.`;
+    }
+  }
+
   return res.json({
     booking,
     listing,
     linkedRequest,
+    contract: contract || null,
+    hasContract: Boolean(contract),
     userRoleInDeal: auth.roleInDeal,
     permissions: {
       canProposeTerms: booking.status === 'active',
       canRespondTerms: booking.status === 'active' && Boolean(booking.termsHistory?.[0] && booking.termsHistory[0].proposedBy.id !== req.currentUser.id),
       canScheduleInspection: booking.status === 'active',
       canCompleteDeal: (auth.isAdvertiser || auth.isOrgManager || auth.isSysAdmin) && booking.status === 'active',
-      canCancelBooking: booking.status === 'active'
+      canCancelBooking: booking.status === 'active',
+      canGenerateContract: booking.status === 'active' || booking.status === 'completed' || Boolean(booking.agreedTerms),
+      canViewContract: true
     },
     nextStep: {
       title: nextStepTitle,

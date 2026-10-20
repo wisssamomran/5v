@@ -27,9 +27,12 @@ import {
   Share2,
   Eye,
   Check,
-  X
+  X,
+  FileCheck,
+  Printer
 } from 'lucide-react';
 import { BookingDealWorkspaceModal } from '../components/BookingDealWorkspaceModal';
+import { ContractDocumentModal } from '../components/ContractDocumentModal';
 
 interface BookingsManagementPageProps {
   onNavigateHome: () => void;
@@ -108,6 +111,7 @@ export const BookingsManagementPage: React.FC<BookingsManagementPageProps> = ({
     requests,
     bookings,
     listings,
+    contracts,
     acceptPropertyRequest,
     rejectPropertyRequest,
     cancelPropertyRequest,
@@ -159,6 +163,10 @@ export const BookingsManagementPage: React.FC<BookingsManagementPageProps> = ({
 
   // Deal Follow-up Workspace Modal State
   const [selectedDealBookingId, setSelectedDealBookingId] = useState<string | null>(null);
+
+  // Contract Document Modal State (Requirement 1, 4, 8, 9)
+  const [selectedContractId, setSelectedContractId] = useState<string | null>(null);
+  const [selectedContractBookingId, setSelectedContractBookingId] = useState<string | null>(null);
 
   const handleRefresh = async () => {
     setIsRefreshing(true);
@@ -595,7 +603,10 @@ export const BookingsManagementPage: React.FC<BookingsManagementPageProps> = ({
           </div>
         ) : (
           filteredRequests.map(req => {
-            const linkedBooking = req.bookingId ? bookings.find(b => b.id === req.bookingId) : undefined;
+            const linkedBooking = req.bookingId ? bookings.find(b => b.id === req.bookingId) : bookings.find(b => b.requestId === req.id);
+            const linkedContract = linkedBooking
+              ? contracts.find(c => c.bookingId === linkedBooking.id || c.id === linkedBooking.contractId)
+              : contracts.find(c => c.requestId === req.id || c.listingId === req.listingId);
             const targetListing = listings.find(l => l.id === req.listingId);
             const isPending = req.status === 'pending';
             const isAccepted = req.status === 'accepted';
@@ -653,6 +664,12 @@ export const BookingsManagementPage: React.FC<BookingsManagementPageProps> = ({
                             {linkedBooking.bookingNumber}
                           </span>
                         )}
+                        {linkedContract && (
+                          <span className="font-mono text-[11px] font-bold bg-[#12A889] text-white px-2 py-0.5 rounded-md flex items-center gap-1">
+                            <FileCheck className="w-3 h-3" />
+                            <span>{linkedContract.contractNumber}</span>
+                          </span>
+                        )}
                       </div>
                       <h3 className="font-black text-slate-900 text-sm sm:text-base">{req.listingTitle}</h3>
                       <div className="text-xs text-[#12A889] font-black">
@@ -696,6 +713,28 @@ export const BookingsManagementPage: React.FC<BookingsManagementPageProps> = ({
                       ) : (
                         <span className="px-3 py-1 rounded-full bg-slate-100 text-slate-700 font-bold text-xs">
                           {req.status}
+                        </span>
+                      )}
+
+                      {/* Linked Contract Status Badge (Requirement 8) */}
+                      {linkedContract && (
+                        <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full font-bold text-xs border ${
+                          linkedContract.status === 'signed'
+                            ? 'bg-teal-50 text-teal-800 border-teal-300'
+                            : linkedContract.status === 'approved'
+                            ? 'bg-emerald-50 text-emerald-800 border-emerald-300'
+                            : linkedContract.status === 'pending_approval'
+                            ? 'bg-purple-50 text-purple-800 border-purple-300'
+                            : 'bg-amber-50 text-amber-800 border-amber-300'
+                        }`}>
+                          <FileCheck className="w-3.5 h-3.5 text-[#12A889]" />
+                          <span>
+                            {linkedContract.contractType === 'sale' ? 'عقد بيع: ' : 'عقد إيجار: '}
+                            {linkedContract.status === 'signed' ? 'موقع رسمياً' :
+                             linkedContract.status === 'approved' ? 'معتمد' :
+                             linkedContract.status === 'pending_approval' ? 'قيد الاعتماد' :
+                             linkedContract.status === 'cancelled' ? 'ملغي' : `مسودة (v${linkedContract.currentVersion})`}
+                          </span>
                         </span>
                       )}
                     </div>
@@ -823,6 +862,56 @@ export const BookingsManagementPage: React.FC<BookingsManagementPageProps> = ({
                   </div>
                 )}
 
+                {/* Linked Contract Highlight Bar (Requirement 7 & 8) */}
+                {linkedContract && (
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3.5 rounded-2xl bg-emerald-50/80 border border-emerald-200 text-xs">
+                    <div className="flex items-center gap-2.5">
+                      <div className="w-8 h-8 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-2xs">
+                        <FileCheck className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <div className="font-extrabold text-slate-900 flex items-center gap-2 flex-wrap">
+                          <span>{linkedContract.contractType === 'sale' ? 'عقد بيع عقار شرعي قطعي' : 'عقد إيجار عقار موثق'}</span>
+                          <span className="font-mono text-emerald-800 font-bold bg-white px-2 py-0.5 rounded-lg border border-emerald-200">
+                            {linkedContract.contractNumber}
+                          </span>
+                          <span className="text-[10px] bg-emerald-200 text-emerald-900 px-2 py-0.5 rounded-md font-bold">
+                            إصدار (v{linkedContract.currentVersion})
+                          </span>
+                          <span className={`text-[10px] px-2 py-0.5 rounded-md font-bold ${
+                            linkedContract.status === 'signed' ? 'bg-teal-100 text-teal-900' :
+                            linkedContract.status === 'approved' ? 'bg-emerald-100 text-emerald-900' :
+                            linkedContract.status === 'pending_approval' ? 'bg-purple-100 text-purple-900' :
+                            'bg-amber-100 text-amber-900'
+                          }`}>
+                            {linkedContract.status === 'signed' ? 'موقع رسمياً' :
+                             linkedContract.status === 'approved' ? 'معتمد' :
+                             linkedContract.status === 'pending_approval' ? 'بانتظار الاعتماد' :
+                             linkedContract.status === 'cancelled' ? 'ملغي ومؤرشف' : 'مسودة قيد المراجعة'}
+                          </span>
+                        </div>
+                        <p className="text-[11px] text-slate-600 mt-1">
+                          القيمة الإجمالية: {linkedContract.financialTerms.totalAmount.toLocaleString()} {linkedContract.financialTerms.currency} • {linkedContract.clauses.length} بنود قانونية • الأطراف: ({linkedContract.firstParty.name} و {linkedContract.secondParty.name})
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-2 shrink-0 self-end sm:self-auto">
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setSelectedContractId(linkedContract.id);
+                          if (linkedBooking) setSelectedContractBookingId(linkedBooking.id);
+                        }}
+                        className="px-3.5 py-1.5 rounded-xl bg-[#12A889] hover:bg-[#0f8e74] text-white text-xs font-bold flex items-center gap-1.5 shadow-2xs cursor-pointer transition-colors"
+                      >
+                        <FileText className="w-3.5 h-3.5" />
+                        <span>فتح وثيقة العقد والطباعة</span>
+                      </button>
+                    </div>
+                  </div>
+                )}
+
                 {/* Interactive Action Bar according to Role (Requirement 4 & 6) */}
                 <div className="flex items-center justify-between gap-3 pt-3 border-t border-slate-100 flex-wrap">
                   {/* View Listing Link */}
@@ -881,6 +970,33 @@ export const BookingsManagementPage: React.FC<BookingsManagementPageProps> = ({
                             <span>مساحة متابعة الحجز والاتفاق</span>
                           </button>
                         )}
+
+                        {/* Contract Actions (Advertiser) */}
+                        {linkedContract ? (
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setSelectedContractId(linkedContract.id);
+                              if (linkedBooking) setSelectedContractBookingId(linkedBooking.id);
+                            }}
+                            className="px-3.5 py-2 rounded-xl bg-[#16324F] hover:bg-[#0f2438] text-white text-xs font-bold transition-all shadow-xs flex items-center gap-1.5 cursor-pointer"
+                          >
+                            <FileText className="w-3.5 h-3.5 text-[#12A889]" />
+                            <span>وثيقة العقد [{linkedContract.contractNumber}]</span>
+                          </button>
+                        ) : linkedBooking && (linkedBooking.termsStatus === 'accepted' || isBookingActive) ? (
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setSelectedContractBookingId(linkedBooking.id);
+                              setSelectedContractId(null);
+                            }}
+                            className="px-3.5 py-2 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold transition-all shadow-xs flex items-center gap-1.5 cursor-pointer"
+                          >
+                            <FileCheck className="w-3.5 h-3.5" />
+                            <span>إنشاء مسودة العقد</span>
+                          </button>
+                        ) : null}
 
                         {isBookingActive && linkedBooking && (
                           <>
@@ -944,6 +1060,21 @@ export const BookingsManagementPage: React.FC<BookingsManagementPageProps> = ({
                           >
                             <ShieldCheck className="w-3.5 h-3.5 text-[#12A889]" />
                             <span>مساحة متابعة الحجز والاتفاق</span>
+                          </button>
+                        )}
+
+                        {/* Contract Document Button (Seeker) */}
+                        {linkedContract && (
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setSelectedContractId(linkedContract.id);
+                              if (linkedBooking) setSelectedContractBookingId(linkedBooking.id);
+                            }}
+                            className="px-3.5 py-2 rounded-xl bg-[#16324F] hover:bg-[#0f2438] text-white text-xs font-bold transition-all shadow-xs flex items-center gap-1.5 cursor-pointer"
+                          >
+                            <FileText className="w-3.5 h-3.5 text-[#12A889]" />
+                            <span>مراجعة وثيقة العقد</span>
                           </button>
                         )}
 
@@ -1394,6 +1525,21 @@ export const BookingsManagementPage: React.FC<BookingsManagementPageProps> = ({
           bookingId={selectedDealBookingId}
           isOpen={Boolean(selectedDealBookingId)}
           onClose={() => setSelectedDealBookingId(null)}
+          onSelectListing={onSelectListing}
+        />
+      )}
+
+      {/* 7. CONTRACT DOCUMENT MODAL (Requirement 1, 4, 8, 9) */}
+      {(selectedContractId || selectedContractBookingId) && (
+        <ContractDocumentModal
+          contractId={selectedContractId || undefined}
+          bookingId={selectedContractBookingId || undefined}
+          isOpen={Boolean(selectedContractId || selectedContractBookingId)}
+          onClose={() => {
+            setSelectedContractId(null);
+            setSelectedContractBookingId(null);
+            fetchRequestsAndBookings();
+          }}
           onSelectListing={onSelectListing}
         />
       )}
